@@ -1,62 +1,80 @@
 //HUSK AT SKRIVE KOMMENTARER TIL NÆRMEST ALT – forklaring samt hvad koden gør
 
-import { Box, Button, ThemeProvider, Typography, createTheme } from "@mui/material";
-import { NavLink } from "react-router-dom";
+
+import logoplaceholder from '../assets/pictures/logoplaceholder.png'
+
+import Box from '@mui/material/Box';
+import TextField from '@mui/material/TextField';
+import { customTheme } from '../themes/themes';
 
 
-
-const theme = createTheme({
-    spacing: [0, 4, 8, 16, 32, 64],
-
-
-    palette:{
-        main: '#EEF9FF',
-        accent: '#FFB336',
-        dark: '#1C465C'
-
-    },
-
-    typography:{
-        fontFamily:
-            [
-                'Lalezar, Sen',
-            ].join(','),
-
-    },
-
- 
-
-    components:{
-        //component name
-        MuiButton:{
-            styleOverrides:{
-                //styles to override mui theme
-                root: {
-                    background:'#FFB336',
-                    color:'#EEF9FF',
-                    borderRadius:'1rem'
-
-                }
-            }
-        }
-    }
+import { CssBaseline, ThemeProvider, Typography } from '@mui/material';
+import { useTheme } from '@mui/material/styles';
 
 
-})
-
-
-theme.spacing(2);
-
-theme.typography.h1 ={
-    fontSize: '3rem',
-}
 
 
 export default function HomePage() {
+    const outerTheme = useTheme();
     return (
-        <ThemeProvider theme={theme}>
-         
-            <Typography variant="h1">
+        <ThemeProvider theme={customTheme(outerTheme)}>
+
+            <CssBaseline enableColorScheme />
+
+
+            <div ><img src={logoplaceholder} alt="placeholder" style={{ width: "5em" }} /></div>
+
+
+            <section>
+
+
+
+
+                <Box
+                    sx={{
+                        '& .MuiTextField-root': { m: 2, width: '30ch' },
+
+
+                    }}
+                    noValidate
+                    autoComplete="off"
+
+                    display={"flex"}
+                    flexDirection={"column"}
+                    textAlign={"center"}
+
+                >
+
+                    <Typography variant="h1">Welcome...</Typography>
+                    <div>
+                        <TextField
+                            id="filled-search"
+                            label="Search travel destinations..."
+                            type="search"
+                            variant="filled"
+
+                        />
+                    </div>
+
+
+                </Box>
+
+            </section>
+
+        </ThemeProvider>
+    );
+}
+
+
+/*           
+
+     <section>
+            <div ><img src={logoplaceholder} alt="" style={{ width: "5em" }} /></div>
+            <h1>Welcome ...</h1>
+
+
+
+<Typography variant="h1">
             <Box
             sx={{
                 textAlign:'center',
@@ -83,10 +101,19 @@ export default function HomePage() {
                 <p>Get your the best travel experience with UniqTravels!</p>
         
 
-            </Box>
+            </Box> 
+            
+            
+            
+            
+            
+                        <Box color="bg"
+                sx={{
+                    padding: "1em",
+                }}
+            >
+
+                <Button color="dark" backgroundColor="accent" ><NavLink to="/planner">This is a button</NavLink></Button>
 
 
-            <NavLink to="/planner"><Button>This is a button</Button></NavLink> 
-        </ThemeProvider>
-    );
-}
+            </Box>*/
