@@ -1,6 +1,5 @@
 //HUSK AT SKRIVE KOMMENTARER TIL NÆRMEST ALT – forklaring samt hvad koden gør
 import { NavLink } from "react-router-dom";
-import ''
 
 export default function Nav() {
     return (
