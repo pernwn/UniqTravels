@@ -24,7 +24,7 @@ export default function HomePage() {
             <section>
                 <Box
                     sx={{
-                        '& .MuiTextField-root': { m: 2, width: '30ch' },
+                        '& .MuiTextField-root': { m: 1, width: '30ch' },
 
 
                     }}
@@ -55,15 +55,21 @@ export default function HomePage() {
 
             <section className='quickTools'>
 
-                <Card sx={{ minWidth: 275 }}>
+                <Card 
+                    sx={{ 
+                        minWidth: 16,
+      
+                    
+                    }}
+                >
                     <CardContent>
-                        <Typography sx={{ fontSize: 14 }} color="primary" gutterBottom>
-                            Word of the Day
+                        <Typography sx={{ fontSize: 14 }} color="primary">
+                            icon her
                         </Typography>
 
                     </CardContent>
                     <CardActions>
-                        <Button variant='h2'>Learn More</Button>
+                        <Button variant='h2'>ikon navn her</Button>
                     </CardActions>
                 </Card>
 
