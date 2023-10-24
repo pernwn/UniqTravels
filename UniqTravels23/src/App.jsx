@@ -11,14 +11,14 @@ function App() {
 
   return (
     <main>
-    <Nav /> 
+    <Nav/> 
     <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/booking" element={<HomePage />} />
-        <Route path="/planner" element={<Planner />} />
-        <Route path="/map" element={<HomePage />} />
-        <Route path="/user" element={<HomePage />} />
-        <Route path="/login" element={<HomePage />} />
+        <Route path="/" element={<HomePage/>} />
+        <Route path="/booking" element={<HomePage/>} />
+        <Route path="/planner" element={<Planner/>} />
+        <Route path="/map" element={<HomePage/>} />
+        <Route path="/user" element={<HomePage/>} />
+        <Route path="/login" element={<HomePage/>} />
     </Routes>
     </main>
 )
