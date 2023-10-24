@@ -9,23 +9,35 @@ import { customTheme } from '../themes/themes';
 import { ThemeProvider, useTheme } from '@mui/material/styles';
 
 
-
-export default function SearchBar(){
+export default function SearchBar() {
     const outerTheme = useTheme();
-    <ThemeProvider theme={customTheme(outerTheme)}>
-        <Box>
-            <TravelExploreOutlinedIcon/>
-        <TextField
-                            id="filled-search"
-                            label="Search travel destinations..."
-                            type="search"
-                            variant="filled"
 
-                        />
-
-        </Box>
+    return (
+        <ThemeProvider theme={customTheme(outerTheme)}>
+            <Box
+                sx={{
+                    '& .MuiTextField-root': { m: 1, width: '30ch' },
 
 
-    </ThemeProvider>
+                }}
+                noValidate
+                autoComplete="off"
+            >
+               <TravelExploreOutlinedIcon />
+                <TextField
+
+                    id="filled-search"
+                    label="Search travel destinations..."
+                    type="search"
+                    variant="filled"
+
+                />
+
+            </Box>
+
+
+        </ThemeProvider>
+    )
+
 
 }

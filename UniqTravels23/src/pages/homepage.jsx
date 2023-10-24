@@ -32,14 +32,6 @@ export default function HomePage() {
 
             <section>
                 <Box
-                    sx={{
-                        '& .MuiTextField-root': { m: 1, width: '30ch' },
-
-
-                    }}
-                    noValidate
-                    autoComplete="off"
-
                     display={"flex"}
                     flexDirection={"column"}
                     textAlign={"center"}
