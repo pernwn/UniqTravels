@@ -1,9 +1,14 @@
 //HUSK AT SKRIVE KOMMENTARER TIL NÆRMEST ALT – forklaring samt hvad koden gør
 //kodet af Rina
-import { ThemeProvider } from "@mui/material";
+
 import { customTheme } from '../themes/themes';
+import { useTheme } from '@mui/material/styles';
+
+
+
+import { CssBaseline, ThemeProvider, Typography } from '@mui/material';
 import { useState } from "react";
-import { useTheme } from "@emotion/react";
+
 
 export default function Login(){
   const outerTheme = useTheme();

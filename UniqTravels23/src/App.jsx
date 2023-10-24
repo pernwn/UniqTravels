@@ -19,7 +19,7 @@ function App() {
         <Route path="/planner" element={<Planner />} />
         <Route path="/map" element={<HomePage />} />
         <Route path="/user" element={<HomePage />} />
-        <Route path="/login" element={<HomePage />} />
+        <Route path="/login" element={<Login />} />
     </Routes>
     </main>
 )

@@ -89,6 +89,7 @@ export default function Nav() {
                             >
                                 User</Typography>
                         </NavLink>
+                        <NavLink to='/login'>login</NavLink>
                     </div>
                 </section>
                 <aside className="nav_border nav_right"></aside>
