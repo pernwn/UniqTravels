@@ -16,7 +16,7 @@ import AccountCircleOutlinedIcon from '@mui/icons-material/AccountCircleOutlined
 //import af custom theme
 import { customTheme } from '../themes/themes';
 import { ThemeProvider, useTheme } from '@mui/material/styles';
-import { Box, CssBaseline, Typography } from "@mui/material";
+import { CssBaseline, Typography } from "@mui/material";
 
 //noter til koden under {/*KOMMENTAR*/}
 export default function Nav() {
@@ -82,7 +82,6 @@ export default function Nav() {
                             >
                                 User</Typography>
                         </NavLink>
-                        <NavLink to='/login'>login</NavLink>
                     </div>
                 </section>
                 <aside className="nav_border nav_right"></aside>
