@@ -21,7 +21,7 @@ import AccountCircleOutlinedIcon from '@mui/icons-material/AccountCircleOutlined
 //import af custom theme
 import { customTheme } from '../themes/themes';
 import { ThemeProvider, useTheme } from '@mui/material/styles';
-import { CssBaseline, Typography } from "@mui/material";
+import { Box, CssBaseline, Typography } from "@mui/material";
 
 
 //Mangler: Cirkel der flytter sig alt efter siden og gradient farve
@@ -34,8 +34,8 @@ export default function Nav() {
             <nav> {/* Jeg vil gerne sætte denne i en Box så jeg kan tilføje theme – hilsen Vic */}
                 <aside className="nav_border nav_left"></aside>
                 <section className="nav">
-                    <div>
-                        <NavLink to='/' activeClassName="active" className={'navlink'}>
+                    <Box activeClassName="active">
+                        <NavLink to='/' className={'navlink'}>
                             <HomeOutlinedIcon
                                 sx={{ color: customTheme => customTheme.palette.text.primary }} //Denne vil jeg gerne have er overordnet på hele siden, så den ikke står flere gange (kig kommentar på nav tag) – hilsen Vic
                             />
@@ -44,7 +44,7 @@ export default function Nav() {
                             >
                                 Home</Typography>
                         </NavLink>
-                    </div>
+                    </Box>
                     <div>
                         <NavLink to='/booking' activeClassName="active" className={'navlink'}>
                             <AirplaneTicketOutlinedIcon
