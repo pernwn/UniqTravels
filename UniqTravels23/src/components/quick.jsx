@@ -1,5 +1,6 @@
 import { Button, Card, CardActions, CardContent, Stack } from "@mui/material";
 
+
 export default function QuickTools(props){
     return(
         
@@ -27,11 +28,11 @@ export default function QuickTools(props){
                     
                     >
                         <CardContent>
-                           ikon her
-
+                        {/*<IconComponent /> {/* Replace with your icon component}*/}
+            
                         </CardContent>
                         <CardActions>
-                            <Button variant='h3'>{props.name}</Button>
+                            <Button variant='outlined'>{props.name}</Button>
                         </CardActions>
                     </Card>
 
