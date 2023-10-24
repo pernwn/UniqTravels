@@ -1,15 +1,23 @@
 //HUSK AT SKRIVE KOMMENTARER TIL NÆRMEST ALT – forklaring samt hvad koden gør
 
+//{Kodet af: Victoria}
 
 import logoplaceholder from '../assets/pictures/logoplaceholder.png'
 
+import QuickTools from '../components/quick';
+
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
+
+
+//import af separat theme fil
 import { customTheme } from '../themes/themes';
-
-
-import { Button, Card, CardActions, CardContent, CssBaseline, ThemeProvider, Typography } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
+
+
+
+import { CssBaseline, ThemeProvider, Typography } from '@mui/material';
+
 
 
 
@@ -55,24 +63,10 @@ export default function HomePage() {
 
             <section className='quickTools'>
 
-                <Card 
-                    sx={{ 
-                        minWidth: 16,
-      
-                    
-                    }}
-                >
-                    <CardContent>
-                        <Typography sx={{ fontSize: 14 }} color="primary">
-                            icon her
-                        </Typography>
-
-                    </CardContent>
-                    <CardActions>
-                        <Button variant='h2'>ikon navn her</Button>
-                    </CardActions>
-                </Card>
-
+                    <QuickTools name="Flights"/>
+                    <QuickTools name="Hotels"/>
+                    <QuickTools name="Rentals"/>
+                    <QuickTools name="Explore"/>
 
             </section>
 
