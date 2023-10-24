@@ -4,7 +4,7 @@
 import { customTheme } from "../themes/themes";
 import { useTheme } from "@mui/material/styles";
 
-import { CssBaseline, ThemeProvider, Typography, TextField } from "@mui/material";
+import { Button, CssBaseline, ThemeProvider, Typography, TextField } from "@mui/material";
 import { useState } from "react";
 
 export default function Login() {
@@ -34,7 +34,7 @@ export default function Login() {
           placeholder="Type here..."
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-          id="outlined-basic" 
+          id="outlined-email" 
           label="E-mail" 
           variant="outlined" />
 
@@ -42,15 +42,14 @@ export default function Login() {
         <TextField 
            type="password"
           placeholder="Type here..."
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          id="outlined-basic" 
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+          id="outlined-password" 
           label="Password" 
           variant="outlined" />
 
-          <button type="button" onClick={handleLogin}>
-            Login
-          </button>
+          <Button variant="contained" type="button" onClick={handleLogin}>Login</Button>
+          
         </div>
       </section>
     </ThemeProvider>
