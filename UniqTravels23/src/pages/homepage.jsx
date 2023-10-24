@@ -7,10 +7,9 @@ import logoplaceholder from '../assets/pictures/logoplaceholder.png'
 import QuickTools from '../components/quick';
 
 import Box from '@mui/material/Box';
-import TextField from '@mui/material/TextField';
 
-import TravelExploreOutlinedIcon from '@mui/icons-material/TravelExploreOutlined';
 
+import SearchBar from '../components/search';
 
 //import af separat theme fil
 import { customTheme } from '../themes/themes';
@@ -49,13 +48,7 @@ export default function HomePage() {
 
                     <Typography variant="h1">Welcome...</Typography>
                     <div>
-                        <TextField
-                            id="filled-search"
-                            label="Search travel destinations..."
-                            type="search"
-                            variant="filled"
-
-                        />
+                        <SearchBar/>
                     </div>
 
 
