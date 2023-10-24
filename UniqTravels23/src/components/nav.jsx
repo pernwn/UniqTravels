@@ -27,8 +27,8 @@ export default function Nav() {
             <nav> {/* Jeg vil gerne sætte denne i en Box så jeg kan tilføje theme – hilsen Vic */}
                 <aside className="nav_border nav_left"></aside>
                 <section className="nav">
-                    <Box activeClassName="active">
-                        <NavLink to='/' className={'navlink'}>
+                    <div>
+                        <NavLink to='/' activeClassName="active" className={'navlink'}>
                             <HomeOutlinedIcon
                                 sx={{ color: customTheme => customTheme.palette.text.primary }} //Denne vil jeg gerne have er overordnet på hele siden, så den ikke står flere gange (kig kommentar på nav tag) – hilsen Vic
                             />
@@ -37,7 +37,7 @@ export default function Nav() {
                             >
                                 Home</Typography>
                         </NavLink>
-                    </Box>
+                    </div>
                     <div>
                         <NavLink to='/booking' activeClassName="active" className={'navlink'}>
                             <AirplaneTicketOutlinedIcon
