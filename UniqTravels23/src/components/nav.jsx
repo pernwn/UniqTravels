@@ -15,7 +15,6 @@ import Map from '../assets/pictures/Map.png'
 import User from '../assets/pictures/User.png'
 
 //Mangler: Cirkel der flytter sig alt efter siden og gradient farve
-//Mangler: få Root til at virke
 //noter til koden under {/*KOMMENTAR*/}
 export default function Nav() {
     return (
@@ -23,31 +22,31 @@ export default function Nav() {
             <aside className="nav_border nav_left"></aside>
             <section className="nav">
                 <div>
-                    <NavLink to='/' className={'navlink'}>
+                    <NavLink to='/' activeClassName="active" className={'navlink'}>
                     <img src={Home} alt="Home" className="nav_img"/>
                         <p>Home</p>
                     </NavLink>                
                 </div>
                 <div>
-                    <NavLink to='/booking' className={'navlink'}>
+                    <NavLink to='/booking' activeClassName="active" className={'navlink'}>
                         <img src={Booking} alt="Booking" className="nav_img"/>
                         <p>Booking</p>
                     </NavLink>
                 </div>
                 <div>
-                    <NavLink to='/map' className={'navlink'}>
+                    <NavLink to='/map' activeClassName="active" className={'navlink'}>
                         <img src={Map} alt="Map" className="nav_img"/>
                         <p>Map</p>
                     </NavLink>
                 </div>
                 <div>
-                    <NavLink to='/planner' className={'navlink'}>
+                    <NavLink to='/planner' activeClassName="active" className={'navlink'}>
                         <img src={Planner} alt="Planner" className="nav_img"/>
                         <p>Planner</p>
                     </NavLink>
                 </div>
                 <div>
-                    <NavLink to='/user' className={'navlink'}>
+                    <NavLink to='/user' activeClassName="active" className={'navlink'}>
                         <img src={User} alt="User" className="nav_img"/>
                         <p>User</p>
                     </NavLink>

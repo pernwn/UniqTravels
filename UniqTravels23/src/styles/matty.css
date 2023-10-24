@@ -51,6 +51,17 @@ table {
     border-spacing: 0;
 }
 
+/*Farver
+  white-off: #EEF9FF;
+  light-blue-light: #DAEBF4;
+  light-blue: #256EB3;
+  blue: #1D558A;
+  dark-blue: #1C465C;
+  yellow: #FFB336;
+  orange: #FF9336;
+  black: #000000;
+*/
+
 /*Navbar*/
 nav {
   display: flex;
@@ -105,4 +116,19 @@ nav {
   height: 30px;
   width: 30px;
   opacity: 60%;
+}
+
+.not_active {
+  display: none;
+}
+
+.active {
+  display: flex;
+  position: relative;
+  bottom: 10px;
+  background: radial-gradient(#b3ddf3, #DAEBF4);
+  height: 60px;
+  border-radius: 50%;
+  width: 60px;
+  z-index: -1;
 }
