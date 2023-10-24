@@ -13,6 +13,7 @@
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
     "@firebase/firestore": "^4.3.0",
+    "@mui/icons-material": "^5.14.14",
     "@mui/material": "^5.14.14",
     "D": "^1.0.0",
     "firebase": "^10.5.0",

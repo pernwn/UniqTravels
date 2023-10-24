@@ -3,7 +3,7 @@ import { createTheme} from '@mui/material/styles';
 
 export const customTheme = (outerTheme) =>
   createTheme({
-    mode: outerTheme.palette,
+    mode: outerTheme.palette.typography,
       palette: {
         mode: 'light',
         primary: {
@@ -17,7 +17,7 @@ export const customTheme = (outerTheme) =>
           default: '#DAEBF4',
         },
         text: {
-          primary: '#1C465C',
+          primary: '#1C465C', //DARK
         },
         warning: {
           main: '#ed4d02',

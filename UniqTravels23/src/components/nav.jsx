@@ -8,11 +8,14 @@ import '../styles/matty.css'
 import '../styles/matty.css'
 
 //Import af ikoner til nav baren
-import Home from '../assets/pictures/Home.png'
+//import Home from '../assets/pictures/Home.png'
 import Booking from '../assets/pictures/Booking.png'
 import Planner from '../assets/pictures/Planner.png'
 import Map from '../assets/pictures/Map.png'
 import User from '../assets/pictures/User.png'
+
+import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
+import { customTheme } from "../themes/themes";
 
 //Mangler: Cirkel der flytter sig alt efter siden og gradient farve
 //noter til koden under {/*KOMMENTAR*/}
@@ -23,7 +26,9 @@ export default function Nav() {
             <section className="nav">
                 <div>
                     <NavLink to='/' activeClassName="active" className={'navlink'}>
-                    <img src={Home} alt="Home" className="nav_img"/>
+                    <HomeOutlinedIcon
+                        sx={{color: customTheme => customTheme.palette.text.primary}}
+                    />
                         <p>Home</p>
                     </NavLink>                
                 </div>

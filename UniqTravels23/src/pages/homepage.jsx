@@ -1,5 +1,6 @@
 //HUSK AT SKRIVE KOMMENTARER TIL NÆRMEST ALT – forklaring samt hvad koden gør
 
+//{Kodet af: Victoria}
 
 import logoplaceholder from '../assets/pictures/logoplaceholder.png'
 
@@ -7,12 +8,16 @@ import QuickTools from '../components/quick';
 
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
+
+
+//import af separat theme fil
 import { customTheme } from '../themes/themes';
+import { useTheme } from '@mui/material/styles';
 
 
 
 import { CssBaseline, ThemeProvider, Typography } from '@mui/material';
-import { useTheme } from '@mui/material/styles';
+
 
 
 
