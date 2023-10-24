@@ -2,13 +2,9 @@
 
 // Med NavLink gør vi, at produktet bliver en 1 pager
 import { NavLink } from "react-router-dom";
-import '../styles/matty.css'
 
 // Her er der linket til CSS filen
 import '../styles/matty.css'
-
-
-
 
 //import ikoner fra MUI
 import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
@@ -17,14 +13,11 @@ import ExploreOutlinedIcon from '@mui/icons-material/ExploreOutlined';
 import EventOutlinedIcon from '@mui/icons-material/EventOutlined';
 import AccountCircleOutlinedIcon from '@mui/icons-material/AccountCircleOutlined';
 
-
 //import af custom theme
 import { customTheme } from '../themes/themes';
 import { ThemeProvider, useTheme } from '@mui/material/styles';
 import { Box, CssBaseline, Typography } from "@mui/material";
 
-
-//Mangler: Cirkel der flytter sig alt efter siden og gradient farve
 //noter til koden under {/*KOMMENTAR*/}
 export default function Nav() {
     const outerTheme = useTheme();
