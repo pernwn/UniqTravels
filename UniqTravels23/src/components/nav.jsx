@@ -7,57 +7,92 @@ import '../styles/matty.css'
 // Her er der linket til CSS filen
 import '../styles/matty.css'
 
-//Import af ikoner til nav baren
-//import Home from '../assets/pictures/Home.png'
-import Booking from '../assets/pictures/Booking.png'
-import Planner from '../assets/pictures/Planner.png'
-import Map from '../assets/pictures/Map.png'
-import User from '../assets/pictures/User.png'
 
+
+
+//import ikoner fra MUI
 import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
-import { customTheme } from "../themes/themes";
+import AirplaneTicketOutlinedIcon from '@mui/icons-material/AirplaneTicketOutlined';
+import ExploreOutlinedIcon from '@mui/icons-material/ExploreOutlined';
+import EventOutlinedIcon from '@mui/icons-material/EventOutlined';
+import AccountCircleOutlinedIcon from '@mui/icons-material/AccountCircleOutlined';
+
+
+//import af custom theme
+import { customTheme } from '../themes/themes';
+import { ThemeProvider, useTheme } from '@mui/material/styles';
+import { CssBaseline, Typography } from "@mui/material";
+
 
 //Mangler: Cirkel der flytter sig alt efter siden og gradient farve
 //noter til koden under {/*KOMMENTAR*/}
 export default function Nav() {
+    const outerTheme = useTheme();
     return (
-        <nav>
-            <aside className="nav_border nav_left"></aside>
-            <section className="nav">
-                <div>
-                    <NavLink to='/' activeClassName="active" className={'navlink'}>
-                    <HomeOutlinedIcon
-                        sx={{color: customTheme => customTheme.palette.text.primary}}
-                    />
-                        <p>Home</p>
-                    </NavLink>                
-                </div>
-                <div>
-                    <NavLink to='/booking' activeClassName="active" className={'navlink'}>
-                        <img src={Booking} alt="Booking" className="nav_img"/>
-                        <p>Booking</p>
-                    </NavLink>
-                </div>
-                <div>
-                    <NavLink to='/map' activeClassName="active" className={'navlink'}>
-                        <img src={Map} alt="Map" className="nav_img"/>
-                        <p>Map</p>
-                    </NavLink>
-                </div>
-                <div>
-                    <NavLink to='/planner' activeClassName="active" className={'navlink'}>
-                        <img src={Planner} alt="Planner" className="nav_img"/>
-                        <p>Planner</p>
-                    </NavLink>
-                </div>
-                <div>
-                    <NavLink to='/user' activeClassName="active" className={'navlink'}>
-                        <img src={User} alt="User" className="nav_img"/>
-                        <p>User</p>
-                    </NavLink>
-                </div>
-            </section>
-            <aside className="nav_border nav_right"></aside>
-        </nav>
+        <ThemeProvider theme={customTheme(outerTheme)}>
+            <CssBaseline enableColorScheme />
+            <nav> {/* Jeg vil gerne sætte denne i en Box så jeg kan tilføje theme – hilsen Vic */}
+                <aside className="nav_border nav_left"></aside>
+                <section className="nav">
+                    <div>
+                        <NavLink to='/' activeClassName="active" className={'navlink'}>
+                            <HomeOutlinedIcon
+                                sx={{ color: customTheme => customTheme.palette.text.primary }} //Denne vil jeg gerne have er overordnet på hele siden, så den ikke står flere gange (kig kommentar på nav tag) – hilsen Vic
+                            />
+                            <Typography variant="body2"
+                                sx={{ color: customTheme => customTheme.palette.text.primary }}
+                            >
+                                Home</Typography>
+                        </NavLink>
+                    </div>
+                    <div>
+                        <NavLink to='/booking' activeClassName="active" className={'navlink'}>
+                            <AirplaneTicketOutlinedIcon
+                                sx={{ color: customTheme => customTheme.palette.text.primary }}
+                            />
+                            <Typography variant="body2"
+                                sx={{ color: customTheme => customTheme.palette.text.primary }}
+                            >
+                                Booking</Typography>
+                        </NavLink>
+                    </div>
+                    <div>
+                        <NavLink to='/map' activeClassName="active" className={'navlink'}>
+                            <ExploreOutlinedIcon
+                                sx={{ color: customTheme => customTheme.palette.text.primary }}
+                            />
+                            <Typography variant="body2"
+                                sx={{ color: customTheme => customTheme.palette.text.primary }}
+                            >
+                                Map</Typography>
+                        </NavLink>
+                    </div>
+                    <div>
+                        <NavLink to='/planner' activeClassName="active" className={'navlink'}>
+                            <EventOutlinedIcon
+                                sx={{ color: customTheme => customTheme.palette.text.primary }}
+                            />
+                            <Typography variant="body2"
+                                sx={{ color: customTheme => customTheme.palette.text.primary }}
+                            >
+                                Planner</Typography>
+                        </NavLink>
+                    </div>
+                    <div>
+                        <NavLink to='/user' activeClassName="active" className={'navlink'}>
+                            <AccountCircleOutlinedIcon
+                                 sx={{ color: customTheme => customTheme.palette.text.primary }}
+
+                            />
+                            <Typography variant="body2"
+                                sx={{ color: customTheme => customTheme.palette.text.primary }}
+                            >
+                                User</Typography>
+                        </NavLink>
+                    </div>
+                </section>
+                <aside className="nav_border nav_right"></aside>
+            </nav>
+        </ThemeProvider>
     );
 }

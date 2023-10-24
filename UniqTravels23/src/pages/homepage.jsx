@@ -9,6 +9,8 @@ import QuickTools from '../components/quick';
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 
+import TravelExploreOutlinedIcon from '@mui/icons-material/TravelExploreOutlined';
+
 
 //import af separat theme fil
 import { customTheme } from '../themes/themes';
