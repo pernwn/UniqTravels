@@ -27,34 +27,28 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
     display: block;
 }
+
 body {
     line-height: 1;
 }
+
 ol, ul {
     list-style: none;
 }
+
 blockquote, q {
     quotes: none;
 }
+
 blockquote:before, blockquote:after,
 q:before, q:after {
     content: '';
     content: none;
 }
+
 table {
     border-collapse: collapse;
     border-spacing: 0;
-}
-*/
-:root {
-  --c-white-off: #EEF9FF;
-  --c-light-blue-light: #DAEBF4;
-  --c-light-blue: #256EB3;
-  --c-blue: #1D558A;
-  --c-dark-blue: #1C465C;
-  --c-yellow: #FFB336;
-  --c-orange: #FF9336;
-  --c-black: #000000;
 }
 
 /*Navbar*/
@@ -90,9 +84,11 @@ nav {
   background: #DAEBF4;
   display: flex;
   flex-direction: row;
+  align-items: center;
   justify-content: space-between;
   width: 80%;
   z-index: 2;
+  height: 60px;
 }
 
 .navlink {
@@ -101,9 +97,12 @@ nav {
   line-height: 1.5rem;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .nav_img {
-  height: auto;
-  width: auto;
+  height: 30px;
+  width: 30px;
+  opacity: 60%;
 }
