@@ -10,6 +10,7 @@ export default function Nav() {
             <NavLink to='/map' >Map</NavLink>
             <NavLink to='/planner' >Planner</NavLink>
             <NavLink to='/user' >User</NavLink>
+            <NavLink to='/login'>Login</NavLink>
         </nav>
     );
 }

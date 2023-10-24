@@ -4,6 +4,7 @@ import './App.css'
 import Nav from './components/nav'
 import HomePage from './pages/homepage'
 import Planner from './pages/planner'
+import Login from './pages/login'
 
 
 
@@ -18,7 +19,7 @@ function App() {
         <Route path="/planner" element={<Planner />} />
         <Route path="/map" element={<HomePage />} />
         <Route path="/user" element={<HomePage />} />
-        <Route path="/login" element={<HomePage />} />
+        <Route path="/login" element={<Login />} />
     </Routes>
     </main>
 )
