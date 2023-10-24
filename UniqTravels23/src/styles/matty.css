@@ -47,14 +47,14 @@ table {
 }
 */
 :root {
-  --color-white-off: #EEF9FF;
-  --color-light-blue-light: #DAEBF4;
-  --color-light-blue: #256EB3;
-  --color-blue: #1D558A;
-  --dark-blue: #1C465C;
-  --color-yellow: #FFB336;
-  --color-orange: #FF9336;
-  --color-black: #000000;
+  --c-white-off: #EEF9FF;
+  --c-light-blue-light: #DAEBF4;
+  --c-light-blue: #256EB3;
+  --c-blue: #1D558A;
+  --c-dark-blue: #1C465C;
+  --c-yellow: #FFB336;
+  --c-orange: #FF9336;
+  --c-black: #000000;
 }
 
 /*Navbar*/
