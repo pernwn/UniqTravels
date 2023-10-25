@@ -6,7 +6,7 @@
 import logoplaceholder from '../assets/pictures/logoplaceholder.png'
 
 //import andre komponenter
-import QuickTools from '../components/quick';
+import {QuickTools, ScrollCards} from '../components/cards';
 import "../styles/vic.css"
 
 //import fra MUI
@@ -70,19 +70,18 @@ export default function HomePage() {
                 <Typography variant='h3' m="1% 3%" >Hot deals!</Typography>
 
 
-                <Stack direction="row" spacing={2}  /*Stack komponenten fra MUI er brugt her for at sætte elementerne horisontalt – opdagede denne måde, efter jeg havde brugt flex og flexdirection andre steder */
+                <Stack direction="row" spacing={4}  /*Stack komponenten fra MUI er brugt her for at sætte elementerne horisontalt – opdagede denne måde, efter jeg havde brugt flex og flexdirection andre steder */
                     sx={{
-
-                        padding: "1% 3%",
+                        p: "1% 3%",
                         overflow: "auto",
           
                     }}
                 >
-                <QuickTools name="New offers" />
-                <QuickTools name="Your next vacation?" />
-                <QuickTools name="Get 20% off!" />
-                <QuickTools name="Incredible croissonts" />
-                <QuickTools name="Got a coupon?" />
+                <ScrollCards name="New offers" />
+                <ScrollCards name="Your next vacation?" />
+                <ScrollCards name="Get 20% off!" />
+                <ScrollCards name="Incredible croissonts" />
+                <ScrollCards name="Got a coupon?" />
 
 
             </Stack>
