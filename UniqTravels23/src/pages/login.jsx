@@ -24,13 +24,15 @@ export default function Login() {
     if (email === "user@example.com" && password === "password") {
       // Hvis email og password matcher, vises en velkomstbesked
       //alert("welcome!");
-      
+
       //fører til homepage
       window.location.href='/'
       
     } else {
        // Hvis email og password ikke matcher, vises en fejlbesked
       alert("lol noob");
+      
+      //TODO: måske felterne kan skifte farve til rød og en 'tooltip' (fra MUI) kan vises og sige at password wrong
     }
   };
   // i denne sætning if (email === 'user@example.com' && password === 'password') starter vi en 'if' sætning for at undersøge om email og password matcher

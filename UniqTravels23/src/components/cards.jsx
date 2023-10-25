@@ -1,9 +1,8 @@
 import { Button, Card, CardContent, Stack } from "@mui/material";
 
-//Kort komponent som genbruges
+//Kort komponent som genbruges på flere sider vha props
 export function QuickTools(props) {
     return (
-
         <Stack direction="row">
             <Card elevation={4}>
                 <Button variant='filled'
