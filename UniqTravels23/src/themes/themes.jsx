@@ -34,7 +34,6 @@ export const customTheme = (outerTheme) =>
     typography: {
       h1: {
         fontFamily: 'Lalezar',
-        fontSize: '32pt',
       },
       h2: {
         fontFamily: 'Lalezar',
