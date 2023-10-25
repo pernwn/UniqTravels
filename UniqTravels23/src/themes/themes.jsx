@@ -32,6 +32,7 @@ export const customTheme = (outerTheme) =>
       },
     },
     typography: {
+
       h1: {
         fontFamily: 'Lalezar',
       },
@@ -84,6 +85,7 @@ export const customTheme = (outerTheme) =>
     shape: {
       borderRadius: 15,
     },
+
     
   });
 

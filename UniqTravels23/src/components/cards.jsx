@@ -5,7 +5,7 @@ export function QuickTools(props) {
     return (
 
         <Stack direction="row">
-            <Card>
+            <Card elevation={4}>
                 <Button variant='filled'
 
                 >
@@ -19,7 +19,7 @@ export function QuickTools(props) {
                             width:80,
                             height:90,
                             fontWeight: 600,
-                            lineHeight: 1.3,
+                            lineHeight: 1.15,
                             borderRadius:"10%"
                         }}
                     >
@@ -40,7 +40,7 @@ export function ScrollCards(props){
     return (
 
         <Stack direction="row">
-            <Card>
+            <Card elevation={6}>
                 <Button variant='filled'
 
                 >
@@ -53,7 +53,6 @@ export function ScrollCards(props){
 
                             width:100,
                             height:100,
-                            fontWeight: 600,
                             lineHeight: 1.3,
                         }}
                     >

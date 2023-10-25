@@ -2,42 +2,75 @@
 
 
 import Box from '@mui/material/Box';
-import TextField from '@mui/material/TextField';
+//import TextField from '@mui/material/TextField';
 
 //import af separat theme fil
 import { customTheme } from '../themes/themes';
 import { ThemeProvider, useTheme } from '@mui/material/styles';
 import SearchIcon from '@mui/icons-material/Search';
-import { InputAdornment } from '@mui/material';
-
+import { Divider, IconButton, InputBase, Paper } from '@mui/material';
+import MenuIcon from '@mui/icons-material/Menu';
+import DirectionsIcon from '@mui/icons-material/Directions';
 
 export default function SearchBar() {
     const outerTheme = useTheme();
     return (
         <ThemeProvider theme={customTheme(outerTheme)}>
-            <Box sx={{
-                display: 'flex',
-                alignItems: 'flex-start',
-            }}>
 
-                <TextField //DENNE SKAL HAVE INPUT ?? man skal kunne søge ting, evt tag fra firebase
-                    id="input-with-icon-textfield"
-                    label="Your next adventure awaits!"
-                    placeholder='Search'
-                    InputProps={{
-                        startAdornment: (
-                            <InputAdornment position="start">
-                                <SearchIcon
-                                    sx={{ color: customTheme => customTheme.palette.primary.main }}
-                                />
-                            </InputAdornment>
-                        ),
-                    }}
-                    variant="filled"
+            <Paper
+                component="form"
+                sx={{ p: '2px 4px', display: 'flex', alignItems: 'center', width: 300 }}
+            >
+                <IconButton sx={{ p: '10px' }} label="menu" /*Denne menu skal laves til filtrerin */>
+                    <MenuIcon />
+                </IconButton>
+
+                <InputBase //tekstfeltet
+                    sx={{ ml: 1, flex: 1 }}
+                    placeholder="Search dream vacation"
+                    inputProps={{ 'aria-label': 'search dream vacation' }}
                 />
-            </Box>
+
+                <IconButton type="button" sx={{ p: '10px' }} label="search">
+                    <SearchIcon />
+                </IconButton>
+
+                <Divider sx={{ height: 28, m: 0.5 }} orientation="vertical" />
+
+                <IconButton color="primary" sx={{ p: '10px' }} label="directions">
+                    <DirectionsIcon />
+                </IconButton>
+            </Paper>
+
+
+
 
         </ThemeProvider>
     )
 
 }
+
+/*
+<Box sx={{
+    display: 'flex',
+    alignItems: 'flex-start',
+}}>
+    <TextField //DENNE SKAL HAVE INPUT ?? man skal kunne søge ting, evt tag fra firebase
+
+        fullWidth
+        id="input-with-icon-textfield"
+        label="Your next adventure awaits!"
+        placeholder='E.g. "Amazing beaches"'
+
+        InputProps={{
+            startAdornment: (
+                <InputAdornment position="start">
+                    <SearchIcon
+                        sx={{ color: customTheme => customTheme.palette.secondary.main }}
+                    />
+                </InputAdornment>
+            ),
+        }}
+        variant="outlined"
+    />
+</Box>*/

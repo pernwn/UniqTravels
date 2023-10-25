@@ -5,6 +5,7 @@
     position:relative;
 
     height:350px;
+    box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.5);
 
 }
 
@@ -23,5 +24,12 @@ html{
 .search{
     display:flex;
     justify-content: center;
+
+    text-align: center;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    
+
     
 }

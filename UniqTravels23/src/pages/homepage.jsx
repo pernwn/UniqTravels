@@ -17,7 +17,7 @@ import { CssBaseline, Stack, ThemeProvider, Typography } from '@mui/material';
 //import af ikoner fra MUI
 import TravelExploreOutlinedIcon from '@mui/icons-material/TravelExploreOutlined';
 import FmdGoodOutlinedIcon from '@mui/icons-material/FmdGoodOutlined';
-
+import MapsHomeWorkOutlinedIcon from '@mui/icons-material/MapsHomeWorkOutlined';
 
 
 //import af separat theme file
@@ -28,6 +28,8 @@ import { useTheme } from '@mui/material/styles';
 export default function HomePage() {
     //Oprettelse af variabel for at bruge useTheme
     const outerTheme = useTheme();
+    
+    //const greet = newUser ? "Welcome, new traveler!" : "Welcome back, traveler!"
     return (
         <ThemeProvider theme={customTheme(outerTheme)}>
             <CssBaseline enableColorScheme />
@@ -40,11 +42,11 @@ export default function HomePage() {
                             alignItems: "center",
 
                             position: 'absolute',
-                            top: 100
+                            top: 50
                         }}
                     >
-                        <Typography variant="h2" sx={{ color: customTheme => customTheme.palette.background.paper }}>Welcome...</Typography>
-                        <SearchBar />
+                        <Typography variant="h3" sx={{ color: customTheme => customTheme.palette.background.paper, lineHeight:.8, marginBottom:4 }}>Welcome Traveler!</Typography>
+                        <SearchBar/>
                     </Box>
 
                 </section>
@@ -61,9 +63,9 @@ export default function HomePage() {
                     m: "2em 0",
                 }}
             >
-                <QuickTools name="Travel options" icon={<FmdGoodOutlinedIcon sx={{ fontSize: 40 }} />} />
-                <QuickTools name="Housing" icon={<FmdGoodOutlinedIcon sx={{ fontSize: 40 }} />} />
-                <QuickTools name="Explore" icon={<TravelExploreOutlinedIcon sx={{ fontSize: 40 }} />} />
+                <QuickTools name="Travel options" icon={<FmdGoodOutlinedIcon sx={{ fontSize: 40, marginBottom:"16%" }} />} />
+                <QuickTools name="Housing options" icon={<MapsHomeWorkOutlinedIcon sx={{ fontSize: 40, marginBottom:"16%" }} />} />
+                <QuickTools name="Explore options" icon={<TravelExploreOutlinedIcon sx={{ fontSize: 40, marginBottom:"16%" }} />} />
             </Box>
 
 
@@ -88,6 +90,13 @@ export default function HomePage() {
 
 
                 </Stack>
+            </Box>
+
+
+            <Box>
+                <Typography variant="h3" lineHeight="1" textAlign="center">Plan your next vacation with us!</Typography>
+
+                    
             </Box>
 
 
