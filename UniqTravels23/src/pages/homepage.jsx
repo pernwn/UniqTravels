@@ -3,7 +3,8 @@
 //{Kodet af: Victoria}
 
 //import billeder
-import logoplaceholder from '../assets/pictures/logoplaceholder.png'
+//import logoplaceholder from '../assets/pictures/logoplaceholder.png'
+
 
 //import andre komponenter
 import { QuickTools, ScrollCards } from '../components/cards';
@@ -13,9 +14,9 @@ import "../styles/vic.css"
 //import fra MUI
 import Box from '@mui/material/Box';
 import { CssBaseline, Stack, ThemeProvider, Typography } from '@mui/material';
-    //import af ikoner fra MUI
-    import TravelExploreOutlinedIcon from '@mui/icons-material/TravelExploreOutlined';
-    import FmdGoodOutlinedIcon from '@mui/icons-material/FmdGoodOutlined';
+//import af ikoner fra MUI
+import TravelExploreOutlinedIcon from '@mui/icons-material/TravelExploreOutlined';
+import FmdGoodOutlinedIcon from '@mui/icons-material/FmdGoodOutlined';
 
 
 
@@ -30,21 +31,26 @@ export default function HomePage() {
     return (
         <ThemeProvider theme={customTheme(outerTheme)}>
             <CssBaseline enableColorScheme />
-            <div ><img src={logoplaceholder} alt="placeholder" style={{ width: "5em" }} /></div>
+            <section className='hPic'>
+                <section className='search'>
+                    <Box /* Bruger box komponenten fra MUI i stedet for div/section etc, for at være i stand til at style med CSS fra MUI systemet*/
+                        sx={{
+                            display: "flex",
+                            flexDirection: "column",
+                            alignItems: "center",
 
-            <Box /* Bruger box komponenten fra MUI i stedet for div/section etc, for at være i stand til at style med CSS fra MUI systemet*/
-                sx={{
-                    display: "flex",
-                    flexDirection: "column",
-                    alignItems: "center"
+                            position: 'absolute',
+                            top: 100
+                        }}
+                    >
+                        <Typography variant="h2" sx={{ color: customTheme => customTheme.palette.background.paper }}>Welcome...</Typography>
+                        <SearchBar />
+                    </Box>
 
-                }}
-            >
-                <Typography variant="h2">Welcome...</Typography>
-                <div>
-                    <SearchBar />
-                </div>
-            </Box>
+                </section>
+            </section>
+
+
 
 
             <Box className='quickTools'
@@ -52,8 +58,7 @@ export default function HomePage() {
                     display: "flex",
                     flexDirection: "row",
                     justifyContent: "space-evenly",
-                    m: "2em 0 4em",
-
+                    m: "2em 0",
                 }}
             >
                 <QuickTools name="Travel options" icon={<FmdGoodOutlinedIcon sx={{ fontSize: 40 }} />} />
@@ -71,6 +76,7 @@ export default function HomePage() {
                     sx={{
                         p: "1% 3%",
                         overflow: "auto",
+
 
                     }}
                 >

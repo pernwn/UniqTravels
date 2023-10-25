@@ -1,0 +1,27 @@
+.hPic{
+    background-image: url("../assets/pictures/beachy.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position:relative;
+
+    height:350px;
+
+}
+
+
+html{
+    overflow:auto;
+    position: relative;
+    top:47px;
+    bottom:34px;
+
+
+    display:flex;
+    flex-direction: column;
+}
+
+.search{
+    display:flex;
+    justify-content: center;
+    
+}

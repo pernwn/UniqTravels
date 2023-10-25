@@ -10,13 +10,17 @@ import { ThemeProvider, useTheme } from '@mui/material/styles';
 import SearchIcon from '@mui/icons-material/Search';
 import { InputAdornment } from '@mui/material';
 
+
 export default function SearchBar() {
     const outerTheme = useTheme();
     return (
         <ThemeProvider theme={customTheme(outerTheme)}>
-            <Box sx={{ display: 'flex', alignItems: 'flex-start'}}>
-    
-                <TextField
+            <Box sx={{
+                display: 'flex',
+                alignItems: 'flex-start',
+            }}>
+
+                <TextField //DENNE SKAL HAVE INPUT ?? man skal kunne søge ting, evt tag fra firebase
                     id="input-with-icon-textfield"
                     label="Your next adventure awaits!"
                     placeholder='Search'
@@ -24,13 +28,12 @@ export default function SearchBar() {
                         startAdornment: (
                             <InputAdornment position="start">
                                 <SearchIcon
-                                sx={{ color: customTheme => customTheme.palette.primary.main }}
-                                
+                                    sx={{ color: customTheme => customTheme.palette.primary.main }}
                                 />
                             </InputAdornment>
                         ),
                     }}
-                    variant="outlined"
+                    variant="filled"
                 />
             </Box>
 

@@ -20,7 +20,7 @@ export function QuickTools(props) {
                             height:90,
                             fontWeight: 600,
                             lineHeight: 1.3,
-
+                            borderRadius:"10%"
                         }}
                     >
                         {props.icon} 

@@ -4,16 +4,7 @@
     box-sizing: border-box;
 }
 
-html{
-    overflow:auto;
-    position: relative;
-    top:47px;
-    bottom:34px;
-    margin: 0 24px;
 
-    display:flex;
-    flex-direction: column;
-}
 
 
 
