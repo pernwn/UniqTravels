@@ -1,7 +1,7 @@
 //{Kodet af: Vic}
 
 
-import Box from '@mui/material/Box';
+//import Box from '@mui/material/Box';
 //import TextField from '@mui/material/TextField';
 
 //import af separat theme fil
@@ -11,6 +11,8 @@ import SearchIcon from '@mui/icons-material/Search';
 import { Divider, IconButton, InputBase, Paper } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import DirectionsIcon from '@mui/icons-material/Directions';
+import TuneOutlinedIcon from '@mui/icons-material/TuneOutlined';
+
 
 export default function SearchBar() {
     const outerTheme = useTheme();
@@ -21,25 +23,27 @@ export default function SearchBar() {
                 component="form"
                 sx={{ p: '2px 4px', display: 'flex', alignItems: 'center', width: 300 }}
             >
-                <IconButton sx={{ p: '10px' }} label="menu" /*Denne menu skal laves til filtrerin */>
-                    <MenuIcon />
+                <IconButton sx={{ p: '10px' }} label="search filter" /*Denne menu skal laves til filtrerin */>
+                    <TuneOutlinedIcon />
                 </IconButton>
 
                 <InputBase //tekstfeltet
                     sx={{ ml: 1, flex: 1 }}
                     placeholder="Search dream vacation"
-                    inputProps={{ 'aria-label': 'search dream vacation' }}
+                    inputProps={{ 'label': 'search dream vacation' }}
                 />
 
                 <IconButton type="button" sx={{ p: '10px' }} label="search">
                     <SearchIcon />
                 </IconButton>
-
+                
+                
+                {/*
                 <Divider sx={{ height: 28, m: 0.5 }} orientation="vertical" />
 
-                <IconButton color="primary" sx={{ p: '10px' }} label="directions">
+                <IconButton sx={{ p: '10px', color: customTheme => customTheme.palette.text.primary }} label="directions">
                     <DirectionsIcon />
-                </IconButton>
+                </IconButton>*/}
             </Paper>
 
 

@@ -45,7 +45,7 @@ export default function HomePage() {
                             top: 50
                         }}
                     >
-                        <Typography variant="h3" sx={{ color: customTheme => customTheme.palette.background.paper, lineHeight:.8, marginBottom:4 }}>Welcome Traveler!</Typography>
+                        <Typography variant="h2" sx={{ color: customTheme => customTheme.palette.background.paper, lineHeight:.8, marginBottom:4 }}>Welcome Traveler!</Typography>
                         <SearchBar/>
                     </Box>
 
@@ -73,7 +73,7 @@ export default function HomePage() {
             <Box
                 sx={{ color: customTheme => customTheme.palette.secondary.main }}
             >
-                <Typography variant='h3' m="1% 3%" >Hot deals!</Typography>
+                <Typography variant='h4' m="1% 3%" >Hot deals!</Typography>
                 <Stack direction="row" spacing={4}  /*Stack komponenten fra MUI er brugt her for at sætte elementerne horisontalt – opdagede denne måde, efter jeg havde brugt flex og flexdirection andre steder */
                     sx={{
                         p: "1% 3%",
@@ -94,9 +94,9 @@ export default function HomePage() {
 
 
             <Box>
-                <Typography variant="h3" lineHeight="1" textAlign="center">Plan your next vacation with us!</Typography>
+                <Typography variant="h4" lineHeight="1" textAlign="center">Plan your next vacation with us!</Typography>
 
-                    
+
             </Box>
 
 
