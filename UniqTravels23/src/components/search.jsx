@@ -14,7 +14,7 @@ export default function SearchBar() {
     const outerTheme = useTheme();
     return (
         <ThemeProvider theme={customTheme(outerTheme)}>
-            <Box sx={{ display: 'flex', alignItems: 'flex-end'}}>
+            <Box sx={{ display: 'flex', alignItems: 'flex-start'}}>
     
                 <TextField
                     id="input-with-icon-textfield"

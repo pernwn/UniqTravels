@@ -27,11 +27,13 @@ export default function HomePage() {
     //Oprettelse af variabel for at bruge useTheme
     const outerTheme = useTheme();
     return (
-        <ThemeProvider theme={customTheme(outerTheme)}>
+        <ThemeProvider theme={customTheme(outerTheme)} className="grid-container">
             <CssBaseline enableColorScheme />
             <div ><img src={logoplaceholder} alt="placeholder" style={{ width: "5em" }} /></div>
 
             <Box /* Bruger box komponenten fra MUI i stedet for div/section etc, for at være i stand til at style med CSS fra MUI systemet*/
+                className='grid-item'
+                
                 sx={{
                     display: "flex",
                     flexDirection: "column",
@@ -45,25 +47,25 @@ export default function HomePage() {
                 </div>
             </Box>
 
-    
-                <Box className='quickTools'
-                                sx={{
-                                    display: "flex",
-                                    flexDirection:"row",
-                                    justifyContent: "space-evenly",
-                                    m:"2em 0 4em", 
-                   
-                                }}
-                >
-                    <QuickTools name="Travel options" icon={<FmdGoodOutlinedIcon sx={{ fontSize: 40 }} />} />
-                    <QuickTools name="Housing" icon={<FmdGoodOutlinedIcon sx={{ fontSize: 40 }} />} />
-                    <QuickTools name="Explore" icon={<TravelExploreOutlinedIcon sx={{ fontSize: 40 }} />} />
-                </Box>
+
+            <Box className='quickTools'
+                sx={{
+                    display: "flex",
+                    flexDirection: "row",
+                    justifyContent: "space-evenly",
+                    m: "2em 0 4em",
+
+                }}
+            >
+                <QuickTools name="Travel options" icon={<FmdGoodOutlinedIcon sx={{ fontSize: 40 }} />} />
+                <QuickTools name="Housing" icon={<FmdGoodOutlinedIcon sx={{ fontSize: 40 }} />} />
+                <QuickTools name="Explore" icon={<TravelExploreOutlinedIcon sx={{ fontSize: 40 }} />} />
+            </Box>
 
 
 
             <Box
-                sx={{color: customTheme => customTheme.palette.secondary.main }}
+                sx={{ color: customTheme => customTheme.palette.secondary.main }}
             >
                 <Typography variant='h3' m="1% 3%" >Hot deals!</Typography>
 
@@ -73,20 +75,20 @@ export default function HomePage() {
 
                         padding: "1% 3%",
                         overflow: "auto",
-
+          
                     }}
                 >
-                    <QuickTools name="New offers" />
-                    <QuickTools name="Your next vacation?" />
-                    <QuickTools name="Get 20% off!"/>
-                    <QuickTools name="Incredible croissonts" />
-                    <QuickTools name="Got a coupon?" />
+                <QuickTools name="New offers" />
+                <QuickTools name="Your next vacation?" />
+                <QuickTools name="Get 20% off!" />
+                <QuickTools name="Incredible croissonts" />
+                <QuickTools name="Got a coupon?" />
 
 
-                </Stack>
-            </Box>
+            </Stack>
+        </Box>
 
 
-        </ThemeProvider>
+        </ThemeProvider >
     );
 }
