@@ -1,6 +1,6 @@
 import { Button, Card, CardContent, Stack } from "@mui/material";
 
-
+//Kort komponent som genbruges
 export function QuickTools(props) {
     return (
 
@@ -51,7 +51,7 @@ export function ScrollCards(props){
                             alignItems: "center",
                             justifyContent: "space-evenly",
 
-                            width:100,
+                            width:110,
                             height:100,
                             lineHeight: 1.3,
                         }}

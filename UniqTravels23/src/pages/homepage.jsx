@@ -74,7 +74,7 @@ export default function HomePage() {
                 sx={{ color: customTheme => customTheme.palette.secondary.main }}
             >
                 <Typography variant='h4' m="1% 3%" >Hot deals!</Typography>
-                <Stack direction="row" spacing={4}  /*Stack komponenten fra MUI er brugt her for at sætte elementerne horisontalt – opdagede denne måde, efter jeg havde brugt flex og flexdirection andre steder */
+                <Stack direction="row" spacing={2}  /*Stack komponenten fra MUI er brugt her for at sætte elementerne horisontalt – opdagede denne måde, efter jeg havde brugt flex og flexdirection andre steder */
                     sx={{
                         p: "2% 3%",
                         overflow: "auto",
@@ -95,8 +95,6 @@ export default function HomePage() {
 
             <Box>
                 <Typography variant="h4" lineHeight="1" textAlign="center">Plan your next vacation with us!</Typography>
-
-
             </Box>
 
 
