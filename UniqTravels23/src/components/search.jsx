@@ -1,11 +1,11 @@
 
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
-import TravelExploreOutlinedIcon from '@mui/icons-material/TravelExploreOutlined';
 
 //import af separat theme fil
 import { customTheme } from '../themes/themes';
 import { ThemeProvider, useTheme } from '@mui/material/styles';
+import SearchIcon from '@mui/icons-material/Search';
 import { InputAdornment } from '@mui/material';
 
 export default function SearchBar() {
@@ -21,7 +21,7 @@ export default function SearchBar() {
                     InputProps={{
                         startAdornment: (
                             <InputAdornment position="start">
-                                <TravelExploreOutlinedIcon 
+                                <SearchIcon
                                 sx={{ color: customTheme => customTheme.palette.primary.main }}
                                 
                                 />

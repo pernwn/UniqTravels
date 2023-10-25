@@ -1,46 +1,30 @@
-import { Button, Card, CardActions, CardContent, Stack } from "@mui/material";
+import { Button, Card, CardContent, Stack } from "@mui/material";
 
 
-export default function QuickTools(props){
-    return(
-        
-                        <Stack
-                    sx={{
-                        display:"flex",
-                        flexDirection:"row",
-                        alignItems:"center",
-                        gap:2,
-                        marginLeft:2,
-                        marginRight:2,
-                 
+export default function QuickTools(props) {
+    return (
 
-
-                    }}
-
-                >
-                    <Card
-                    sx={{
-                        width:"10em",
-                        height:"8em",
-
-
-                    }}
-                    
+        <Stack>
+            <Card>
+                <Button variant='filled'>
+                    <CardContent
+                        sx={{
+                            display: "flex",
+                            flexDirection: "column",
+                            alignItems: "center",
+                        }}
                     >
-                        <CardContent>
-                        {/*<IconComponent /> {/* Replace with your icon component}*/}
-            
-                        </CardContent>
-                        <CardActions>
-                            <Button variant='outlined'>{props.name}</Button>
-                        </CardActions>
-                    </Card>
+                        {props.icon}
+                        {props.name}
+                    </CardContent>
+                </Button>
+            </Card>
 
 
 
 
-                </Stack>
-        
+        </Stack>
+
     )
 
 }

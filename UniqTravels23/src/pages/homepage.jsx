@@ -19,8 +19,8 @@ import { useTheme } from '@mui/material/styles';
 
 import { CssBaseline, ThemeProvider, Typography } from '@mui/material';
 
-
-
+import TravelExploreOutlinedIcon from '@mui/icons-material/TravelExploreOutlined';
+import FmdGoodOutlinedIcon from '@mui/icons-material/FmdGoodOutlined';
 
 
 export default function HomePage() {
@@ -32,15 +32,19 @@ export default function HomePage() {
 
             <section>
                 <Box
-                    display={"flex"}
-                    flexDirection={"column"}
-                    textAlign={"center"}
+                sx={{
+                    display:"flex",
+                    flexDirection:"column",
+                    alignItems:"center"
+
+                }}
+
 
                 >
 
                     <Typography variant="h1">Welcome...</Typography>
                     <div>
-                        <SearchBar/>
+                        <SearchBar />
                     </div>
 
 
@@ -48,14 +52,21 @@ export default function HomePage() {
 
             </section>
 
-            <section className='quickTools'>
+            <Box className='quickTools'
+                sx={{
+                    display: "flex",
+                    flexDirection:"row",
+                    justifyContent: "space-between",
+                    margin:"8% 5%"
+                }}
 
-                    <QuickTools name="Flights"/>
-                    <QuickTools name="Hotels"/>
-                    <QuickTools name="Rentals"/>
-                    <QuickTools name="Explore"/>
+            >
 
-            </section>
+                <QuickTools name="Destinations" icon={<FmdGoodOutlinedIcon sx={{fontSize:50}}/>} />
+                <QuickTools name="Exploration" icon={<TravelExploreOutlinedIcon sx={{fontSize:50}}/>}/>
+
+
+            </Box>
 
         </ThemeProvider>
     );
