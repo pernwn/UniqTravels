@@ -13,9 +13,9 @@ import "../styles/vic.css"
 //import fra MUI
 import Box from '@mui/material/Box';
 import { CssBaseline, Stack, ThemeProvider, Typography } from '@mui/material';
-//import af ikoner fra MUI
-import TravelExploreOutlinedIcon from '@mui/icons-material/TravelExploreOutlined';
-import FmdGoodOutlinedIcon from '@mui/icons-material/FmdGoodOutlined';
+    //import af ikoner fra MUI
+    import TravelExploreOutlinedIcon from '@mui/icons-material/TravelExploreOutlined';
+    import FmdGoodOutlinedIcon from '@mui/icons-material/FmdGoodOutlined';
 
 
 
