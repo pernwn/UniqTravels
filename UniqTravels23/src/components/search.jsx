@@ -8,7 +8,7 @@
 import { customTheme } from '../themes/themes';
 import { ThemeProvider, useTheme } from '@mui/material/styles';
 import SearchIcon from '@mui/icons-material/Search';
-import { /*Divider,*/ IconButton, InputBase, Paper } from '@mui/material';
+import { /*Divider,*/ Divider, IconButton, InputBase, Paper } from '@mui/material';
 //import MenuIcon from '@mui/icons-material/Menu';
 //import DirectionsIcon from '@mui/icons-material/Directions';
 import TuneOutlinedIcon from '@mui/icons-material/TuneOutlined';
@@ -24,12 +24,10 @@ export default function SearchBar() {
                 elevation="14"
                 sx={{ p: '2px 4px', display: 'flex', alignItems: 'center', width: 300, opacity:.9 }}
             >
-                <IconButton sx={{ p: '10px' }} label="search filter" /*Denne menu skal laves til filtrerin */>
-                    <TuneOutlinedIcon />
-                </IconButton>
+
 
                 <InputBase //tekstfeltet
-                    sx={{ ml: 1, flex: 1 }}
+                    sx={{ ml: 2, flex: 1 }}
                     placeholder="Search dream vacation"
                     inputProps={{ 'label': 'search dream vacation' }}
                 />
@@ -37,7 +35,12 @@ export default function SearchBar() {
                 <IconButton type="button" sx={{ p: '10px' }} label="search">
                     <SearchIcon />
                 </IconButton>
+
+                <Divider sx={{ height: 28, m: 0.2 }} orientation="vertical" />
                 
+                <IconButton sx={{ p: '10px' }} label="search filter" /*Denne menu skal laves til filtrerin */>
+                    <TuneOutlinedIcon />
+                </IconButton>
                 
                 {/*
                 <Divider sx={{ height: 28, m: 0.5 }} orientation="vertical" />

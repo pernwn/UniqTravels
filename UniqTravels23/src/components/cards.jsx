@@ -1,4 +1,6 @@
-import { Button, Card, CardContent, Stack } from "@mui/material";
+import { Button, Card, CardActionArea, CardContent, CardMedia, Stack, Typography } from "@mui/material";
+
+
 
 //Kort komponent som genbruges på flere sider vha props
 export function QuickTools(props) {
@@ -15,14 +17,13 @@ export function QuickTools(props) {
                             alignItems: "center",
                             justifyContent: "space-evenly",
 
-                            width:80,
-                            height:90,
+                            width: 80,
+                            height: 90,
                             fontWeight: 600,
                             lineHeight: 1.15,
-                            borderRadius:"10%"
                         }}
                     >
-                        {props.icon} 
+                        {props.icon}
                         {props.name}
 
                     </CardContent>
@@ -35,32 +36,41 @@ export function QuickTools(props) {
 
 }
 
-export function ScrollCards(props){
+export function ScrollCards(props) {
     return (
 
         <Stack direction="row">
-            <Card elevation={4}>
-                <Button variant='filled'
+            <Card elevation={4} sx={{ maxWidth: 150 }}>
 
-                >
+                <CardActionArea>
+                    <CardMedia className="dealsPic"
+                        sx={{
+                            height: 50,
+                        }}
+                    >
+                        {props.image}
+                    </CardMedia>
+
                     <CardContent
                         sx={{
                             display: "flex",
                             flexDirection: "column",
                             alignItems: "center",
                             justifyContent: "space-evenly",
+                            textAlign:"center",
 
-                            width:110,
-                            height:100,
-                            lineHeight: 1.3,
+                            width: 150,
+                            height: 100,
+                            
                         }}
                     >
-                        {props.icon} 
-                        {props.name}
 
+                        <Typography gutterBottom variant="body1" component="div" color="background.default">
+                            {props.name}
+                        </Typography>
                     </CardContent>
 
-                </Button>
+                </CardActionArea>
             </Card>
         </Stack>
 

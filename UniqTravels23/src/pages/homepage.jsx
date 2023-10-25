@@ -4,7 +4,8 @@
 
 //import billeder
 //import logoplaceholder from '../assets/pictures/logoplaceholder.png'
-
+import beach from "../assets/pictures/beachy.jpeg"
+import video from "../assets/NFP2.mp4"
 
 //import andre komponenter
 import { QuickTools, ScrollCards } from '../components/cards';
@@ -54,13 +55,13 @@ export default function HomePage() {
 
 
 
-
+        <Stack spacing={4} m={"2em 0"} marginBottom={"150px"}>
             <Box className='quickTools'
                 sx={{
                     display: "flex",
                     flexDirection: "row",
                     justifyContent: "space-evenly",
-                    m: "1em 0 2em",
+                  
                 }}
             >
                 <QuickTools name="Travel options" icon={<FmdGoodOutlinedIcon sx={{ fontSize: 40, marginBottom:"16%" }} />} />
@@ -78,26 +79,27 @@ export default function HomePage() {
                     sx={{
                         p: "0 3% 3%",
                         overflow: "auto",
-                        m: "0 0 2em",
-
                     }}
                 >
-                    <ScrollCards name="New offers" />
-                    <ScrollCards name="Your next vacation?" />
-                    <ScrollCards name="Get 20% off!" />
-                    <ScrollCards name="Incredible croissonts" />
-                    <ScrollCards name="Got a coupon?" />
+                    <ScrollCards name="New offers" image={<img src={beach} alt="img"/>}/> {/*Billeder virker ikke ordentligt med props, forsøger at fikse */}
+                    <ScrollCards name="Your next vacation?" image={<img src={beach} alt="img"/>} />
+                    <ScrollCards name="Get 20% off on next booking!" image={<img src={beach} alt="img"/>} />
+                    <ScrollCards name="Incredible croissonts" image={<img src={beach} alt="img"/>} />
+                    <ScrollCards name="Got a coupon?" image={<img src={beach} alt="img"/>} />
 
 
                 </Stack>
             </Box>
 
 
-            <Box>
-                <Typography variant="h4" lineHeight="1" textAlign="center">Plan your next vacation with us!</Typography>
-            </Box>
+            <Stack direction="column">
+                <Typography variant="h4" lineHeight="1" textAlign="center" gutterBottom>Plan your next vacation with us!</Typography>
+                    
+                    <video src={video} width="100%" height="auto" controls preload="none" /*TODO: udskift video*//> 
+            </Stack>
 
             
+        </Stack>    
 
 
         </ThemeProvider >
