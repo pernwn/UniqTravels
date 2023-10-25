@@ -24,13 +24,13 @@ export default function Nav() {
     return (
         <ThemeProvider theme={customTheme(outerTheme)}>
             <CssBaseline enableColorScheme />
-            <nav> {/* Jeg vil gerne sætte denne i en Box så jeg kan tilføje theme – hilsen Vic */}
+            <nav>
                 <aside className="nav_border nav_left"></aside>
                 <section className="nav">
                     <div>
                         <NavLink to='/' activeClassName="active" className={'navlink'}>
                             <HomeOutlinedIcon
-                                sx={{ color: customTheme => customTheme.palette.text.primary }} //Denne vil jeg gerne have er overordnet på hele siden, så den ikke står flere gange (kig kommentar på nav tag) – hilsen Vic
+                                sx={{ color: customTheme => customTheme.palette.text.primary }}
                             />
                             <Typography variant="body2"
                                 sx={{ color: customTheme => customTheme.palette.text.primary }}
