@@ -54,6 +54,7 @@ export default function Login() {
           label="Password" 
           variant="outlined" />
 
+          {/* Knappen, der udløser 'handleLogin' funktionen ved klik */}
           <Button variant="contained" type="button" onClick={handleLogin}>Login</Button>
           
         </div>
