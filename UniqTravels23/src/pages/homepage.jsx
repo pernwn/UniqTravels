@@ -27,13 +27,11 @@ export default function HomePage() {
     //Oprettelse af variabel for at bruge useTheme
     const outerTheme = useTheme();
     return (
-        <ThemeProvider theme={customTheme(outerTheme)} className="grid-container">
+        <ThemeProvider theme={customTheme(outerTheme)}>
             <CssBaseline enableColorScheme />
             <div ><img src={logoplaceholder} alt="placeholder" style={{ width: "5em" }} /></div>
 
             <Box /* Bruger box komponenten fra MUI i stedet for div/section etc, for at være i stand til at style med CSS fra MUI systemet*/
-                className='grid-item'
-                
                 sx={{
                     display: "flex",
                     flexDirection: "column",
