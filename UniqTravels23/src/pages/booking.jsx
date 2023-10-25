@@ -4,7 +4,7 @@ import { useTheme } from '@mui/material/styles';
 
 import { CssBaseline, Stack, ThemeProvider, Typography } from '@mui/material';
 import SearchBar from '../components/search';
-import QuickTools from '../components/cards';
+import { QuickTools, ScrollCards } from '../components/cards';
 
 
 
@@ -17,6 +17,8 @@ export default function Booking() {
             <div>
                 <SearchBar/>
             </div>
+
+
 
             <section className='quickTools'>
                 <Stack direction="row" spacing={2}  
