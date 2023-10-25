@@ -8,9 +8,9 @@
 import { customTheme } from '../themes/themes';
 import { ThemeProvider, useTheme } from '@mui/material/styles';
 import SearchIcon from '@mui/icons-material/Search';
-import { Divider, IconButton, InputBase, Paper } from '@mui/material';
-import MenuIcon from '@mui/icons-material/Menu';
-import DirectionsIcon from '@mui/icons-material/Directions';
+import { /*Divider,*/ IconButton, InputBase, Paper } from '@mui/material';
+//import MenuIcon from '@mui/icons-material/Menu';
+//import DirectionsIcon from '@mui/icons-material/Directions';
 import TuneOutlinedIcon from '@mui/icons-material/TuneOutlined';
 
 
@@ -21,7 +21,8 @@ export default function SearchBar() {
 
             <Paper
                 component="form"
-                sx={{ p: '2px 4px', display: 'flex', alignItems: 'center', width: 300 }}
+                elevation="14"
+                sx={{ p: '2px 4px', display: 'flex', alignItems: 'center', width: 300, opacity:.9 }}
             >
                 <IconButton sx={{ p: '10px' }} label="search filter" /*Denne menu skal laves til filtrerin */>
                     <TuneOutlinedIcon />

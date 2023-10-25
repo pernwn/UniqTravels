@@ -40,7 +40,7 @@ export function ScrollCards(props){
     return (
 
         <Stack direction="row">
-            <Card elevation={6}>
+            <Card elevation={4}>
                 <Button variant='filled'
 
                 >

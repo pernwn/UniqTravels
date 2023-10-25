@@ -76,7 +76,7 @@ export default function HomePage() {
                 <Typography variant='h4' m="1% 3%" >Hot deals!</Typography>
                 <Stack direction="row" spacing={4}  /*Stack komponenten fra MUI er brugt her for at sætte elementerne horisontalt – opdagede denne måde, efter jeg havde brugt flex og flexdirection andre steder */
                     sx={{
-                        p: "1% 3%",
+                        p: "2% 3%",
                         overflow: "auto",
 
 
