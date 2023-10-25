@@ -5,8 +5,9 @@
 import { customTheme } from '../themes/themes';
 import { useTheme } from '@mui/material/styles';
 
-import { Button, ThemeProvider, Typography, TextField, Box } from "@mui/material";
+import { Button, ThemeProvider, Typography, TextField, Box, /*Grid*/ } from "@mui/material";
 import { useState } from "react";
+//import { Link } from 'react-router-dom';
 
 
 
@@ -73,6 +74,16 @@ export default function Login() {
           {/* Knappen, der udløser 'handleLogin' funktionen ved klik */}
           <Button variant="contained" type="button" onClick={handleLogin}>Login</Button>
 
+          {/* 
+          <Grid container justifyContent="flex-end">
+              <Grid item>
+                
+                <Link href="../pages/signup.jsx" variant="body2">
+                  Don&rsquo;t have an account? Sign up
+                </Link>
+              </Grid>
+            </Grid>
+*/}
         </div>
 
       </Box>
