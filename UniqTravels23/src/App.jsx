@@ -6,6 +6,7 @@ import HomePage from './pages/homepage'
 import Planner from './pages/planner'
 import Login from './pages/login'
 import User from './pages/user'
+import Booking from './pages/booking'
 
 
 
@@ -16,7 +17,7 @@ function App() {
     <Nav/> 
     <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/booking" element={<HomePage />} />
+        <Route path="/booking" element={<Booking />} />
         <Route path="/planner" element={<Planner />} />
         <Route path="/map" element={<HomePage />} />
         <Route path="/user" element={<User />} />
