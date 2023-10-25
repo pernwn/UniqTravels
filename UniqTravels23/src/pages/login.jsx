@@ -35,6 +35,7 @@ export default function Login() {
         <div>
           <Typography variant="h2">Login</Typography>
 
+          {/* Inputfelt for email med en onChange-handler, der opdaterer email-tilstanden */}
         <TextField 
           type="email"
           placeholder="Type here..."
@@ -44,7 +45,7 @@ export default function Login() {
           label="E-mail" 
           variant="outlined" />
 
-
+          {/* Inputfelt for password med en onChange-handler, der opdaterer password-tilstanden */}
         <TextField 
            type="password"
           placeholder="Type here..."
