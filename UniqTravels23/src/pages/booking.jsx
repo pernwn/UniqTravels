@@ -4,7 +4,7 @@ import { useTheme } from '@mui/material/styles';
 
 import { CssBaseline, Stack, ThemeProvider, Typography } from '@mui/material';
 import SearchBar from '../components/search';
-import QuickTools from '../components/quick';
+import QuickTools from '../components/cards';
 
 
 
