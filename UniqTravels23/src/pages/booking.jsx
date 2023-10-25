@@ -10,7 +10,8 @@ export default function Booking() {
     const outerTheme = useTheme();
     return (
         <ThemeProvider theme={customTheme(outerTheme)}>
-            <Typography></Typography>
+            <CssBaseline enableColorScheme />
+            <Typography variant="h1">Booking</Typography>
 
         </ThemeProvider>   
     
