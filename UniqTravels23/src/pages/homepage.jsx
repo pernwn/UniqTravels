@@ -42,7 +42,7 @@ export default function HomePage() {
                             alignItems: "center",
 
                             position: 'absolute',
-                            top: 50
+                            top: 80
                         }}
                     >
                         <Typography variant="h2" sx={{ color: customTheme => customTheme.palette.background.paper, lineHeight:.8, marginBottom:4 }}>Welcome Traveler!</Typography>
@@ -60,7 +60,7 @@ export default function HomePage() {
                     display: "flex",
                     flexDirection: "row",
                     justifyContent: "space-evenly",
-                    m: "2em 0",
+                    m: "1em 0 2em",
                 }}
             >
                 <QuickTools name="Travel options" icon={<FmdGoodOutlinedIcon sx={{ fontSize: 40, marginBottom:"16%" }} />} />
@@ -73,12 +73,12 @@ export default function HomePage() {
             <Box
                 sx={{ color: customTheme => customTheme.palette.secondary.main }}
             >
-                <Typography variant='h4' m="1% 3%" >Hot deals!</Typography>
+                <Typography variant='h4' m="0 3%" >Hot deals!</Typography>
                 <Stack direction="row" spacing={2}  /*Stack komponenten fra MUI er brugt her for at sætte elementerne horisontalt – opdagede denne måde, efter jeg havde brugt flex og flexdirection andre steder */
                     sx={{
-                        p: "2% 3%",
+                        p: "0 3% 3%",
                         overflow: "auto",
-
+                        m: "0 0 2em",
 
                     }}
                 >
@@ -96,6 +96,8 @@ export default function HomePage() {
             <Box>
                 <Typography variant="h4" lineHeight="1" textAlign="center">Plan your next vacation with us!</Typography>
             </Box>
+
+            
 
 
         </ThemeProvider >

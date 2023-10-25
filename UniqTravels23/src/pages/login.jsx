@@ -1,17 +1,19 @@
 //HUSK AT SKRIVE KOMMENTARER TIL NÆRMEST ALT – forklaring samt hvad koden gør
 //kodet af Rina
 
-import { customTheme } from "../themes/themes";
-import { useTheme } from "@mui/material/styles";
+//import af separat theme file
+import { customTheme } from '../themes/themes';
+import { useTheme } from '@mui/material/styles';
 
-import { Button, ThemeProvider, Typography, TextField } from "@mui/material";
+import { Button, ThemeProvider, Typography, TextField, Box } from "@mui/material";
 import { useState } from "react";
 
 
 
 export default function Login() {
-   // Bruger React's 'useTheme' hook til at hente det aktuelle tema
+  // Bruger React's 'useTheme' hook til at hente det aktuelle tema
   const outerTheme = useTheme();
+
   // Opretter to tilstande (states) for email og password
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -26,12 +28,12 @@ export default function Login() {
       //alert("welcome!");
 
       //fører til homepage
-      window.location.href='/'
-      
+      window.location.href = '/'
+
     } else {
-       // Hvis email og password ikke matcher, vises en fejlbesked
+      // Hvis email og password ikke matcher, vises en fejlbesked
       alert("lol noob");
-      
+
       //TODO: måske felterne kan skifte farve til rød og en 'tooltip' (fra MUI) kan vises og sige at password wrong
     }
   };
@@ -39,35 +41,41 @@ export default function Login() {
   return (
     // Anvender det brugerdefinerede tema på komponenten
     <ThemeProvider theme={customTheme(outerTheme)}>
-      <section>
+      <Box
+        sx={{
+          marginTop: 20,
+        }}
+      >
+
         <div>
           <Typography variant="h2">Login</Typography>
 
           {/* Inputfelt for email med en onChange-handler, der opdaterer email-tilstanden */}
-        <TextField 
-          type="email"
-          placeholder="Type here..."
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          id="outlined-email" 
-          label="E-mail" 
-          variant="outlined" />
+          <TextField
+            type="email"
+            placeholder="Type here..."
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            id="outlined-email"
+            label="E-mail"
+            variant="outlined" />
 
           {/* Inputfelt for password med en onChange-handler, der opdaterer password-tilstanden */}
-        <TextField 
-           type="password"
-          placeholder="Type here..."
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          id="outlined-password" 
-          label="Password" 
-          variant="outlined" />
+          <TextField
+            type="password"
+            placeholder="Type here..."
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            id="outlined-password"
+            label="Password"
+            variant="outlined" />
 
           {/* Knappen, der udløser 'handleLogin' funktionen ved klik */}
           <Button variant="contained" type="button" onClick={handleLogin}>Login</Button>
-          
+
         </div>
-      </section>
+
+      </Box>
     </ThemeProvider>
   );
 }
