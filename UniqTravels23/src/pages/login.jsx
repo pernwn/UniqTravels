@@ -4,8 +4,10 @@
 import { customTheme } from "../themes/themes";
 import { useTheme } from "@mui/material/styles";
 
-import { Button, CssBaseline, ThemeProvider, Typography, TextField } from "@mui/material";
+import { Button, ThemeProvider, Typography, TextField } from "@mui/material";
 import { useState } from "react";
+
+
 
 export default function Login() {
    // Bruger React's 'useTheme' hook til at hente det aktuelle tema
@@ -21,7 +23,11 @@ export default function Login() {
   const handleLogin = () => {
     if (email === "user@example.com" && password === "password") {
       // Hvis email og password matcher, vises en velkomstbesked
-      alert("welcome!");
+      //alert("welcome!");
+      
+      //fører til homepage
+      window.location.href='/'
+      
     } else {
        // Hvis email og password ikke matcher, vises en fejlbesked
       alert("lol noob");
