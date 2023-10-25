@@ -6,7 +6,8 @@
 import logoplaceholder from '../assets/pictures/logoplaceholder.png'
 
 //import andre komponenter
-import {QuickTools, ScrollCards} from '../components/cards';
+import { QuickTools, ScrollCards } from '../components/cards';
+import SearchBar from '../components/search';
 import "../styles/vic.css"
 
 //import fra MUI
@@ -15,7 +16,7 @@ import { CssBaseline, Stack, ThemeProvider, Typography } from '@mui/material';
 //import af ikoner fra MUI
 import TravelExploreOutlinedIcon from '@mui/icons-material/TravelExploreOutlined';
 import FmdGoodOutlinedIcon from '@mui/icons-material/FmdGoodOutlined';
-import SearchBar from '../components/search';
+
 
 
 //import af separat theme file
@@ -27,13 +28,11 @@ export default function HomePage() {
     //Oprettelse af variabel for at bruge useTheme
     const outerTheme = useTheme();
     return (
-        <ThemeProvider theme={customTheme(outerTheme)} className="grid-container">
+        <ThemeProvider theme={customTheme(outerTheme)}>
             <CssBaseline enableColorScheme />
             <div ><img src={logoplaceholder} alt="placeholder" style={{ width: "5em" }} /></div>
 
             <Box /* Bruger box komponenten fra MUI i stedet for div/section etc, for at være i stand til at style med CSS fra MUI systemet*/
-                className='grid-item'
-                
                 sx={{
                     display: "flex",
                     flexDirection: "column",
@@ -68,24 +67,22 @@ export default function HomePage() {
                 sx={{ color: customTheme => customTheme.palette.secondary.main }}
             >
                 <Typography variant='h3' m="1% 3%" >Hot deals!</Typography>
-
-
                 <Stack direction="row" spacing={4}  /*Stack komponenten fra MUI er brugt her for at sætte elementerne horisontalt – opdagede denne måde, efter jeg havde brugt flex og flexdirection andre steder */
                     sx={{
                         p: "1% 3%",
                         overflow: "auto",
-          
+
                     }}
                 >
-                <ScrollCards name="New offers" />
-                <ScrollCards name="Your next vacation?" />
-                <ScrollCards name="Get 20% off!" />
-                <ScrollCards name="Incredible croissonts" />
-                <ScrollCards name="Got a coupon?" />
+                    <ScrollCards name="New offers" />
+                    <ScrollCards name="Your next vacation?" />
+                    <ScrollCards name="Get 20% off!" />
+                    <ScrollCards name="Incredible croissonts" />
+                    <ScrollCards name="Got a coupon?" />
 
 
-            </Stack>
-        </Box>
+                </Stack>
+            </Box>
 
 
         </ThemeProvider >
