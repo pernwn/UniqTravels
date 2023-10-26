@@ -5,6 +5,7 @@ import { useTheme } from '@mui/material/styles';
 import { CssBaseline, Stack, ThemeProvider, Typography } from '@mui/material';
 import SearchBar from '../components/search';
 import { QuickTools } from '../components/cards';
+import ComplexCard from '../components/compcard';
 
 
 
@@ -35,7 +36,12 @@ export default function Booking() {
                     <QuickTools name="Explore"/>
                 </Stack>
             </section>
+            <Typography variant="h2">Flights</Typography>
 
+            <Stack direction="row" spacing={2}>
+            <ComplexCard />
+            </Stack>
+            
         </ThemeProvider>   
     
     );

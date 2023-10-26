@@ -33,7 +33,7 @@ export default function Nav() {
 
     return (
             <BottomNavigation
-                sx={{width: "100%", p:"2.5em 0 4em 0" , position: 'fixed', bottom: 0, left: 0, right: 0, boxShadow:3}}
+                sx={{width: "100%", p:"2.5em 0 4em 0" , position: 'fixed', bottom: 0, left: 0, right: 0, boxShadow:3, zIndex:2}}
                 value={location.pathname}
                 onChange={handleChange}
                 
