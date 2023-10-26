@@ -37,9 +37,11 @@ return(
              
         </CardMedia>
         <CardContent>
-            <Typography variant="body2" color="text.secondary">
+            <Typography variant="body2" color="text.secondary" //Jeg vil gerne få den her til at klappe sig lidt sammen så man kun kan se starten af teksten, kigger på det senere
+            > 
                {props.body}
             </Typography>
+
         </CardContent>
         <CardActions disableSpacing>
                 <IconButton aria-label="add to favorites">
