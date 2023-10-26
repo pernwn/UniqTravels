@@ -16,7 +16,7 @@ return(
         <CardHeader
         avatar={ 
             <Avatar sx={{bgcolor: "info"}} aria-label="Destination">
-                {props.label}
+                {props.label} 
             </Avatar>
         }
         action={

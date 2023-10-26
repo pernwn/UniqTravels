@@ -12,9 +12,9 @@ import ComplexCard from '../components/compcard';
 
 
 export default function Booking() {
-        // Definér nogle variabler med data, der skal bruges senere
+    // Hent det aktuelle tema ved hjælp af useTheme hook
     const outerTheme = useTheme();
-        // Definér nogle variabler med data, der skal bruges senere
+     // Definér nogle variabler med data, der skal bruges senere
     const imageUrl = 'url_to_your_image.jpg';
     const cardTitle = 'Card Title';
     const cardSubheader = 'Card Subheader';
@@ -26,19 +26,19 @@ export default function Booking() {
             <CssBaseline enableColorScheme />
             <Typography variant="h2">Where would you like to go [username]</Typography>
             <div>
-                <SearchBar/>
+                <SearchBar/> {/* Searchbar er importeret som en komponent og bliver indsat ved at kalde den her*/ }
             </div>
 
 
-
+{/* */}
             <section className='quickTools'>
                 <Stack direction="row" spacing={2}  
-                        sx={{
+                        sx={{ 
 
                             padding: "1% 3%",
                             overflow: "auto",
 
-                        }}>
+                        }}>{/* sx tilpasser stil for stack så det er horisontalt og tilføjer en rullebjælke så man kan scrolle over komponenterne*/}
 
                     <QuickTools name="Flights"/>
                     <QuickTools name="Hotels"/>
@@ -49,6 +49,10 @@ export default function Booking() {
             <Typography variant="h2">Flights</Typography>
 
             <Stack direction="row" spacing={2}>
+                {/* ComplexCard er importeret som en komponent og bliver indsat ved at kalde den her
+                    Cards har vi defineret som funktionelle komponenter som tager props indunder sig som dets parameter
+                    I vores card komponenter skriver vi f.eks. {props.title} så når vi skal bruge vores cards kan vi tilføje dem med de specifikke info der er på pagen.
+                */ }
                 <ComplexCard
                 image={"../src/assets/pictures/Hamburg.jpg"}
                 title={ "Two day trip to Hamburg"}
