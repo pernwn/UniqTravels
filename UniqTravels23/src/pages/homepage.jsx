@@ -14,7 +14,7 @@ import "../styles/vic.css"
 
 //import fra MUI
 import Box from '@mui/material/Box';
-import { CssBaseline, Stack, ThemeProvider, Typography } from '@mui/material';
+import { CssBaseline, Divider, Stack, ThemeProvider, Typography } from '@mui/material';
 //import af ikoner fra MUI
 import TravelExploreOutlinedIcon from '@mui/icons-material/TravelExploreOutlined';
 import FmdGoodOutlinedIcon from '@mui/icons-material/FmdGoodOutlined';
@@ -96,6 +96,15 @@ export default function HomePage() {
                 <Typography variant="h4" lineHeight="1" textAlign="center" gutterBottom>Plan your next vacation with us!</Typography>
                     
                     <video src={video} width="100%" height="auto" controls preload="none" /*TODO: udskift video*//> 
+                    
+                    <Stack direction="row">
+                        <Typography>Simple!</Typography>
+                        <Divider/>
+                        <Typography>Fast!</Typography>
+                        <Typography>Easy!</Typography>
+
+                    </Stack>
+            
             </Stack>
 
             
