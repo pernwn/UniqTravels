@@ -13,6 +13,7 @@ import AccountCircleOutlinedIcon from '@mui/icons-material/AccountCircleOutlined
 
 import { NavLink } from 'react-router-dom';
 
+//{Kodet af Victoria ved brug af MUI library og tilpasset til vores app}
 
 //TODO: skal lige have skrevet kommentarer til ddet her
 export default function Nav() {
