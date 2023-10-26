@@ -18,10 +18,10 @@ export default function User(){
     return (
         <ThemeProvider theme={customTheme(outerTheme)}>
             <CssBaseline enableColorScheme />
-            <div>
+            <section>
                 <img src={logoplaceholder} alt="placeholder" style={{ width: "5em" }} />
                 <NavLink to='/login'>login</NavLink>
-            </div>
+            </section>
         </ThemeProvider>
     );
 }

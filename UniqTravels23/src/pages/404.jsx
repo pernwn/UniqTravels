@@ -17,8 +17,21 @@ export default function ERROR_404() {
     return (
         <ThemeProvider theme={customTheme(outerTheme)}>
             <CssBaseline enableColorScheme />
-
-        
+            <section>
+                <div>
+                    Error
+                </div>
+                <img src={logoplaceholder} alt="placeholder" style={{ width: "5em" }} />
+                <div>
+                    <p>An error has occured <br/>Please check your connection<br/>and press the button below<br/>to return to the front page</p>
+                </div>
+                <button>
+                    <NavLink to='/'>Home</NavLink>
+                </button>
+                <button>
+                <NavLink to='/'>Home</NavLink>
+                </button>
+            </section>
         </ThemeProvider>
     );
 }

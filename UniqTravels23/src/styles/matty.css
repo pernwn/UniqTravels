@@ -147,7 +147,7 @@ nav {
   display: flex;
   position: relative;
   bottom: 10px;
-  background: radial-gradient(#DAEBF4 40%, #EEF9FF 100%);
+  background: radial-gradient(#DAEBF4 40%, #EEF9FF 60%);
   height: 60px;
   border-radius: 50%;
   width: 60px;
