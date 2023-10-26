@@ -1,7 +1,5 @@
 import { Button, Card, CardActionArea, CardContent, CardMedia, Stack, Typography } from "@mui/material";
 
-
-
 //Kort komponent som genbruges på flere sider vha props
 export function QuickTools(props) {
     return (
