@@ -11,7 +11,10 @@ import ExploreOutlinedIcon from '@mui/icons-material/ExploreOutlined';
 import EventOutlinedIcon from '@mui/icons-material/EventOutlined';
 import AccountCircleOutlinedIcon from '@mui/icons-material/AccountCircleOutlined';
 
+//NavLink bruges som komponent inde i BottomNavigationActions for at henvise til en anden side når man trykker ??
 import { NavLink } from 'react-router-dom';
+
+
 
 //{Kodet af Victoria ved brug af MUI library og tilpasset til vores app}
 
@@ -19,8 +22,11 @@ import { NavLink } from 'react-router-dom';
 export default function Nav() {
     const [value, setValue] = React.useState("");
 
+
     const handleChange = (event, newValue) => {
-        setValue(newValue);
+            
+        setValue(newValue, value);
+        
     };
 
 
