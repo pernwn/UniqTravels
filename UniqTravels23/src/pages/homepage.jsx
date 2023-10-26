@@ -53,7 +53,7 @@ export default function HomePage() {
 
 
 
-            <Stack spacing={4} m={"2em 0 5em"}>
+            <Stack spacing={4} m={"2em 0 8em"}>
                 <Box className='quickTools'
                     sx={{
                         display: "flex",

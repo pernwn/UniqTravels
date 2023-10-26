@@ -17,18 +17,20 @@ import { NavLink } from 'react-router-dom';
 
 //TODO: skal lige have skrevet kommentarer til ddet her
 export default function Nav() {
-    const [setValue] = React.useState("");
+    const [value, setValue] = React.useState("");
 
     const handleChange = (event, newValue) => {
         setValue(newValue);
     };
 
 
+
     return (
             <BottomNavigation
-                sx={{width: "100%", position: 'fixed', bottom: 0, left: 0, right: 0}}
+                sx={{width: "100%", p:"2.5em 0 4em 0" , position: 'fixed', bottom: 0, left: 0, right: 0, boxShadow:3}}
                 value={location.pathname}
                 onChange={handleChange}
+                
             >
 
                 <BottomNavigationAction
@@ -36,35 +38,37 @@ export default function Nav() {
                     to='/'
                     label="Home"
                     value="/"
-                    icon={<HomeOutlinedIcon />}
+                    icon={<HomeOutlinedIcon sx={{fontSize:35}}/>}
                 />
                 <BottomNavigationAction
                     component={NavLink}
                     to='/booking'
                     label="Booking"
                     value="/booking"
-                    icon={<AirplaneTicketOutlinedIcon />}
+                    icon={<AirplaneTicketOutlinedIcon sx={{fontSize:35}}/>}
                 />
                 <BottomNavigationAction
                     component={NavLink}
                     to='/map'
                     label="Map"
                     value="/map"
-                    icon={<ExploreOutlinedIcon />}
+                    icon={<ExploreOutlinedIcon sx={{fontSize:35}}/>}
                 />
                 <BottomNavigationAction
                     component={NavLink}
                     to='/planner'
                     label="Planner"
                     value="/planner"
-                    icon={<EventOutlinedIcon />} />
+                    icon={<EventOutlinedIcon sx={{fontSize:35}}/>} 
+                />
 
                 <BottomNavigationAction
                     component={NavLink}
                     to='/user'
                     label="User"
                     value="/user"
-                    icon={<AccountCircleOutlinedIcon />} />
+                    icon={<AccountCircleOutlinedIcon sx={{fontSize:35}}/>} 
+                />
 
             </BottomNavigation>
 
