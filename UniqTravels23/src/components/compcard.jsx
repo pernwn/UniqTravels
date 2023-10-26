@@ -1,5 +1,15 @@
-import { Avatar, Card, CardContent, CardHeader, CardMedia, IconButton, Typography } from "@mui/material";
-import { MoreVert } from "@mui/icons-material"; //Note; tror det er bedst at importere ikoner hver for sig, læste noget om at det godt kan ende med at blive kompliceret hvis man importere i 1 branch
+import Card from '@mui/material/Card';
+import CardHeader from '@mui/material/CardHeader';
+import CardMedia from '@mui/material/CardMedia';
+import CardContent from '@mui/material/CardContent';
+import CardActions from '@mui/material/CardActions';
+import Avatar from '@mui/material/Avatar';
+import IconButton from '@mui/material/IconButton';
+import Typography from '@mui/material/Typography';
+import FavoriteIcon from '@mui/icons-material/Favorite';
+import ShareIcon from '@mui/icons-material/Share';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import MoreVert from '@mui/icons-material/MoreVert';
 
 export default function ComplexCard(props) {
 return(
