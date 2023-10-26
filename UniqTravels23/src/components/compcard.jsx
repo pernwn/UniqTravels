@@ -15,8 +15,8 @@ return(
     <Card>
         <CardHeader
         avatar={ 
-            <Avatar sx={{bgcolor: "info"}} aria-label="London">
-                L
+            <Avatar sx={{bgcolor: "info"}} aria-label="Destination">
+                {props.label}
             </Avatar>
         }
         action={
@@ -25,18 +25,20 @@ return(
 
             </IconButton>
         }
-        title="British Airways to London"
-        subheader="September 16, 2024"
-        />
-        <CardMedia 
-        component="img"
-        height="200"
-        image="/src/assets/pictures/logoplaceholder.png"
-        alt="London trip"
-        />
+        >
+                    {props.title}
+                    {props.subheader}
+        </CardHeader>
+        <CardMedia
+          component="img"
+          height="200"
+          image={props.image} 
+        >
+             
+        </CardMedia>
         <CardContent>
             <Typography variant="body2" color="text.secondary">
-                London is nice, London is cool, everyone wants to go to London. You want to be cool like us dont you? Come to London today!
+               {props.body}
             </Typography>
         </CardContent>
         <CardActions disableSpacing>
@@ -47,11 +49,6 @@ return(
                 <ShareIcon />
                 </IconButton>
         </CardActions>
-
-
-
-
-
     </Card>
 
 
