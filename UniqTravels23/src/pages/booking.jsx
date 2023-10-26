@@ -54,7 +54,7 @@ export default function Booking() {
                     I vores card komponenter skriver vi f.eks. {props.title} så når vi skal bruge vores cards kan vi tilføje dem med de specifikke info der er på pagen.
                 */ }
                 <ComplexCard
-                image={"../src/assets/pictures/Hamburg.jpg"}
+                image={"../src/assets/pictures/hamburg.jpg"}
                 title={ "Two day trip to Hamburg"}
                 subheader={"Special tickets to the Elbphilharmonie"}
                 label={"GER"}
@@ -62,7 +62,7 @@ export default function Booking() {
                 />
 
                 <ComplexCard
-                image={"../src/assets/pictures/Kyoto.jpg"}
+                image={"../src/assets/pictures/kyoto.jpg"}
                 title={"Discover the Beauty of Kyoto"}
                 subheader={"Experience Japanese Culture"}
                 label={"JPN"}
@@ -70,7 +70,7 @@ export default function Booking() {
                  />
 
                 <ComplexCard
-                image={"../src/assets/pictures/London.jpg"}
+                image={"../src/assets/pictures/london.jpg"}
                 title={"Discover the Magic of London"}
                 subheader={"Explore Iconic Landmarks"}
                 label={"UK"}
