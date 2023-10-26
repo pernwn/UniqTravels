@@ -1,91 +1,71 @@
-//HUSK AT SKRIVE KOMMENTARER TIL NÆRMEST ALT – forklaring samt hvad koden gør
+//ny nav
+import * as React from 'react';
+import BottomNavigation from '@mui/material/BottomNavigation';
+import BottomNavigationAction from '@mui/material/BottomNavigationAction';
 
-// Med NavLink gør vi, at produktet bliver en 1 pager
-import { NavLink } from "react-router-dom";
 
-// Her er der linket til CSS filen
-import '../styles/matty.css'
-
-//import ikoner fra MUI
+//import af ikoner fra MUI
 import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
 import AirplaneTicketOutlinedIcon from '@mui/icons-material/AirplaneTicketOutlined';
 import ExploreOutlinedIcon from '@mui/icons-material/ExploreOutlined';
 import EventOutlinedIcon from '@mui/icons-material/EventOutlined';
 import AccountCircleOutlinedIcon from '@mui/icons-material/AccountCircleOutlined';
 
-//import af custom theme
-import { customTheme } from '../themes/themes';
-import { ThemeProvider, useTheme } from '@mui/material/styles';
-import { CssBaseline, Typography } from "@mui/material";
+import { NavLink } from 'react-router-dom';
 
-//noter til koden under {/*KOMMENTAR*/}
+
+//TODO: skal lige have skrevet kommentarer til ddet her
 export default function Nav() {
-    const outerTheme = useTheme();
-    return (
-        <ThemeProvider theme={customTheme(outerTheme)}>
-            <CssBaseline enableColorScheme />
-            <nav>
-                <aside className="nav_border nav_left"></aside>
-                <section className="nav">
-                    <div>
-                        <NavLink to='/' activeClassName="active" className={'navlink'}>
-                            <HomeOutlinedIcon
-                                sx={{ color: customTheme => customTheme.palette.text.primary }}
-                            />
-                            <Typography variant="body2"
-                                sx={{ color: customTheme => customTheme.palette.text.primary }}
-                            >
-                                Home</Typography>
-                        </NavLink>
-                    </div>
-                    <div>
-                        <NavLink to='/booking' activeClassName="active" className={'navlink'}>
-                            <AirplaneTicketOutlinedIcon
-                                sx={{ color: customTheme => customTheme.palette.text.primary }}
-                            />
-                            <Typography variant="body2"
-                                sx={{ color: customTheme => customTheme.palette.text.primary }}
-                            >
-                                Booking</Typography>
-                        </NavLink>
-                    </div>
-                    <div>
-                        <NavLink to='/map' activeClassName="active" className={'navlink'}>
-                            <ExploreOutlinedIcon
-                                sx={{ color: customTheme => customTheme.palette.text.primary }}
-                            />
-                            <Typography variant="body2"
-                                sx={{ color: customTheme => customTheme.palette.text.primary }}
-                            >
-                                Map</Typography>
-                        </NavLink>
-                    </div>
-                    <div>
-                        <NavLink to='/planner' activeClassName="active" className={'navlink'}>
-                            <EventOutlinedIcon
-                                sx={{ color: customTheme => customTheme.palette.text.primary }}
-                            />
-                            <Typography variant="body2"
-                                sx={{ color: customTheme => customTheme.palette.text.primary }}
-                            >
-                                Planner</Typography>
-                        </NavLink>
-                    </div>
-                    <div>
-                        <NavLink to='/user' activeClassName="active" className={'navlink'}>
-                            <AccountCircleOutlinedIcon
-                                 sx={{ color: customTheme => customTheme.palette.text.primary }}
+    const [setValue] = React.useState("");
 
-                            />
-                            <Typography variant="body2"
-                                sx={{ color: customTheme => customTheme.palette.text.primary }}
-                            >
-                                User</Typography>
-                        </NavLink>
-                    </div>
-                </section>
-                <aside className="nav_border nav_right"></aside>
-            </nav>
-        </ThemeProvider>
+    const handleChange = (event, newValue) => {
+        setValue(newValue);
+    };
+
+
+    return (
+            <BottomNavigation
+                sx={{width: "100%", position: 'fixed', bottom: 0, left: 0, right: 0}}
+                value={location.pathname}
+                onChange={handleChange}
+            >
+
+                <BottomNavigationAction
+                    component={NavLink}
+                    to='/'
+                    label="Home"
+                    value="/"
+                    icon={<HomeOutlinedIcon />}
+                />
+                <BottomNavigationAction
+                    component={NavLink}
+                    to='/booking'
+                    label="Booking"
+                    value="/booking"
+                    icon={<AirplaneTicketOutlinedIcon />}
+                />
+                <BottomNavigationAction
+                    component={NavLink}
+                    to='/map'
+                    label="Map"
+                    value="/map"
+                    icon={<ExploreOutlinedIcon />}
+                />
+                <BottomNavigationAction
+                    component={NavLink}
+                    to='/planner'
+                    label="Planner"
+                    value="/planner"
+                    icon={<EventOutlinedIcon />} />
+
+                <BottomNavigationAction
+                    component={NavLink}
+                    to='/user'
+                    label="User"
+                    value="/user"
+                    icon={<AccountCircleOutlinedIcon />} />
+
+            </BottomNavigation>
+
     );
 }

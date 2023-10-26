@@ -14,7 +14,7 @@ import "../styles/vic.css"
 
 //import fra MUI
 import Box from '@mui/material/Box';
-import { CssBaseline, Divider, Stack, ThemeProvider, Typography } from '@mui/material';
+import { Divider, Stack, Typography } from '@mui/material';
 //import af ikoner fra MUI
 import TravelExploreOutlinedIcon from '@mui/icons-material/TravelExploreOutlined';
 import FmdGoodOutlinedIcon from '@mui/icons-material/FmdGoodOutlined';
@@ -22,18 +22,16 @@ import MapsHomeWorkOutlinedIcon from '@mui/icons-material/MapsHomeWorkOutlined';
 
 
 //import af separat theme file
-import { customTheme } from '../themes/themes';
-import { useTheme } from '@mui/material/styles';
+
 
 
 export default function HomePage() {
     //Oprettelse af variabel for at bruge useTheme
-    const outerTheme = useTheme();
     
+
     //const greet = newUser ? "Welcome, new traveler!" : "Welcome back, traveler!"
     return (
-        <ThemeProvider theme={customTheme(outerTheme)}>
-            <CssBaseline enableColorScheme />
+        <>
             <section className='hPic'>
                 <section className='search'>
                     <Box /* Bruger box komponenten fra MUI i stedet for div/section etc, for at være i stand til at style med CSS fra MUI systemet*/
@@ -46,8 +44,8 @@ export default function HomePage() {
                             top: 80
                         }}
                     >
-                        <Typography variant="h2" sx={{ color: customTheme => customTheme.palette.background.paper, lineHeight:.8, marginBottom:4 }}>Welcome Traveler!</Typography>
-                        <SearchBar/>
+                        <Typography variant="h2" sx={{ color: customTheme => customTheme.palette.background.paper, lineHeight: .8, marginBottom: 4 }}>Welcome Traveler!</Typography>
+                        <SearchBar />
                     </Box>
 
                 </section>
@@ -55,66 +53,82 @@ export default function HomePage() {
 
 
 
-        <Stack spacing={4} m={"2em 0"} marginBottom={"200px"}>
-            <Box className='quickTools'
-                sx={{
-                    display: "flex",
-                    flexDirection: "row",
-                    justifyContent: "space-evenly",
-                  
-                }}
-            >
-                <QuickTools name="Travel options" icon={<FmdGoodOutlinedIcon sx={{ fontSize: 40, marginBottom:"16%" }} />} />
-                <QuickTools name="Housing options" icon={<MapsHomeWorkOutlinedIcon sx={{ fontSize: 40, marginBottom:"16%" }} />} />
-                <QuickTools name="Explore options" icon={<TravelExploreOutlinedIcon sx={{ fontSize: 40, marginBottom:"16%" }} />} />
-            </Box>
-
-
-
-            <Box
-                sx={{ color: customTheme => customTheme.palette.secondary.main }}
-            >
-                <Typography variant='h4' m="0 3%" >Hot deals!</Typography>
-                <Stack direction="row" spacing={2}  /*Stack komponenten fra MUI er brugt her for at sætte elementerne horisontalt – opdagede denne måde, efter jeg havde brugt flex og flexdirection andre steder */
+            <Stack spacing={4} m={"2em 0 5em"}>
+                <Box className='quickTools'
                     sx={{
-                        p: "0 3% 3%",
-                        overflow: "auto",
+                        display: "flex",
+                        flexDirection: "row",
+                        justifyContent: "space-evenly",
+
                     }}
                 >
-                    <ScrollCards name="New offers" image={<img src={beach} alt="img"/>}/> {/*Billeder virker ikke ordentligt med props, forsøger at fikse */}
-                    <ScrollCards name="Your next vacation?" image={<img src={beach} alt="img"/>} />
-                    <ScrollCards name="Get 20% off on next booking!" image={<img src={beach} alt="img"/>} />
-                    <ScrollCards name="Incredible croissonts" image={<img src={beach} alt="img"/>} />
-                    <ScrollCards name="Got a coupon?" image={<img src={beach} alt="img"/>} />
+                    <QuickTools name="Travel options" icon={<FmdGoodOutlinedIcon sx={{ fontSize: 40, marginBottom: "16%" }} />} />
+                    <QuickTools name="Housing options" icon={<MapsHomeWorkOutlinedIcon sx={{ fontSize: 40, marginBottom: "16%" }} />} />
+                    <QuickTools name="Explore options" icon={<TravelExploreOutlinedIcon sx={{ fontSize: 40, marginBottom: "16%" }} />} />
+                </Box>
 
+
+
+                <Box
+                    sx={{ color: customTheme => customTheme.palette.secondary.main }}
+                >
+                    <Typography variant='h4' m="0 3%" >Hot deals!</Typography>
+                    <Stack direction="row" spacing={2}  /*Stack komponenten fra MUI er brugt her for at sætte elementerne horisontalt – opdagede denne måde, efter jeg havde brugt flex og flexdirection andre steder */
+                        sx={{
+                            p: "0 3% 3%",
+                            overflow: "auto",
+                        }}
+                    >
+                        <ScrollCards name="New offers" image={<img src={beach} alt="img" />} /> {/*Billeder virker ikke ordentligt med props, forsøger at fikse */}
+                        <ScrollCards name="Your next vacation?" image={<img src={beach} alt="img" />} />
+                        <ScrollCards name="Get 20% off on next booking!" image={<img src={beach} alt="img" />} />
+                        <ScrollCards name="Incredible croissonts" image={<img src={beach} alt="img" />} />
+                        <ScrollCards name="Got a coupon?" image={<img src={beach} alt="img" />} />
+
+
+                    </Stack>
+                </Box>
+
+
+                <Stack direction="column">
+                    <Typography variant="h4" lineHeight="1" textAlign="center" gutterBottom>Plan your next vacation with us!</Typography>
+
+                    <video src={video} width="100%" height="auto" controls preload="none" /*TODO: udskift video*/ />
+
+                    <Stack direction="row" spacing={2}
+                        sx={{
+                            display: "flex",
+                            justifyContent: "center",
+
+
+                            m: "10% 50%"
+                        }}
+                    >
+
+                        <Typography variant="h4">
+                            <Divider textAlign="left" variant="fullWidth" color="">Simple!</Divider>
+                            <Divider textAlign="center">Fast!</Divider>
+                            <Divider textAlign="right">Easy!</Divider>
+                        </Typography>
+
+
+                    </Stack>
 
                 </Stack>
-            </Box>
 
 
-            <Stack direction="column">
-                <Typography variant="h4" lineHeight="1" textAlign="center" gutterBottom>Plan your next vacation with us!</Typography>
-                    
-                    <video src={video} width="100%" height="auto" controls preload="none" /*TODO: udskift video*//> 
-                    
-                    <Stack direction="row" spacing={4}>
-                        <Typography>Simple!</Typography>
-                        <Divider orientation="horizontal" variant="inset"/>
-                        
-                        <Typography>Fast!</Typography>
-                        <Divider orientation="horizontal" variant="inset"/>
-                        
-                        <Typography>Easy!</Typography>
-                        <Divider orientation="horizontal" variant="inset"/>
-                    </Stack>
-            
             </Stack>
 
-            
-        </Stack>    
 
-
-        </ThemeProvider >
+        </ >
     );
 }
 
+/*<Typography variant="h4">Simple!</Typography>
+                        <Divider orientation="horizontal" variant="middle"/>
+                        
+                        <Typography variant="h4">Fast!</Typography>
+                        <Divider orientation="horizontal" variant="middle"/>
+                        
+                        <Typography variant="h4">Easy!</Typography>
+                        <Divider orientation="vertical" variant="middle" backgroundColor="secondary"/> */

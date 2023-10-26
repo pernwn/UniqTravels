@@ -12,12 +12,17 @@ import Map from './pages/booking'
 import SignUp from './pages/signup'
 import Login from './pages/login'
 
-
+//import af separat theme file
+import { customTheme } from './themes/themes'
+import { useTheme } from '@mui/material/styles';
+import { ThemeProvider } from '@emotion/react'
+import { CssBaseline } from '@mui/material'
 
 function App() {
-
+  const outerTheme = useTheme();
   return (
-    <main>
+    <ThemeProvider theme={customTheme(outerTheme)}>
+      <CssBaseline enableColorScheme />
 
       <Routes>
         <Route path="/signup" element={<SignUp />} />
@@ -42,7 +47,7 @@ function App() {
 
        
       </Routes>
-    </main>
+    </ThemeProvider>
   )
 }
 
