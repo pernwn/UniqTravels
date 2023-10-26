@@ -97,12 +97,15 @@ export default function HomePage() {
                     
                     <video src={video} width="100%" height="auto" controls preload="none" /*TODO: udskift video*//> 
                     
-                    <Stack direction="row">
+                    <Stack direction="row" spacing={4}>
                         <Typography>Simple!</Typography>
-                        <Divider/>
+                        <Divider orientation="horizontal" variant="inset"/>
+                        
                         <Typography>Fast!</Typography>
+                        <Divider orientation="horizontal" variant="inset"/>
+                        
                         <Typography>Easy!</Typography>
-
+                        <Divider orientation="horizontal" variant="inset"/>
                     </Stack>
             
             </Stack>
@@ -114,3 +117,4 @@ export default function HomePage() {
         </ThemeProvider >
     );
 }
+
