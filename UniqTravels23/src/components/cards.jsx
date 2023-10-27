@@ -62,7 +62,7 @@ export function ScrollCards(props) {
                             textAlign:"center",
 
                             width: 150,
-                            height: 100,
+                            height: 70,
                             
                         }}
                     >
