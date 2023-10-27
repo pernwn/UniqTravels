@@ -1,14 +1,20 @@
 //HUSK AT SKRIVE KOMMENTARER TIL NÆRMEST ALT – forklaring samt hvad koden gør
 
 // Importér nødvendige moduler og komponenter
+import hamburg from "../assets/pictures/hamburg.jpg"
+import kyoto from "../assets/pictures/kyoto.jpg"
+import london from "../assets/pictures/london.jpg"
+
 import { customTheme } from '../themes/themes';
 import { useTheme } from '@mui/material/styles';
 
-import { CssBaseline, Stack, ThemeProvider, Typography } from '@mui/material';
+import { Box, CssBaseline, Stack, ThemeProvider, Typography } from '@mui/material';
 import SearchBar from '../components/search';
-import { QuickTools } from '../components/cards';
+import { QuickTools, ScrollCards } from '../components/cards';
 import ComplexCard from '../components/compcard';
-
+import TravelExploreOutlinedIcon from '@mui/icons-material/TravelExploreOutlined';
+import FmdGoodOutlinedIcon from '@mui/icons-material/FmdGoodOutlined';
+import MapsHomeWorkOutlinedIcon from '@mui/icons-material/MapsHomeWorkOutlined';
 
 
 export default function Booking() {
@@ -30,23 +36,24 @@ export default function Booking() {
             </div>
 
 
-{/* */}
+{/* */}{/* sx tilpasser stil for stack så det er horisontalt og tilføjer en rullebjælke så man kan scrolle over komponenterne*/}
             <section className='quickTools'>
-                <Stack direction="row" spacing={2}  
-                        sx={{ 
+            <Stack spacing={4} m={"2em 0 8em"}>
+                <Box className='quickTools'
+                    sx={{
+                        display: "flex",
+                        flexDirection: "row",
+                        justifyContent: "space-evenly",
 
-                            padding: "1% 3%",
-                            overflow: "auto",
-
-                        }}>{/* sx tilpasser stil for stack så det er horisontalt og tilføjer en rullebjælke så man kan scrolle over komponenterne*/}
-
-                    <QuickTools name="Flights"/>
-                    <QuickTools name="Hotels"/>
-                    <QuickTools name="Rentals"/>
-                    <QuickTools name="Explore"/>
+                    }}
+                >
+                    <QuickTools name="Travel options" icon={<FmdGoodOutlinedIcon sx={{ fontSize: 40, marginBottom: "16%" }} />} />
+                    <QuickTools name="Housing options" icon={<MapsHomeWorkOutlinedIcon sx={{ fontSize: 40, marginBottom: "16%" }} />} />
+                    <QuickTools name="Explore options" icon={<TravelExploreOutlinedIcon sx={{ fontSize: 40, marginBottom: "16%" }} />} />
+                </Box>
                 </Stack>
             </section>
-            <Typography variant="h2">Flights</Typography>
+            <Typography variant="h2" m="0 3%">Flights</Typography>
 
             <Stack direction="row" spacing={2}>
                 {/* ComplexCard er importeret som en komponent og bliver indsat ved at kalde den her
@@ -58,7 +65,7 @@ export default function Booking() {
                 title={ "Two day trip to Hamburg"}
                 subheader={"Special tickets to the Elbphilharmonie"}
                 label={"GER"}
-                body={"Escape to Hamburg for a quick getaway! Explore historic landmarks like the stunning Elbphilharmonie, stroll along the scenic Alster Lake, and savor mouthwatering local cuisine at the famous Fischmarkt. With its vibrant arts scene and rich maritime history, Hamburg promises a memorable adventure in just a few days. Book your short trip now and immerse yourself in the charm of this captivating German city!"}
+                body={"Go to to Hamburg for a quick getaway! Explore historic landmarks like the stunning Elbphilharmonie, stroll along the scenic Alster Lake, and savor mouthwatering local cuisine at the famous Fischmarkt. With its vibrant arts scene and rich maritime history, Hamburg promises a memorable adventure in just a few days. Book your short trip now and immerse yourself in the charm of this captivating German city!"}
                 />
 
                 <ComplexCard
@@ -75,14 +82,34 @@ export default function Booking() {
                 subheader={"Explore Iconic Landmarks"}
                 label={"UK"}
                 body={"Escape to the enchanting city of London and uncover its rich history and vibrant culture. Visit world-famous landmarks like the Tower of London, Buckingham Palace, and the British Museum. Take a leisurely stroll along the River Thames, enjoy a traditional afternoon tea, and explore the trendy neighborhoods of Shoreditch and Notting Hill. London's diverse attractions and culinary scene promise an unforgettable journey. Book your trip now and experience the magic of this iconic city!"}
-                />
+                /> {/* 
+                // Her gentages lignende blokke for andre rejsemål (Kyoto og London) med forskellige oplysninger
+                // ComplexCard komponenten bruges til at vise oplysningerne om hvert rejsemål Offers  */}
             </Stack>
-            <Typography variant="h3">
-               Exclusive Offers 
+            <Typography variant="h3" m="0 3%">
+               Exclusive Offers!            
             </Typography>
 
+            <Stack direction="row" spacing={1}  
+                        sx={{
+                            overflow: "auto",
+                            display: "flex",
+                            flexDirection: "row",
+                            justifyContent: "space-evenly"
+
+                        }}
+                    >
+                        <ScrollCards name="New " image={london} /> 
+                        <ScrollCards name="vacation?" image={kyoto} />
+                        <ScrollCards name="booking!" image={hamburg} />
+                        <ScrollCards name="Incredible" image={london} />
+                        <ScrollCards name="coupon?" image={kyoto} />
+                        </Stack>
+
+
+
+
         </ThemeProvider>   
-                // Her gentages lignende blokke for andre rejsemål (Kyoto og London) med forskellige oplysninger
-                // ComplexCard komponenten bruges til at vise oplysningerne om hvert rejsemål
+
     );
 }
