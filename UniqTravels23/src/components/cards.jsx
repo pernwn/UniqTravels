@@ -48,7 +48,7 @@ export function ScrollCards(props) {
                         component="img"
                         image={props.image} 
                         sx={{
-                            height: 50,
+                            height: 100,
                         }}
                     >
                     </CardMedia>
@@ -67,7 +67,7 @@ export function ScrollCards(props) {
                         }}
                     >
 
-                        <Typography gutterBottom variant="body1" component="div" color="background.default">
+                        <Typography gutterBottom variant="body1" component="div" lineHeight="1.15">
                             {props.name}
                         </Typography>
                     </CardContent>
@@ -85,7 +85,6 @@ export function MainBtn(props){
                 component={NavLink}
                 to={props.page}
            
-                
                 sx={{
                     color: customTheme => customTheme.palette.background.paper,
                     backgroundColor: customTheme => customTheme.palette.secondary.main,
