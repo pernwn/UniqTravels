@@ -42,11 +42,12 @@ export function ScrollCards(props) {
 
                 <CardActionArea>
                     <CardMedia className="dealsPic"
+                        component="img"
+                        image={props.image} 
                         sx={{
                             height: 50,
                         }}
                     >
-                        {props.image}
                     </CardMedia>
 
                     <CardContent
