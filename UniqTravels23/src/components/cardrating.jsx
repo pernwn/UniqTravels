@@ -10,7 +10,7 @@ import FavoriteIcon from '@mui/icons-material/Favorite';
 import ShareIcon from '@mui/icons-material/Share';
 import MoreVert from '@mui/icons-material/MoreVert';
 
-export default function ComplexCard(props) {
+export default function ComplexCardRating(props) {
 return(
     <Card>
         <CardHeader
@@ -25,9 +25,9 @@ return(
 
             </IconButton>
         }
-        >      
-            title={props.title}
-            subheader={props.subheader} 
+        >
+                    {props.title}
+                    {props.subheader}
         </CardHeader>
         <CardMedia
           component="img"

@@ -15,6 +15,8 @@ import ComplexCard from '../components/compcard';
 import TravelExploreOutlinedIcon from '@mui/icons-material/TravelExploreOutlined';
 import FmdGoodOutlinedIcon from '@mui/icons-material/FmdGoodOutlined';
 import MapsHomeWorkOutlinedIcon from '@mui/icons-material/MapsHomeWorkOutlined';
+import "../styles/rin.css"
+
 
 
 export default function Booking() {
@@ -30,13 +32,26 @@ export default function Booking() {
     return (
         <ThemeProvider theme={customTheme(outerTheme)}>
             <CssBaseline enableColorScheme />
-            <Typography variant="h2">Where would you like to go [username]</Typography>
-            <div>
-                <SearchBar/> {/* Searchbar er importeret som en komponent og bliver indsat ved at kalde den her*/ }
-            </div>
+            <section className='hPic'>{/* Denne section er stylet magen til den på Homepage for at der er sammenhæng i siden*/}
+            <section className='search'>
+                    <Box 
+                        sx={{
+                            display: "flex",
+                            flexDirection: "column",
+                            alignItems: "center",
 
+                            position: 'absolute',
+                            top: 80
+                        }}
+                    >
+                        <Typography variant="h2" sx={{ color: customTheme => customTheme.palette.background.paper, lineHeight: .8, marginBottom: 4 }}>Where would you like to go?</Typography>
+                        <SearchBar />{/* Searchbar er importeret som en komponent og bliver indsat ved at kalde den her*/ }
+                    </Box>
 
-{/* */}{/* sx tilpasser stil for stack så det er horisontalt og tilføjer en rullebjælke så man kan scrolle over komponenterne*/}
+                </section>
+            </section>
+
+{/* sx tilpasser stil for stack så det er horisontalt og tilføjer en rullebjælke så man kan scrolle over komponenterne*/}
             <section className='quickTools'>
             <Stack spacing={4} m={"2em 0 8em"}>
                 <Box className='quickTools'
@@ -55,7 +70,14 @@ export default function Booking() {
             </section>
             <Typography variant="h2" m="0 3%">Flights</Typography>
 
-            <Stack direction="row" spacing={2}>
+            <Stack direction="row" spacing={2}
+                    sx={{
+                        display: "flex",
+                        flexDirection: "row",
+                        justifyContent: "space-evenly",
+
+                    }}
+            >
                 {/* ComplexCard er importeret som en komponent og bliver indsat ved at kalde den her
                     Cards har vi defineret som funktionelle komponenter som tager props indunder sig som dets parameter
                     I vores card komponenter skriver vi f.eks. {props.title} så når vi skal bruge vores cards kan vi tilføje dem med de specifikke info der er på pagen.
