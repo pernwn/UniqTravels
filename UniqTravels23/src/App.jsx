@@ -1,5 +1,5 @@
 
-import { Navigate, Outlet, Route, Routes } from 'react-router-dom'
+import { Outlet, Route, Routes } from 'react-router-dom'
 import './App.css'
 import Nav from './components/nav'
 import HomePage from './pages/homepage'
@@ -11,6 +11,8 @@ import Map from './pages/booking'
 
 import SignUp from './pages/signup'
 import Login from './pages/login'
+
+import Error from './pages/404'
 
 //import af separat theme file
 import { customTheme } from './themes/themes'
@@ -40,7 +42,7 @@ function App() {
         <Route path="/map" element={<Map />} />
         <Route path="/user" element={<User />} />
 
-        <Route path="*" element={<Navigate to="/404" />} />
+        <Route path="*" element={<Error />} />
 
       </Route>
 

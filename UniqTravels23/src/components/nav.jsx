@@ -22,9 +22,8 @@ import { NavLink } from 'react-router-dom';
 export default function Nav() {
     const [value, setValue] = React.useState("");
 
-
+    //når man trykker på knappen sker en ændring dvs aktiv nav ikon
     const handleChange = (event, newValue) => {
-            
         setValue(newValue, value);
         
     };
@@ -34,7 +33,7 @@ export default function Nav() {
     return (
             <BottomNavigation
                 sx={{width: "100%", p:"2.5em 0 4em 0" , position: 'fixed', bottom: 0, left: 0, right: 0, boxShadow:3, zIndex:2}}
-                value={location.pathname}
+                value={location.pathname} //denne value gør at knappen er aktiv på den side man er på uanset om man har trykket på nav eller tilgår siden på anden måde
                 onChange={handleChange}
                 
             >
