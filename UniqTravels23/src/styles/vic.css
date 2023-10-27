@@ -9,7 +9,9 @@
 
 }
 
-
+.mBtn{
+    background-color: red;
+}
 
 
 html{
@@ -30,7 +32,10 @@ html{
     position: absolute;
     top: 20%;
     left: 50%;
-    
 
     
+}
+
+.dash{
+    border: dashed 1.5px;
 }

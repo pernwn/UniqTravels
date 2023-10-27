@@ -14,11 +14,13 @@ import "../styles/vic.css"
 
 //import fra MUI
 import Box from '@mui/material/Box';
-import { Divider, Stack, Typography } from '@mui/material';
+import { Stack, Typography } from '@mui/material';
 //import af ikoner fra MUI
 import TravelExploreOutlinedIcon from '@mui/icons-material/TravelExploreOutlined';
 import FmdGoodOutlinedIcon from '@mui/icons-material/FmdGoodOutlined';
 import MapsHomeWorkOutlinedIcon from '@mui/icons-material/MapsHomeWorkOutlined';
+import { customTheme } from "../themes/themes";
+
 
 
 //import af separat theme file
@@ -27,7 +29,7 @@ import MapsHomeWorkOutlinedIcon from '@mui/icons-material/MapsHomeWorkOutlined';
 
 export default function HomePage() {
     //Oprettelse af variabel for at bruge useTheme
-    
+
 
     //const greet = newUser ? "Welcome, new traveler!" : "Welcome back, traveler!"
     return (
@@ -95,40 +97,47 @@ export default function HomePage() {
 
                     <video src={video} width="100%" height="auto" controls preload="none" /*TODO: udskift video*/ />
 
-                    <Stack direction="row" spacing={2}
+                    <Stack direction="row" spacing={4}
                         sx={{
                             display: "flex",
-                            justifyContent: "center",
+                            justifyContent:"center",
+                            my:"2em",
+                         
+                            color: customTheme => customTheme.palette.secondary.main
 
-
-                            m: "10% 50%"
                         }}
                     >
+                        <Typography variant="h5">Simple!</Typography>
+                        <hr className="dash"/>
 
-                        <Typography variant="h4">
-                            <Divider textAlign="left" variant="fullWidth" color="">Simple!</Divider>
-                            <Divider textAlign="center">Fast!</Divider>
-                            <Divider textAlign="right">Easy!</Divider>
-                        </Typography>
+                        <Typography variant="h5">Fast!</Typography>
+                        <hr className="dash"/>
 
+                        <Typography variant="h5">Easy!</Typography>
 
                     </Stack>
 
                 </Stack>
 
+                <Box
+                    sx={{
+                        backgroundColor: customTheme => customTheme.palette.background.paper,
+                    }}
+                >
+                    
+                    hello
+                </Box>
+
 
             </Stack>
 
-
-        </ >
+        </>
     );
 }
 
-/*<Typography variant="h4">Simple!</Typography>
-                        <Divider orientation="horizontal" variant="middle"/>
-                        
-                        <Typography variant="h4">Fast!</Typography>
-                        <Divider orientation="horizontal" variant="middle"/>
-                        
-                        <Typography variant="h4">Easy!</Typography>
-                        <Divider orientation="vertical" variant="middle" backgroundColor="secondary"/> */
+/*                            <Typography variant="h4">
+                                <Divider textAlign="center">Simple!</Divider>
+                                <Divider textAlign="center">Fast!</Divider>
+                                <Divider textAlign="center">Easy!</Divider>
+                            </Typography>
+ */

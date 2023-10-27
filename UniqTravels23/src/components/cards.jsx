@@ -1,4 +1,7 @@
 import { Button, Card, CardActionArea, CardContent, CardMedia, Stack, Typography } from "@mui/material";
+import { NavLink } from "react-router-dom";
+
+
 
 //Kort komponent som genbruges på flere sider vha props
 export function QuickTools(props) {
@@ -72,6 +75,26 @@ export function ScrollCards(props) {
                 </CardActionArea>
             </Card>
         </Stack>
+
+    )
+}
+
+export function MainBtn(props){
+    return(
+            <Button variant="filled"
+                component={NavLink}
+                to={props.page}
+           
+                
+                sx={{
+                    color: customTheme => customTheme.palette.background.paper,
+                    backgroundColor: customTheme => customTheme.palette.secondary.main,
+                    width:"80%"
+                }}
+            >
+                <Typography variant="button">{props.name}</Typography>
+            </Button>
+  
 
     )
 }

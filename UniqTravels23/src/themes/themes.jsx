@@ -11,7 +11,7 @@ export const customTheme = (outerTheme) =>
         contrastText: '#EEF9FF',
       },
       secondary: {
-        main: '#d35400',
+        main: '#008b8b',
         contrastText: '#0c1e29',
       },
       background: {
