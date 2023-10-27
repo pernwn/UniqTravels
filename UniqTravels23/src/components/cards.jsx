@@ -85,7 +85,6 @@ export function MainBtn(props){
                 component={NavLink}
                 to={props.page}
            
-                
                 sx={{
                     color: customTheme => customTheme.palette.background.paper,
                     backgroundColor: customTheme => customTheme.palette.secondary.main,

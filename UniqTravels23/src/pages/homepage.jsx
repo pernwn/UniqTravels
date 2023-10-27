@@ -20,6 +20,7 @@ import TravelExploreOutlinedIcon from '@mui/icons-material/TravelExploreOutlined
 import FmdGoodOutlinedIcon from '@mui/icons-material/FmdGoodOutlined';
 import MapsHomeWorkOutlinedIcon from '@mui/icons-material/MapsHomeWorkOutlined';
 import { customTheme } from "../themes/themes";
+import ComReviews from "../components/reviews";
 
 
 
@@ -74,7 +75,7 @@ export default function HomePage() {
                 <Box
                     sx={{ color: customTheme => customTheme.palette.secondary.main }}
                 >
-                    <Typography variant='h4' m="0 3%" >Hot deals!</Typography>
+                    <Typography variant='h4' m="0 3%">Hot deals! &#10024;</Typography>
                     <Stack direction="row" spacing={2}  /*Stack komponenten fra MUI er brugt her for at sætte elementerne horisontalt – opdagede denne måde, efter jeg havde brugt flex og flexdirection andre steder */
                         sx={{
                             p: "0 3% 3%",
@@ -124,8 +125,8 @@ export default function HomePage() {
                         backgroundColor: customTheme => customTheme.palette.background.paper,
                     }}
                 >
-                    
-                    hello
+
+                    <ComReviews />
                 </Box>
 
 

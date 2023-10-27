@@ -21,6 +21,8 @@ export default function User(){
             <section>
                 <img src={logoplaceholder} alt="placeholder" style={{ width: "5em" }} />
                 <NavLink to='/login'>login</NavLink>
+
+                
             </section>
         </ThemeProvider>
     );
