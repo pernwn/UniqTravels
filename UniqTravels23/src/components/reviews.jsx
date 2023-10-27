@@ -1,8 +1,15 @@
-import { addDoc, collection, deleteDoc, doc, onSnapshot } from "@firebase/firestore";
+import { addDoc, collection, onSnapshot } from "@firebase/firestore";
 import { useEffect, useState } from "react";
 import { db } from "../firebase-config";
-import { MainBtn } from "./cards";
-import { Box, List, ListItem, Typography } from "@mui/material";
+
+import { Avatar, Button, Divider, FormGroup, List, ListItem, Rating, Stack, TextField, Typography } from "@mui/material";
+
+
+
+
+
+
+
 
 export default function ComReviews() {
     const [data, setData] = useState([]);
@@ -15,6 +22,9 @@ export default function ComReviews() {
     const [sorting, setSorting] = useState("rating")
 
 
+
+
+
     useEffect(() => {
         async function fetchData() {
             onSnapshot(collection(db, "community-reviews"), data => {
@@ -24,7 +34,7 @@ export default function ComReviews() {
                 });
                 console.log("useEffect");
 
-                docs.sort(function (a, b) {
+                docs.sort(function (a, b) {//sortering virker ikke 
                     if (a[sorting] < b[sorting]) {
                         return -1;
                     }
@@ -55,24 +65,18 @@ export default function ComReviews() {
         }
 
         try { //laver opdatering TODO: pop up beskeder i stedet for console log
+            
+            
             const ratingRef = await addDoc(collection(db, "community-reviews"), newReview);//når bruger opretter ny vare, oprettes nyt dokument i firebase shoppingliste collection
+
+
             console.log("A review has neen added with ID: ", ratingRef.id);
         } catch (e) {
             console.error("ERROR – Could not add review: ", e)
         }
     }
 
-    async function deleteReview(e) { //TODO: prøv at finde ud af at gøre sådan at man kun kan slette sine egne reviews.......
-        const ratingId = e.currentTarget.getAttribute("data-id");
 
-        try {
-            const ratingRef = doc(db, "community-reviews", ratingId);
-            await deleteDoc(ratingRef);
-            console.log("The review was deleted");
-        } catch (e) {
-            console.error("ERROR – the review could not be deleted: ", e);
-        }
-    }
 
     // De følgende to funktioner skifter sorteringsfelt.
     function sortByRating() {
@@ -85,47 +89,154 @@ export default function ComReviews() {
 
     return (
         <>
-            <MainBtn name="Sort by rating" onClick={sortByRating} />
-            <MainBtn name="Sort by location" onClick={sortByLocation} />
 
-            <Typography variant="h4">Reviews</Typography>
-            <List>
-                {data.map((item) => (
-                    <ListItem key={item.id}>
-                        <span>{item.title}</span>
-                        <span>{item.location}</span>
-                        <span>{item.user}</span>
-                        <span>{item.description}</span>
-                        <span>{item.rating}</span>
-                        <MainBtn name="Delete review" data-id={item.id} onclick={deleteReview}></MainBtn>
-                    </ListItem>
-                ))}
+            <Stack direction="column" textAlign="center">
+                <Typography variant="h4">Reviews</Typography>
 
-            </List>
+                <div>
+                    <Button onClick={sortByRating}>Sort by rating</Button>
+                    <Button onClick={sortByLocation}>Sort by location</Button>
+                </div>
 
 
-                <Box
-                    component="form"
-                >
+                <List>
+                    {data.map((item) => (
+                        <ListItem key={item.id}>
+                            <div >
+                                <Typography variant="h5">{item.title}</Typography>
+                                <Typography variant="h6"
+                                    sx={{
+                                        display: "flex",
+                                        flexDirection: "row",
+                                        alignItems: "center",
+                                    }}
+                                >
+                                    <Avatar alt="" src="/static/images/avatar/2.jpg" sx={{ width: 32, height: 32, m: "0 4% 2% 0" }} /> {item.user}
+                                </Typography>
+
+                                <Typography variant="body1">Location: {item.location}</Typography>
+                                <Typography variant="body2">{item.description}</Typography>
+                                <Rating
+                                    value={item.rating}
+                                />
+
+
+                            </div>
+
+
+                        </ListItem>
+
+                    ))}
 
 
 
+                </List>
 
-                </Box>
+            </Stack>
+
+            <Divider variant="middle" sx={{ m: "16%" }} />
+
+            <FormGroup
+                required
+                sx={{
+                    '& .MuiTextField-root': { m: 1, width: "35ch" },
+                    display: "flex",
+                    textAlign: "center"
+                }}
+                autoComplete="off"
+
+            >
+                <Typography variant="h4">Review a city, place or any location!</Typography>
+                <div>
+                    <TextField
+                        required
+                        id="outline-required"
+                        label="Name"
+                        placeholder="How others see you."
+
+                        value={user}
+                        onChange={e => setUser(e.target.value)}
+                    />
+
+                    <TextField
+                        required
+                        id="outline-required"
+                        label="Title"
+                        placeholder="Write a fetching title!"
+
+                        value={title}
+                        onChange={e => setTitle(e.target.value)}
+                    />
+
+                    <TextField
+                        required
+                        id="outline-required"
+                        label="Location"
+                        placeholder="Which place are you reviewing?"
+
+                        value={location}
+                        onChange={e => setLocation(e.target.value)}
+                    />
+
+                    <TextField
+                        required
+                        id="outline-textarea"
+                        label="Description"
+                        placeholder="Write your review here!"
+                        multiline
+                        rows={3}
+
+                        value={description}
+                        onChange={e => setDescription(e.target.value)}
+                    />
+
+                    <div>
+                        <Typography variant="h6" component="legend">Your rating!</Typography>
+                        <Rating
+                            name="half-rating"
+                            value={rating}
+                            onChange={e => setRating(e.target.value)}
+                            defaultValue={0}
+                            precision={0.5}
+                            size="large"
+                        />
+                    </div>
+
+                    <Button onClick={addReview}
+                        type="submit"
+                        variant="contained"
+                        sx={{ mt: 3, mb: 2, backgroundColor: customTheme => customTheme.palette.secondary.main, width: "85%" }}
+                    >Submit</Button>
+
+                </div>
+            </FormGroup>
 
 
         </>
     );
 }
 
+//SLET KNAP
+/*
+ 
+    async function deleteReview(e) { //TODO: prøv at finde ud af at gøre sådan at man kun kan slette sine egne reviews.......
+const ratingId = e.currentTarget.getAttribute("data-id");
 
-/*            <form onSubmit={addReview}>
-                <h2>Add review</h2>
-                <label>Title: </label><input type="text" value={title} onChange={e => setTitle(e.target.value)} required />
-                <label>Location: </label><input type="number" value={location} onChange={e => setLocation(e.target.value)} required />
-                <label>User: </label><input type="number" value={user} onChange={e => setUser(e.target.value)} required />
-                <label>Description: </label><input type="number" value={description} onChange={e => setDescription(e.target.value)} required />
-                <label>Rating: </label><input type="number" value={rating} onChange={e => setRating(e.target.value)} required />
-                
-                <button>Add review</button>
-            </form> */
+try {
+const ratingRef = doc(db, "community-reviews", ratingId);
+await deleteDoc(ratingRef);
+console.log("The review was deleted");
+} catch (e) {
+console.error("ERROR – the review could not be deleted: ", e);
+}
+}
+ 
+ 
+ 
+<Button>
+                    <Tooltip title="Delete" data-id={item.id} onClick={deleteReview}>
+                        <IconButton>
+                            <DeleteIcon />
+                        </IconButton>
+                    </Tooltip>
+                </Button> */

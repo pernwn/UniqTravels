@@ -10,7 +10,7 @@ import logoplaceholder from '../assets/pictures/logoplaceholder.png'
 import { customTheme } from '../themes/themes';
 import { useTheme } from '@mui/material/styles';
 
-import { CssBaseline, ThemeProvider, Typography } from '@mui/material';
+import { CssBaseline, ThemeProvider} from '@mui/material';
 
 
 export default function User(){
@@ -24,6 +24,9 @@ export default function User(){
 
                 
             </section>
+
+
+            
         </ThemeProvider>
     );
 }

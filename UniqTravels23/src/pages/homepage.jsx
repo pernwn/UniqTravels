@@ -6,6 +6,7 @@
 //import logoplaceholder from '../assets/pictures/logoplaceholder.png'
 import beach from "../assets/pictures/beachy.jpeg"
 import video from "../assets/NFP2.mp4"
+import trust from "../assets/trustpilot.png"
 
 //import andre komponenter
 import { QuickTools, ScrollCards } from '../components/cards';
@@ -19,8 +20,9 @@ import { Stack, Typography } from '@mui/material';
 import TravelExploreOutlinedIcon from '@mui/icons-material/TravelExploreOutlined';
 import FmdGoodOutlinedIcon from '@mui/icons-material/FmdGoodOutlined';
 import MapsHomeWorkOutlinedIcon from '@mui/icons-material/MapsHomeWorkOutlined';
-import { customTheme } from "../themes/themes";
+
 import ComReviews from "../components/reviews";
+
 
 
 
@@ -101,18 +103,18 @@ export default function HomePage() {
                     <Stack direction="row" spacing={4}
                         sx={{
                             display: "flex",
-                            justifyContent:"center",
-                            my:"2em",
-                         
+                            justifyContent: "center",
+                            my: "2em",
+
                             color: customTheme => customTheme.palette.secondary.main
 
                         }}
                     >
                         <Typography variant="h5">Simple!</Typography>
-                        <hr className="dash"/>
+                        <hr className="dash" />
 
                         <Typography variant="h5">Fast!</Typography>
-                        <hr className="dash"/>
+                        <hr className="dash" />
 
                         <Typography variant="h5">Easy!</Typography>
 
@@ -123,11 +125,15 @@ export default function HomePage() {
                 <Box
                     sx={{
                         backgroundColor: customTheme => customTheme.palette.background.paper,
+                        p: 2
                     }}
                 >
-
                     <ComReviews />
                 </Box>
+
+                <div className="trust">
+                    <img src={trust} alt="Trust us! :D" width="100" />
+                </div>
 
 
             </Stack>
