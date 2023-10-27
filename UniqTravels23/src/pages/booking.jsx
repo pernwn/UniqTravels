@@ -77,6 +77,9 @@ export default function Booking() {
                 body={"Escape to the enchanting city of London and uncover its rich history and vibrant culture. Visit world-famous landmarks like the Tower of London, Buckingham Palace, and the British Museum. Take a leisurely stroll along the River Thames, enjoy a traditional afternoon tea, and explore the trendy neighborhoods of Shoreditch and Notting Hill. London's diverse attractions and culinary scene promise an unforgettable journey. Book your trip now and experience the magic of this iconic city!"}
                 />
             </Stack>
+            <Typography variant="h3">
+               Exclusive Offers 
+            </Typography>
 
         </ThemeProvider>   
                 // Her gentages lignende blokke for andre rejsemål (Kyoto og London) med forskellige oplysninger
