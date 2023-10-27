@@ -9,8 +9,10 @@ import Typography from '@mui/material/Typography';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import ShareIcon from '@mui/icons-material/Share';
 import MoreVert from '@mui/icons-material/MoreVert';
+import { Rating } from '@mui/material';
 
 export default function ComplexCardRating(props) {
+    const [value] = React.useState<number | null>(4.5);
 return(
     <Card>
         <CardHeader
@@ -47,9 +49,7 @@ return(
                 <IconButton aria-label="add to favorites">
                 <FavoriteIcon />
                 </IconButton>
-                <IconButton aria-label="share">
-                <ShareIcon />
-                </IconButton>
+                <Rating name="read-only" value={props.value} readOnly />
         </CardActions>
     </Card>
 
