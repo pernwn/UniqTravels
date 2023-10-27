@@ -85,7 +85,7 @@ export default function HomePage() {
                         <ScrollCards name="New offers" image={beach} /> {/*Billeder virker ikke ordentligt med props, forsøger at fikse */}
                         <ScrollCards name="Your next vacation?" image={beach} />
                         <ScrollCards name="Get 20% off on next booking!" image={beach} />
-                        <ScrollCards name="Incredible croissonts" image={beach} />
+                        <ScrollCards name="Incredible croissants" image={beach} />
                         <ScrollCards name="Got a coupon?" image={beach} />
 
 
