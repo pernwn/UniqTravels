@@ -1,10 +1,14 @@
-import { ThemeProvider } from "@emotion/react";
-import { CssBaseline } from "@mui/material";
+import { Typography } from "@mui/material";
+
 
 export default function Map(){
     return(
-        <ThemeProvider>
-            <CssBaseline/>
-        </ThemeProvider>
+        <>
+            <Typography variant="h3">
+                this page is for the map thing with pins and stuff
+
+            </Typography>
+        
+        </>
     )
 }

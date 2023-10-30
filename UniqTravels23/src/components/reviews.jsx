@@ -2,11 +2,7 @@ import { addDoc, collection, onSnapshot } from "@firebase/firestore";
 import { useEffect, useState } from "react";
 import { db } from "../firebase-config";
 
-import { Avatar, Button, Divider, FormGroup, List, ListItem, Rating, Stack, TextField, Typography } from "@mui/material";
-
-
-
-
+import { Avatar, Button, Divider, FormGroup, ListItem, Rating, Stack, TextField, Typography } from "@mui/material";
 
 
 
@@ -20,7 +16,7 @@ export default function ComReviews() {
     const [rating, setRating] = useState(0);
     const [date, setDate] = useState(0);
 
-    const [sorting, setSorting] = useState("rating")
+    const [sorting, setSorting] = useState("location")
 
 
 
@@ -35,12 +31,12 @@ export default function ComReviews() {
                 });
                 console.log("useEffect");
 
-                docs.sort(function (a, b) {//sortering virker ikke 
+                docs.sort(function (a, b) {
                     if (a[sorting] < b[sorting]) {
                         return 1;
                     }
                     if (a[sorting] > b[sorting]) {
-                        return -1
+                        return -1;
                     }
                     return 0;
                 });
@@ -92,20 +88,21 @@ export default function ComReviews() {
     return (
         <>
 
-            <Stack direction="column" textAlign="center">
-                <Typography variant="h4">Reviews</Typography>
+            <Stack direction="column" textAlign="center" spacing={4}>
+                <Typography variant="h4">Reviews –– TODO SO I DONT FORGET, omrokering på reviews efter feedback</Typography>
 
-                <div>
+                <div className="sorting">
                     <Button onClick={sortByRating}>Sort by rating</Button>
                     <Button onClick={sortByLocation}>Sort by location</Button>
                 </div>
 
 
-                <List>
+                <Stack spacing={4}>
                     {data.map((item) => (
                         <ListItem key={item.id}>
-                            <div >
+                            <div className="rev">
                                 <Typography variant="h5">{item.title}</Typography>
+                                
                                 <Typography variant="h6"
                                     sx={{
                                         display: "flex",
@@ -132,7 +129,7 @@ export default function ComReviews() {
 
 
 
-                </List>
+                </Stack>
 
             </Stack>
 

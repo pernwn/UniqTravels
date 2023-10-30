@@ -40,8 +40,22 @@ html{
     border: dashed 1.5px;
 }
 
-.trust{
+.trust, .sorting{
     display:flex;
     justify-content: center;
+    justify-content: space-evenly;
 
+}
+
+.sorting button {
+    border: 1px solid #008b8bcb;
+    color:#008b8b;
+}
+
+.rev{
+    min-width: 100%;
+    border-radius: 15px;
+    padding:5%;
+    background-color: #EEF9FF;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
 }

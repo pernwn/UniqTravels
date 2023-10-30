@@ -29,11 +29,11 @@ export default function Error() {
 
                 <Box textAlign="center">
                     <Typography variant='h1'>404</Typography>
-                    <Typography variant="h4" lineHeight="1">Unfortunately this page doesn&apos;t exist <p>&#128546;</p></Typography>
-
+                    <Typography variant="h4" lineHeight="1">Unfortunately this page doesn&apos;t exist yet <p>&#128546;</p></Typography>
+                    <MainBtn name="Return to homepage" page="/"/>
                     
                 </Box>
-                <MainBtn name="Return to homepage" page="/" />
+                
 
             </Stack>
 

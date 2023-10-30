@@ -21,7 +21,7 @@ import FmdGoodOutlinedIcon from '@mui/icons-material/FmdGoodOutlined';
 import MapsHomeWorkOutlinedIcon from '@mui/icons-material/MapsHomeWorkOutlined';
 import CarRentalIcon from '@mui/icons-material/CarRental';
 
-import ComReviews from "../components/reviews";
+//import ComReviews from "../components/reviews";
 
 
 
@@ -127,7 +127,7 @@ export default function HomePage() {
                         p: 2
                     }}
                 >
-                    <ComReviews />
+                    {/*<ComReviews />*/}
                 </Box>
 
                 <div className="trust">
