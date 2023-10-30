@@ -3,7 +3,7 @@ import { Outlet, Route, Routes } from 'react-router-dom'
 import './App.css'
 import Nav from './components/nav'
 import HomePage from './pages/homepage'
-//import Planner from './pages/planner'  //TODO: denne laver vi hvis vi har overskud
+import Planner from './pages/planner'  //TODO: denne laver vi hvis vi har overskud
 
 import User from './pages/user'
 import Booking from './pages/booking'
@@ -19,7 +19,7 @@ import { customTheme } from './themes/themes'
 import { useTheme } from '@mui/material/styles';
 import { ThemeProvider } from '@emotion/react'
 import { CssBaseline } from '@mui/material'
-import Planner from './pages/planner'
+
 
 function App() {
    //Oprettelse af variabel for at bruge useTheme
