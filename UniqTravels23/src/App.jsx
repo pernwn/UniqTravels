@@ -21,6 +21,7 @@ import { ThemeProvider } from '@emotion/react'
 import { CssBaseline } from '@mui/material'
 
 function App() {
+   //Oprettelse af variabel for at bruge useTheme
   const outerTheme = useTheme();
   return (
     <ThemeProvider theme={customTheme(outerTheme)}>
@@ -38,7 +39,7 @@ function App() {
       >
         <Route path="/" element={<HomePage />} />
         <Route path="/booking" element={<Booking />} />
-        <Route path="/planner" element={<Planner />} />
+        <Route path="/planner" element={<Error />} />
         <Route path="/map" element={<Map />} />
         <Route path="/user" element={<User />} />
 

@@ -18,6 +18,7 @@ export default function ComReviews() {
     const [description, setDescription] = useState("");
     const [location, setLocation] = useState("");
     const [rating, setRating] = useState(0);
+    const [date, setDate] = useState(0);
 
     const [sorting, setSorting] = useState("rating")
 
@@ -36,10 +37,10 @@ export default function ComReviews() {
 
                 docs.sort(function (a, b) {//sortering virker ikke 
                     if (a[sorting] < b[sorting]) {
-                        return -1;
+                        return 1;
                     }
                     if (a[sorting] > b[sorting]) {
-                        return 1
+                        return -1
                     }
                     return 0;
                 });
@@ -62,6 +63,7 @@ export default function ComReviews() {
             description: description,
             location: location,
             rating: rating,
+            date: date, //TODO: tilføje noget dato et eller andet sted?????
         }
 
         try { //laver opdatering TODO: pop up beskeder i stedet for console log
@@ -114,7 +116,7 @@ export default function ComReviews() {
                                     <Avatar alt="" src="/static/images/avatar/2.jpg" sx={{ width: 32, height: 32, m: "0 4% 2% 0" }} /> {item.user}
                                 </Typography>
 
-                                <Typography variant="body1">Location: {item.location}</Typography>
+                                <Typography variant="body1"><b>Location:</b> {item.location}</Typography>
                                 <Typography variant="body2">{item.description}</Typography>
                                 <Rating
                                     value={item.rating}
@@ -155,7 +157,7 @@ export default function ComReviews() {
                         placeholder="How others see you."
 
                         value={user}
-                        onChange={e => setUser(e.target.value)}
+                        onChange={e => setUser(e.target.value)} 
                     />
 
                     <TextField
@@ -199,6 +201,8 @@ export default function ComReviews() {
                             defaultValue={0}
                             precision={0.5}
                             size="large"
+                            
+                            sx={{color: customTheme => customTheme.palette.secondary.accent}}
                         />
                     </div>
 

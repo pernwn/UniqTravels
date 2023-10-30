@@ -17,24 +17,23 @@ import "../styles/vic.css"
 import Box from '@mui/material/Box';
 import { Stack, Typography } from '@mui/material';
 //import af ikoner fra MUI
-import TravelExploreOutlinedIcon from '@mui/icons-material/TravelExploreOutlined';
 import FmdGoodOutlinedIcon from '@mui/icons-material/FmdGoodOutlined';
 import MapsHomeWorkOutlinedIcon from '@mui/icons-material/MapsHomeWorkOutlined';
+import CarRentalIcon from '@mui/icons-material/CarRental';
 
 import ComReviews from "../components/reviews";
 
 
 
+//import TravelExploreOutlinedIcon from '@mui/icons-material/TravelExploreOutlined';
 
-//import af separat theme file
 
 
 
 export default function HomePage() {
-    //Oprettelse af variabel for at bruge useTheme
+   
 
-
-    //const greet = newUser ? "Welcome, new traveler!" : "Welcome back, traveler!"
+    // TODO: ???????????????????????? const greet = newUser ? "Welcome, new traveler!" : "Welcome back, traveler!"
     return (
         <>
             <section className='hPic'>
@@ -69,7 +68,7 @@ export default function HomePage() {
                 >
                     <QuickTools name="Travel options" icon={<FmdGoodOutlinedIcon sx={{ fontSize: 40, marginBottom: "16%" }} />} />
                     <QuickTools name="Housing options" icon={<MapsHomeWorkOutlinedIcon sx={{ fontSize: 40, marginBottom: "16%" }} />} />
-                    <QuickTools name="Explore options" icon={<TravelExploreOutlinedIcon sx={{ fontSize: 40, marginBottom: "16%" }} />} />
+                    <QuickTools name="Transport options" icon={<CarRentalIcon sx={{ fontSize: 40, marginBottom: "16%" }} />} />
                 </Box>
 
 

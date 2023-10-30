@@ -12,6 +12,7 @@ export const customTheme = (outerTheme) =>
       },
       secondary: {
         main: '#008b8b',
+        accent: '#FF9635',
         contrastText: '#0c1e29',
       },
       background: {
