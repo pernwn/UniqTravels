@@ -32,3 +32,8 @@ html{
 .compcard{
 width: 250px;
 }
+.horizontal-scroll {
+
+width: fit-content;
+
+  }

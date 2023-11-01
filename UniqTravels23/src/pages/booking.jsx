@@ -73,14 +73,11 @@ export default function Booking() {
             </section>
             <Typography variant="h2" m="0 3%">Flights</Typography>
 
-            <Stack direction="row" spacing={2} m="0 3%"
+            <Stack direction="row" spacing={2} m="0 3%" className="horizontal-scroll"
                     sx={{
                     overflow: "auto",
                     display: "flex",
-                    flexDirection: "row",
-                    justifyContent: "space-evenly"
-
-                        
+                    justifyContent: "space-evenly",
 
                     }}
             >
