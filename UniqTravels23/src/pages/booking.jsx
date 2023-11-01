@@ -162,13 +162,33 @@ export default function Booking() {
                 // Her gentages lignende blokke for andre rejsemål (Kyoto og London) med forskellige oplysninger
                 // ComplexCard komponenten bruges til at vise oplysningerne om hvert rejsemål Offers  */}
             </Stack>
-            <Typography variant="h3" m="0 3%">
+            <Typography variant="h3" m="0 3%" color="text.secondary.accent" >
                Exclusive Offers!            
             </Typography>
 
 
 
-            <Stack direction="row" spacing={1}  
+            <Stack direction="row" spacing={1} m="0 0 3%" 
+                        sx={{
+                            overflow: "auto",
+                            display: "flex",
+                            flexDirection: "row",
+                            justifyContent: "space-evenly"
+
+                        }}
+                    >
+                        <ScrollCards name="New " image={london} /> 
+                        <ScrollCards name="vacation?" image={kyoto} />
+                        <ScrollCards name="booking!" image={hamburg} />
+                        <ScrollCards name="Incredible" image={london} />
+                        <ScrollCards name="coupon?" image={kyoto} />
+                        </Stack>
+
+                        <Typography variant="h3" m="0 3%" color="text.secondary.accent" >
+               Hot Deals!            
+            </Typography>
+
+            <Stack direction="row" spacing={1}  m="0 0 3%"
                         sx={{
                             overflow: "auto",
                             display: "flex",
