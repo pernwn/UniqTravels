@@ -1,5 +1,5 @@
 //ny nav
-import * as React from 'react';
+
 import BottomNavigation from '@mui/material/BottomNavigation';
 import BottomNavigationAction from '@mui/material/BottomNavigationAction';
 
@@ -14,6 +14,9 @@ import AccountCircleOutlinedIcon from '@mui/icons-material/AccountCircleOutlined
 //NavLink bruges som komponent inde i BottomNavigationActions for at henvise til en anden side når man trykker ??
 import { NavLink } from 'react-router-dom';
 
+//importerer useLocation til at få information om den nuværende lokation – denne bruges til at bestemme active state
+import { useLocation } from 'react-router-dom';
+import { useState } from 'react';
 
 
 
@@ -21,7 +24,8 @@ import { NavLink } from 'react-router-dom';
 
 //TODO: skal lige have skrevet kommentarer til ddet her
 export default function Nav() {
-    const [value, setValue] = React.useState("");
+    const location = useLocation();
+    const [value, setValue] = useState(location.pathname);
 
     //når man trykker på knappen sker en ændring dvs aktiv nav ikon
     const handleChange = (event, newValue) => {
@@ -33,8 +37,6 @@ export default function Nav() {
 
     return (
         <>
-    
-        
             <BottomNavigation
                 sx={{ width: "100%", p: "2.5em 0 4em 0", position: 'fixed', bottom: 0, left: 0, right: 0, boxShadow: 3, zIndex: 2 }}
                 value={location.pathname} //denne value gør at knappen er aktiv på den side man er på uanset om man har trykket på nav eller tilgår siden på anden måde
@@ -48,6 +50,7 @@ export default function Nav() {
                     label="Home"
                     value="/"
                     icon={<HomeOutlinedIcon sx={{ fontSize: 35 }} />}
+                    className={value === '/' ? 'active' : ''}
                 />
                 <BottomNavigationAction
                     component={NavLink}
@@ -55,6 +58,7 @@ export default function Nav() {
                     label="Booking"
                     value="/booking"
                     icon={<AirplaneTicketOutlinedIcon sx={{ fontSize: 35 }} />}
+                    className={value === '/' ? 'active' : ''}
                 />
                 <BottomNavigationAction
                     component={NavLink}
@@ -62,6 +66,7 @@ export default function Nav() {
                     label="Map"
                     value="/map"
                     icon={<ExploreOutlinedIcon sx={{ fontSize: 35 }} />}
+                    className={value === '/' ? 'active' : ''}
                 />
                 <BottomNavigationAction
                     component={NavLink}
@@ -69,6 +74,7 @@ export default function Nav() {
                     label="Planner"
                     value="/planner"
                     icon={<EventOutlinedIcon sx={{ fontSize: 35 }} />}
+                    className={value === '/' ? 'active' : ''}
                 />
 
                 <BottomNavigationAction
@@ -77,6 +83,7 @@ export default function Nav() {
                     label="User"
                     value="/user"
                     icon={<AccountCircleOutlinedIcon sx={{ fontSize: 35 }} />}
+                    className={value === '/' ? 'active' : ''}
                 />
 
             </BottomNavigation>
