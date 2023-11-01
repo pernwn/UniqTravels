@@ -4,31 +4,23 @@ import { Box, Stack, Typography } from "@mui/material";
 export default function UserHead() {
 
     return (
-        <Stack direction="row" spacing={2}
+        <>
+
+
+        <Stack direction="row" spacing={20}
         sx={{
-            display: "flex",
-            justifyContent: "center",
-            marginTop:"2em"
+            top:55,
+            position:"absolute",
+
         }}
         >
-            <Box
-                sx={{
-                    display: "flex",
-                    flexDirection: "column",
-                    justifyContent: "space-evenly",
-                    alignItems: "left",
-                }}
-            >
-                <Typography variant="h6" lineHeight={.5}>Sara Marie</Typography>
-                <Typography variant="subtitle2">Member since 2013</Typography>
-            </Box>
 
             <Box
                 sx={{
                     display: "flex",
                     flexDirection: "column",
                     justifyContent: "space-evenly",
-                    alignItems: "left"
+                    alignItems: "center"
                 }}
             >
                 <Typography variant="h6" lineHeight={.5}>544 XP</Typography>
@@ -40,7 +32,7 @@ export default function UserHead() {
                     display: "flex",
                     flexDirection: "column",
                     justifyContent: "space-evenly",
-                    alignItems: "left"
+                    alignItems: "center"
                 }}
             >
                 <Typography variant="h6" lineHeight={.5}>No. 43</Typography>
@@ -48,5 +40,19 @@ export default function UserHead() {
             </Box>
 
         </Stack>
+
+        <Box
+        sx={{
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "space-evenly",
+            alignItems: "center",
+            marginTop:"4%"
+        }}
+    >
+        <Typography variant="h4" lineHeight={.5}>Sara Marie</Typography>
+        <Typography variant="subtitle2">Member since 2013</Typography>
+    </Box>
+        </>
     )
 }
