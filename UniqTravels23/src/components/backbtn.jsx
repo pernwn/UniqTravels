@@ -19,7 +19,7 @@ export default function BackBtn() {
                 
             }}
         >
-            <Button onClick={() => navigate(-1)}
+            <Button onClick={() => navigate(-1) && window.scrollTo(0,0)}
 
             >
                 <ArrowLeftOutlinedIcon
@@ -27,7 +27,7 @@ export default function BackBtn() {
                         color: customTheme => customTheme.palette.secondary.accent,
                         borderRadius:"10px",
                         fontSize:"30pt",
-                        boxShadow: "0 0 5px 0 rgba(0, 0, 0, 0.2)"
+                        boxShadow: "0 0 5px 0 rgba(0, 0, 0, 0.5)"
                     }}
                 />
             </Button>
