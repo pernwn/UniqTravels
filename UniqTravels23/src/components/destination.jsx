@@ -10,9 +10,7 @@ return(
 <ThemeProvider theme={customTheme(outerTheme)}>
 <CssBaseline enableColorScheme />
 
-<Routes>
-  <Route path="/signup" element={<SignUp />} />
-  </Routes>
+
 
 </ThemeProvider>
 
