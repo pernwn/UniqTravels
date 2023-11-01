@@ -9,6 +9,7 @@ import Typography from '@mui/material/Typography';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import ShareIcon from '@mui/icons-material/Share';
 import MoreVert from '@mui/icons-material/MoreVert';
+import { NavLink } from 'react-router-dom';
 
 export default function ComplexCard(props) {
     const cardContentStyle = {
@@ -55,6 +56,7 @@ return(
                 <IconButton aria-label="share">
                 <ShareIcon />
                 </IconButton>
+                <NavLink to="/destination" sx={{fontSize:35}}>Read More</NavLink>
         </CardActions>
     </Card>
 
