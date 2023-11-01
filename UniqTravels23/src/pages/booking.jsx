@@ -24,6 +24,7 @@ import MapsHomeWorkOutlinedIcon from '@mui/icons-material/MapsHomeWorkOutlined';
 import "../styles/rin.css"
 
 import BackBtn from "../components/backbtn";
+import ComplexCardRating from "../components/cardrating";
 
 export default function Booking() {
     // Hent det aktuelle tema ved hjælp af useTheme hook
@@ -88,14 +89,14 @@ export default function Booking() {
               <ComplexCard
                 image={santorini}
                 title={"Escape to Santorini's Paradise"}
-                subheader={"Relax on the Aegean Islands"}
+                subheader={"Relax on Aegean Islands"}
                 label={"GRC"}
                 body={"Indulge in a dreamy retreat to Santorini, Greece's island gem. Enjoy breathtaking sunsets in Oia, explore ancient ruins in Akrotiri, and unwind on the unique black sand beaches of Kamari. Savor traditional Greek cuisine and immerse yourself in the local culture. With its stunning landscapes and charming villages, Santorini is a true paradise waiting to be discovered. Book your getaway now and experience the magic of the Aegean Islands!"}
                 />
 
                 <ComplexCard
                 image={iceland}
-                title={"Unearth Iceland's Natural Wonders"}
+                title={"Iceland's Natural Wonders"}
                 subheader={"Chase Northern Lights & Geysers"}
                 label={"ISL"}
                 body={"Embark on an adventure to Iceland, a land of unparalleled natural beauty. Witness the mesmerizing Northern Lights dance across the Arctic sky, bathe in the Blue Lagoon's geothermal waters, and hike to see geysers erupt in the Golden Circle. Discover the unique Icelandic culture, try the famous hot dogs, and explore the vibrant Reykjavik. Iceland's diverse landscapes will leave you in awe. Book your journey now and experience the wonders of the North!"}
@@ -119,8 +120,8 @@ export default function Booking() {
 
                 <ComplexCard
                 image={lapland}
-                title={"Lapland's Winter Wonderland"}
-                subheader={"Meet Santa & Witness the Northern Lights"}
+                title={"Lapland's Winter"}
+                subheader={"Meet Santa & Northern Lights"}
                 label={"FIN"}
                 body={"Embark on a magical winter adventure to Lapland, Finland. Meet Santa Claus in his hometown of Rovaniemi, go husky sledding through snowy forests, and witness the enchanting Northern Lights. Stay in cozy glass igloos and experience the thrill of ice fishing. Lapland's snowy landscapes and unique experiences make it a perfect winter getaway. Book your journey now and embrace the winter wonderland of Lapland!"}
                 />
@@ -128,7 +129,7 @@ export default function Booking() {
                 <ComplexCard
                 image={azores}
                 title={"Azores: Nature's Paradise"}
-                subheader={"Explore Volcanic Islands"}
+                subheader={"Explore the Volcanic Islands"}
                 label={"PRT"}
                 body={"Discover the natural beauty of the Azores, Portugal's hidden gem in the Atlantic Ocean. Hike to volcanic craters, relax in thermal pools, and whale watch in the crystal-clear waters. Enjoy the local cuisine with fresh seafood and cheeses, and explore the charming towns of São Miguel and Terceira. The Azores offer a unique blend of adventure and tranquility. Book your trip now and experience nature's paradise!"}
                 />
@@ -144,19 +145,12 @@ export default function Booking() {
 
                 <ComplexCard 
                 image={"../src/assets/pictures/kyoto.jpg"}
-                title={"Discover the Beauty of Kyoto"}
+                title={"The Beauty of Kyoto"}
                 subheader={"Experience Japanese Culture"}
                 label={"JPN"}
                 body={"Embark on a journey to Kyoto and immerse yourself in the rich traditions of Japan. Visit historic temples and shrines, such as Kinkaku-ji (the Golden Pavilion) and Fushimi Inari Taisha, known for its thousands of vibrant red torii gates. Explore the enchanting Arashiyama Bamboo Grove and savor delicious Japanese cuisine, from sushi to ramen. Kyoto offers a unique blend of ancient and modern, making it a captivating travel destination. Book your adventure now and create lasting memories in the heart of Japan!"}
                  />
 
-                <ComplexCard 
-                image={"../src/assets/pictures/kyoto.jpg"}
-                title={"Discover the Beauty of Kyoto"}
-                subheader={"Experience Japanese Culture"}
-                label={"JPN"}
-                body={"Embark on a journey to Kyoto and immerse yourself in the rich traditions of Japan. Visit historic temples and shrines, such as Kinkaku-ji (the Golden Pavilion) and Fushimi Inari Taisha, known for its thousands of vibrant red torii gates. Explore the enchanting Arashiyama Bamboo Grove and savor delicious Japanese cuisine, from sushi to ramen. Kyoto offers a unique blend of ancient and modern, making it a captivating travel destination. Book your adventure now and create lasting memories in the heart of Japan!"}
-                 />
 
                 <ComplexCard 
                 image={"../src/assets/pictures/london.jpg"}
@@ -189,7 +183,6 @@ export default function Booking() {
                         <ScrollCards name="Incredible" image={london} />
                         <ScrollCards name="coupon?" image={kyoto} />
                         </Stack>
-
 
 
 

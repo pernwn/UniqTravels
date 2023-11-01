@@ -34,10 +34,10 @@ return(
 
             </IconButton>
         }
-        >      
+            
             title={props.title}
             subheader={props.subheader} 
-        </CardHeader>
+        />
         <CardMedia
           component="img"
           height="200"
