@@ -1,10 +1,10 @@
 
 import { Box, Button } from "@mui/material";
 import { useNavigate } from "react-router-dom";
-//import ArrowBackIosOutlinedIcon from '@mui/icons-material/ArrowBackIosOutlined';
+import ArrowBackIosOutlinedIcon from '@mui/icons-material/ArrowBackIosOutlined';
 //import { customTheme } from "../themes/themes";
 
-import ArrowLeftOutlinedIcon from '@mui/icons-material/ArrowLeftOutlined';
+//import ArrowLeftOutlinedIcon from '@mui/icons-material/ArrowLeftOutlined';
 
 
 export default function BackBtn() {
@@ -19,15 +19,16 @@ export default function BackBtn() {
                 
             }}
         >
-            <Button onClick={() => navigate(-1)}
+            <Button onClick={() => navigate(-1) && window.scrollTo(0,0)}
 
             >
-                <ArrowLeftOutlinedIcon
+                <ArrowBackIosOutlinedIcon
                     sx={{
-                        color: customTheme => customTheme.palette.secondary.accent,
+                        color: customTheme => customTheme.palette.secondary.main,
                         borderRadius:"10px",
-                        fontSize:"30pt",
-                        boxShadow: "0 0 5px 0 rgba(0, 0, 0, 0.2)"
+                        fontSize:"25pt",
+                        p:"8%",
+                        boxShadow: "0 0 5px 0 rgba(0, 0, 0, 0.5)"
                     }}
                 />
             </Button>
