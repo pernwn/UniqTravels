@@ -28,15 +28,16 @@ export default function User() {
             </div>
 
             <section className="body">
-                <UserHead/>
+                <section className="b_head">
 
-                <div className="user">
-                    <div className="u_img"><img src={userp} alt="" /></div>
 
-                </div>
-                <img src={logoplaceholder} alt="placeholder" style={{ width: "5em" }} />
-                <NavLink to='/login'>login</NavLink>
-
+                    <div className="user">
+                        <div className="u_img"><img src={userp} alt="User Profilpicture" /></div>
+                    </div>
+                    <UserHead />
+                    <img src={logoplaceholder} alt="placeholder" style={{ width: "5em" }} />
+                    <NavLink to='/login'>login</NavLink>
+                </section>
 
             </section>
 

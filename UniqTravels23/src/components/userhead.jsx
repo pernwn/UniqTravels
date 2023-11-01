@@ -8,6 +8,7 @@ export default function UserHead() {
         sx={{
             display: "flex",
             justifyContent: "center",
+            marginTop:"2em"
         }}
         >
             <Box
@@ -18,7 +19,7 @@ export default function UserHead() {
                     alignItems: "left",
                 }}
             >
-                <Typography variant="h5" lineHeight={.5}>Sara Marie</Typography>
+                <Typography variant="h6" lineHeight={.5}>Sara Marie</Typography>
                 <Typography variant="subtitle2">Member since 2013</Typography>
             </Box>
 
@@ -30,7 +31,7 @@ export default function UserHead() {
                     alignItems: "left"
                 }}
             >
-                <Typography variant="h5" lineHeight={.5}>544 XP</Typography>
+                <Typography variant="h6" lineHeight={.5}>544 XP</Typography>
                 <Typography variant="subtitle2">Points collected</Typography>
             </Box>
 
@@ -42,14 +43,9 @@ export default function UserHead() {
                     alignItems: "left"
                 }}
             >
-                <Typography variant="h5" lineHeight={.5}>No. 43</Typography>
+                <Typography variant="h6" lineHeight={.5}>No. 43</Typography>
                 <Typography variant="subtitle2">Leaderboard</Typography>
             </Box>
-
-
-
-
-
 
         </Stack>
     )
