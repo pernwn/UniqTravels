@@ -11,6 +11,11 @@ import ShareIcon from '@mui/icons-material/Share';
 import MoreVert from '@mui/icons-material/MoreVert';
 
 export default function ComplexCard(props) {
+    const cardContentStyle = {
+        maxHeight: '200px', // Set the max height for the card content
+        overflow: 'hidden', // Hide the overflow
+        textOverflow: 'ellipsis', // Add ellipsis for the text overflow
+      };
 return(
     <Card>
         <CardHeader
@@ -36,7 +41,7 @@ return(
         >
              
         </CardMedia>
-        <CardContent>
+        <CardContent sx={cardContentStyle}>
             <Typography variant="body2" color="text.secondary" //Jeg vil gerne få den her til at klappe sig lidt sammen så man kun kan se starten af teksten, kigger på det senere
             > 
                {props.body}
