@@ -17,6 +17,7 @@ import FmdGoodOutlinedIcon from '@mui/icons-material/FmdGoodOutlined';
 import MapsHomeWorkOutlinedIcon from '@mui/icons-material/MapsHomeWorkOutlined';
 import "../styles/rin.css"
 
+import BackBtn from "../components/backbtn";
 
 export default function Booking() {
     // Hent det aktuelle tema ved hjælp af useTheme hook
@@ -38,6 +39,7 @@ export default function Booking() {
                             top: 80
                         }}
                     >
+                       
                         <Typography variant="h2" sx={{ color: customTheme => customTheme.palette.background.paper, lineHeight: .8, marginBottom: 4 }}>Where would you like to go?</Typography>
                         <SearchBar />{/* Searchbar er importeret som en komponent og bliver indsat ved at kalde den her*/ }
                     </Box>
@@ -47,6 +49,7 @@ export default function Booking() {
 
 {/* sx tilpasser stil for stack så det er horisontalt og tilføjer en rullebjælke så man kan scrolle over komponenterne*/}
             <section className='quickTools'>
+                        <BackBtn/>
             <Stack spacing={4} m={"2em 0 8em"}>
                 <Box className='quickTools'
                     sx={{
