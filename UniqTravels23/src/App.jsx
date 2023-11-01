@@ -21,6 +21,7 @@ import { ThemeProvider } from '@emotion/react'
 import { CssBaseline } from '@mui/material'
 
 
+
 function App() {
    //Oprettelse af variabel for at bruge useTheme
   const outerTheme = useTheme();

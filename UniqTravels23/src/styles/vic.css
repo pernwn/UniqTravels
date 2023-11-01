@@ -59,3 +59,14 @@ html{
     background-color: #EEF9FF;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
 }
+
+.gMap {
+    height: 60vh;
+    width: 100vw;
+    /*position: relative;*/
+  }
+  
+  .map-container {
+    height: 100%;
+    width: 100%;
+  }
