@@ -18,7 +18,7 @@ export default function ComplexCard(props) {
         textOverflow: 'ellipsis', // Add ellipsis for the text overflow
       };
 return(
-    <Card>
+    <Card className="compcard">
         <CardHeader
         avatar={ 
             <Avatar sx={{bgcolor: "info"}} aria-label="Destination">

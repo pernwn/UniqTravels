@@ -71,6 +71,7 @@ export default function Booking() {
                     sx={{
                         flexDirection: "row",
                         overflow:"auto",
+                        display:'flex',
 
                     }}
             >
@@ -78,7 +79,7 @@ export default function Booking() {
                     Cards har vi defineret som funktionelle komponenter som tager props indunder sig som dets parameter
                     I vores card komponenter skriver vi f.eks. {props.title} så når vi skal bruge vores cards kan vi tilføje dem med de specifikke info der er på pagen.
                 */ }
-                <ComplexCard className="compcard"
+                <ComplexCard 
                 image={"../src/assets/pictures/hamburg.jpg"}
                 title={ "Two day trip to Hamburg"}
                 subheader={"Special tickets to the Elbphilharmonie"}
@@ -86,7 +87,7 @@ export default function Booking() {
                 body={"Go to to Hamburg for a quick getaway! Explore historic landmarks like the stunning Elbphilharmonie, stroll along the scenic Alster Lake, and savor mouthwatering local cuisine at the famous Fischmarkt. With its vibrant arts scene and rich maritime history, Hamburg promises a memorable adventure in just a few days. Book your short trip now and immerse yourself in the charm of this captivating German city!"}
                 />
 
-                <ComplexCard className="compcard"
+                <ComplexCard 
                 image={"../src/assets/pictures/kyoto.jpg"}
                 title={"Discover the Beauty of Kyoto"}
                 subheader={"Experience Japanese Culture"}
@@ -94,7 +95,7 @@ export default function Booking() {
                 body={"Embark on a journey to Kyoto and immerse yourself in the rich traditions of Japan. Visit historic temples and shrines, such as Kinkaku-ji (the Golden Pavilion) and Fushimi Inari Taisha, known for its thousands of vibrant red torii gates. Explore the enchanting Arashiyama Bamboo Grove and savor delicious Japanese cuisine, from sushi to ramen. Kyoto offers a unique blend of ancient and modern, making it a captivating travel destination. Book your adventure now and create lasting memories in the heart of Japan!"}
                  />
 
-                <ComplexCard className="compcard"
+                <ComplexCard 
                 image={"../src/assets/pictures/kyoto.jpg"}
                 title={"Discover the Beauty of Kyoto"}
                 subheader={"Experience Japanese Culture"}
@@ -102,7 +103,7 @@ export default function Booking() {
                 body={"Embark on a journey to Kyoto and immerse yourself in the rich traditions of Japan. Visit historic temples and shrines, such as Kinkaku-ji (the Golden Pavilion) and Fushimi Inari Taisha, known for its thousands of vibrant red torii gates. Explore the enchanting Arashiyama Bamboo Grove and savor delicious Japanese cuisine, from sushi to ramen. Kyoto offers a unique blend of ancient and modern, making it a captivating travel destination. Book your adventure now and create lasting memories in the heart of Japan!"}
                  />
 
-                <ComplexCard className="compcard"
+                <ComplexCard 
                 image={"../src/assets/pictures/london.jpg"}
                 title={"Discover the Magic of London"}
                 subheader={"Explore Iconic Landmarks"}
