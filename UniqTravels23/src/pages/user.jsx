@@ -16,6 +16,7 @@ import { CssBaseline, ThemeProvider, Typography } from '@mui/material';
 
 import UserHead from "../components/userhead";
 import '../styles/vic.css'
+import BackBtn from "../components/backbtn";
 
 export default function User() {
     const outerTheme = useTheme();
@@ -24,6 +25,7 @@ export default function User() {
             <CssBaseline enableColorScheme />
 
             <div className="header">
+                <BackBtn/>
                 <Typography variant="subtitle1" className="h_txt">Traveler Profile</Typography>
             </div>
 
@@ -34,7 +36,7 @@ export default function User() {
                     <div className="user">
                         <div className="u_img"><img src={userp} alt="User Profilpicture" /></div>
                     </div>
-                    
+
                     <UserHead />
                     <img src={logoplaceholder} alt="placeholder" style={{ width: "5em" }} />
                     <NavLink to='/login'>login</NavLink>
