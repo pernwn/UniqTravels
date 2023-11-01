@@ -59,7 +59,7 @@ return(
                 <IconButton aria-label="share">
                 <ShareIcon />
                 </IconButton>
-                <NavLink to="/destination" sx={{fontSize:35}}>Read More</NavLink>
+                <NavLink to="/destination" sx={{fontSize:35 }}>Read More</NavLink>
         </CardActions>
     </Card>
 
