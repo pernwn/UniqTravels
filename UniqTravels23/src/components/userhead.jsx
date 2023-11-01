@@ -11,7 +11,6 @@ export default function UserHead() {
         sx={{
             top:55,
             position:"absolute",
-
         }}
         >
 
