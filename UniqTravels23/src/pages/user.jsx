@@ -34,6 +34,7 @@ export default function User() {
                     <div className="user">
                         <div className="u_img"><img src={userp} alt="User Profilpicture" /></div>
                     </div>
+                    
                     <UserHead />
                     <img src={logoplaceholder} alt="placeholder" style={{ width: "5em" }} />
                     <NavLink to='/login'>login</NavLink>
