@@ -48,10 +48,10 @@ const travelCategories = [
 
 
 const images = [
-  { id: 1, url: alabamahills, title: 'Alabamahills', category: 'Luxury Travel' },
-  { id: 2, url: azores, title: 'Azores', category: 'Volunteer Travel' },
+  { id: 1, url: alabamahills, title: 'Alabamahills', category: 'Road Trips' },
+  { id: 2, url: azores, title: 'Azores', category: 'Religious Tourism' },
   { id: 3, url: bali, title: 'Bali', category: 'Luxury Travel' },
-  { id: 5, url: bellagio, title: 'Bellagio', category: 'Luxury Travel' },
+  { id: 5, url: bellagio, title: 'Bellagio', category: 'Religious Tourism' },
   { id: 6, url: bhutan, title: 'Bhutan', category: 'Medical Tourism' },
   { id: 7, url: dubai, title: 'Dubai', category: 'Luxury Travel' },
   { id: 8, url: firestatepark, title: 'Firestatepark', category: 'Luxury Travel' },
@@ -59,11 +59,11 @@ const images = [
   { id: 10, url: iceland, title: 'Iceland', category: 'Educational Travel' },
   { id: 11, url: lapland, title: 'Lapland', category: 'Honeymoon Travel' },
   { id: 12, url: manarola, title: 'Manarola', category: 'Luxury Travel' },
-  { id: 13, url: oia, title: 'Oia', category: 'Luxury Travel' },
+  { id: 13, url: oia, title: 'Oia', category:  'Volunteer Travel' },
   { id: 14, url: salvador, title: 'Salvador', category: 'Pilgrimage Travel' },
   { id: 15, url: santorini, title: 'Santorini', category: 'Luxury Travel' },
-  { id: 16, url: switzerland, title: 'Switzerland', category: 'Luxury Travel' },
-  { id: 17, url: venice, title: 'Venice', category: 'Luxury Travel' },
+  { id: 16, url: switzerland, title: 'Switzerland', category: 'Backpacking' },
+  { id: 17, url: venice, title: 'Venice', category:  'Pilgrimage Travel' },
 ];
 
 const TravelFilter = () => {
@@ -98,27 +98,55 @@ const TravelFilter = () => {
         </Select>
       </FormControl>
 
-      <Stack spacing={2}        
-        direction="row"
-        flexWrap="wrap"
-        alignItems="center"
-        alignContent="center">
-        {images
-          .filter((image) => !selectedCategory || image.category === selectedCategory)
-          .map((image) => (
-            <div key={image.id} style={{ flex: '0 0 5 30%', margin: '0 0 3 3%', flexWrap: 'wrap' }}>
-              <img
-                src={image.url}
-                alt={image.title}
-                style={{
-                  maxWidth: '100%', 
-                  maxHeight: '300px',                
-                }}
-              />
-              <Typography variant="subtitle1">{image.title}</Typography>
-            </div>
-          ))}
-      </Stack>
+      <Stack
+      spacing={2}
+      direction="row"
+      flexWrap="wrap"
+      alignItems="center"
+      alignContent="center"
+      sx={{
+        display: 'flex',
+        justifyContent: 'center',
+      }}
+    >
+      {images
+        .filter((image) => !selectedCategory || image.category === selectedCategory)
+        .map((image) => (
+          <div
+            key={image.id}
+            style={{
+              flex: '0 0 15%',
+              margin: '0 0 3%',
+              position: 'relative',
+              textAlign: 'center',
+            }}
+          >
+            <img
+              src={image.url}
+              alt={image.title}
+              style={{
+                maxWidth: '300px',
+                maxHeight: '300px',
+                display: 'block',
+              }}
+            />
+            <Typography
+              variant="subtitle1"
+              style={{
+                position: 'absolute',
+                top: '50%', // Center vertically
+                left: '50%', // Center horizontally
+                transform: 'translate(-50%, -50%)', // Center both vertically and horizontally
+                backgroundColor: 'rgba(255, 255, 255, 0.7)', // Add a semi-transparent background
+                padding: '5px',
+                borderRadius: '5px',
+              }}
+            >
+              {image.title}
+            </Typography>
+          </div>
+        ))}
+    </Stack>
     </ThemeProvider>
   );
 };
