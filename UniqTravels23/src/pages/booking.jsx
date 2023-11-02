@@ -24,7 +24,6 @@ import MapsHomeWorkOutlinedIcon from '@mui/icons-material/MapsHomeWorkOutlined';
 import "../styles/rin.css"
 
 import BackBtn from "../components/backbtn";
-import ImageGallery from "../components/imgfilter";
 import TravelFilter from "../components/imgfilter";
 
 export default function Booking() {

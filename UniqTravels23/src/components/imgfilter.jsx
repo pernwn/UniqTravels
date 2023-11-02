@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import {
   ThemeProvider,
   CssBaseline,
@@ -11,18 +11,14 @@ import {
 } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
 import { customTheme } from '../themes/themes';
-import { Image } from '@mui/icons-material';
 
 import hamburg from "../assets/pictures/hamburg.jpg"
-import kyoto from "../assets/pictures/kyoto.jpg"
-import london from "../assets/pictures/london.jpg"
-import santorini from "../assets/pictures/santorini.jpg";
-import iceland from "../assets/pictures/iceland.jpg";
-import bhutan from "../assets/pictures/bhutan.jpg";
-import salvador from "../assets/pictures/salvador.jpg";
-import lapland from "../assets/pictures/lapland.jpg";
+import iceland from "../assets/pictures/iceland.jpg"
+import bhutan from "../assets/pictures/bhutan.jpg"
 import azores from "../assets/pictures/azores.jpg";
-
+import lapland from "../assets/pictures/lapland.jpg";
+import salvador from "../assets/pictures/salvador.jpg";
+import beach from "../assets/pictures/beachy.jpeg"
 
 const travelCategories = [
   'Luxury Travel',
@@ -35,15 +31,16 @@ const travelCategories = [
   'Pilgrimage Travel',
   'Honeymoon Travel',
 ];
+
 const images = [
-    // billeder med tilhørende kategorier til filter funktion
-    { id: 1, url: hamburg, title: 'Hamburg', category: 'Luxury Travel' },
-    { id: 2, url: iceland, title: 'Iceland', category: 'Educational Travel' },
-    { id: 3, url: bhutan, title: 'Bhutan', category: 'Medical Tourism' },
-    { id: 4, url: azores, title: 'Azores', category: 'Volunteer Travel' },
-    { id: 5, url: lapland, title: 'Lapland', category: 'Honeymoon Travel' },
-    { id: 6, url: salvador, title: 'Salvador', category: 'Pilgrimage Travel' },
-  ];
+  { id: 1, url: hamburg, title: 'Hamburg', category: 'Luxury Travel' },
+  { id: 2, url: iceland, title: 'Iceland', category: 'Educational Travel' },
+  { id: 3, url: bhutan, title: 'Bhutan', category: 'Medical Tourism' },
+  { id: 4, url: azores, title: 'Azores', category: 'Volunteer Travel' },
+  { id: 5, url: lapland, title: 'Lapland', category: 'Honeymoon Travel' },
+  { id: 6, url: salvador, title: 'Salvador', category: 'Pilgrimage Travel' },
+  { id: 7, url: beach, title: 'Beach', category:   'Luxury Travel' },
+];
 
 const TravelFilter = () => {
   const outerTheme = useTheme();
@@ -74,16 +71,23 @@ const TravelFilter = () => {
         </Select>
       </FormControl>
 
-      {/* Here, you can map through your images and display them based on the selected category */}
       <Grid container spacing={2}>
-        {/* Replace 'imageURL' with the actual URLs of your images */}
-        {images.map((image) => (
-          <Grid item xs={12} sm={6} md={4} key={image.id}>
-            {/* Assuming you have an 'Image' component to display images */}
-            <Image src={image.url} alt={image.title} />
-            <Typography variant="subtitle1">{image.title}</Typography>
-          </Grid>
-        ))}
+        {images
+          .filter((image) => !selectedCategory || image.category === selectedCategory)
+          .map((image) => (
+            <Grid item xs={12} sm={6} md={4} key={image.id}>
+          <img
+          src={image.url}
+          alt={image.title}
+          style={{
+            maxWidth: '24%', // Adjust the maximum width as needed
+
+
+          }}
+        />
+              <Typography variant="subtitle1">{image.title}</Typography>
+            </Grid>
+          ))}
       </Grid>
     </ThemeProvider>
   );
