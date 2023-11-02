@@ -24,7 +24,7 @@ import MapsHomeWorkOutlinedIcon from '@mui/icons-material/MapsHomeWorkOutlined';
 import "../styles/rin.css"
 
 import BackBtn from "../components/backbtn";
-import ComplexCardRating from "../components/cardrating";
+import ImageGallery from "../components/imgfilter";
 
 export default function Booking() {
     // Hent det aktuelle tema ved hjælp af useTheme hook
@@ -33,12 +33,12 @@ export default function Booking() {
 
      const images = [
         {
-          src: 'image1.jpg',
+          src: {azores},
           title: 'Image 1',
           subheader: 'Description 1',
         },
         {
-          src: 'image2.jpg',
+          src: {azores},
           title: 'Image 2',
           subheader: 'Description 2',
         },
@@ -216,6 +216,9 @@ export default function Booking() {
                         <ScrollCards name="Incredible" image={london} />
                         <ScrollCards name="coupon?" image={kyoto} />
                         </Stack>
+
+
+                        <ImageGallery images={images} />
 
 
 
