@@ -190,11 +190,11 @@ export default function Booking() {
 
                         }}
                     >
-                        <ScrollCards name="New " image={london} /> 
-                        <ScrollCards name="vacation?" image={kyoto} />
+                        <ScrollCards name="New adventure " image={azores} /> 
+                        <ScrollCards name="vacation for you?" image={bhutan} />
                         <ScrollCards name="booking!" image={hamburg} />
                         <ScrollCards name="Incredible" image={london} />
-                        <ScrollCards name="coupon?" image={kyoto} />
+                        <ScrollCards name="Want a coupon?" image={kyoto} />
                         </Stack>
                         <Typography variant="h3" m="0 3%">
                             Popular searches
