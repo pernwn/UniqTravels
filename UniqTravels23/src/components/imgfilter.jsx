@@ -8,17 +8,30 @@ import {
   MenuItem,
   Grid,
   Typography,
+  Stack,
 } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
 import { customTheme } from '../themes/themes';
 
-import hamburg from "../assets/pictures/hamburg.jpg"
-import iceland from "../assets/pictures/iceland.jpg"
-import bhutan from "../assets/pictures/bhutan.jpg"
+import alabamahills from "../assets/pictures/alabamahills.jpg";
 import azores from "../assets/pictures/azores.jpg";
+import bali from "../assets/pictures/bali.jpg";
+import bellagio from "../assets/pictures/bellagio.jpg";
+import bhutan from "../assets/pictures/bhutan.jpg";
+import dubai from "../assets/pictures/dubai.jpg";
+import firestatepark from "../assets/pictures/firestatepark.jpg";
+import hamburg from "../assets/pictures/hamburg.jpg";
+import iceland from "../assets/pictures/iceland.jpg";
 import lapland from "../assets/pictures/lapland.jpg";
+import manarola from "../assets/pictures/manarola.jpg";
+import oia from "../assets/pictures/oia.jpg";
 import salvador from "../assets/pictures/salvador.jpg";
-import beach from "../assets/pictures/beachy.jpeg"
+import santorini from "../assets/pictures/santorini.jpg";
+import switzerland from "../assets/pictures/switzerland.jpg";
+import venice from "../assets/pictures/venice.jpg";
+
+
+
 
 const travelCategories = [
   'Luxury Travel',
@@ -32,14 +45,25 @@ const travelCategories = [
   'Honeymoon Travel',
 ];
 
+
+
 const images = [
-  { id: 1, url: hamburg, title: 'Hamburg', category: 'Luxury Travel' },
-  { id: 2, url: iceland, title: 'Iceland', category: 'Educational Travel' },
-  { id: 3, url: bhutan, title: 'Bhutan', category: 'Medical Tourism' },
-  { id: 4, url: azores, title: 'Azores', category: 'Volunteer Travel' },
-  { id: 5, url: lapland, title: 'Lapland', category: 'Honeymoon Travel' },
-  { id: 6, url: salvador, title: 'Salvador', category: 'Pilgrimage Travel' },
-  { id: 7, url: beach, title: 'Beach', category:   'Luxury Travel' },
+  { id: 1, url: alabamahills, title: 'Alabamahills', category: 'Luxury Travel' },
+  { id: 2, url: azores, title: 'Azores', category: 'Volunteer Travel' },
+  { id: 3, url: bali, title: 'Bali', category: 'Luxury Travel' },
+  { id: 5, url: bellagio, title: 'Bellagio', category: 'Luxury Travel' },
+  { id: 6, url: bhutan, title: 'Bhutan', category: 'Medical Tourism' },
+  { id: 7, url: dubai, title: 'Dubai', category: 'Luxury Travel' },
+  { id: 8, url: firestatepark, title: 'Firestatepark', category: 'Luxury Travel' },
+  { id: 9, url: hamburg, title: 'Hamburg', category: 'Luxury Travel' },
+  { id: 10, url: iceland, title: 'Iceland', category: 'Educational Travel' },
+  { id: 11, url: lapland, title: 'Lapland', category: 'Honeymoon Travel' },
+  { id: 12, url: manarola, title: 'Manarola', category: 'Luxury Travel' },
+  { id: 13, url: oia, title: 'Oia', category: 'Luxury Travel' },
+  { id: 14, url: salvador, title: 'Salvador', category: 'Pilgrimage Travel' },
+  { id: 15, url: santorini, title: 'Santorini', category: 'Luxury Travel' },
+  { id: 16, url: switzerland, title: 'Switzerland', category: 'Luxury Travel' },
+  { id: 17, url: venice, title: 'Venice', category: 'Luxury Travel' },
 ];
 
 const TravelFilter = () => {
@@ -51,9 +75,9 @@ const TravelFilter = () => {
   };
 
   return (
-    <ThemeProvider theme={customTheme(outerTheme)}>
+    <ThemeProvider theme={customTheme(outerTheme)} >
       <CssBaseline enableColorScheme />
-      <FormControl fullWidth>
+      <FormControl sx={{ m: 3, width: 300}}>
         <InputLabel id="category-label">Select Travel Category</InputLabel>
         <Select
           labelId="category-label"
@@ -61,6 +85,9 @@ const TravelFilter = () => {
           value={selectedCategory}
           label="Select Travel Category"
           onChange={handleCategoryChange}
+          sx={{
+            maxWidth: '400px',
+          }}
         >
           <MenuItem value="">All Categories</MenuItem>
           {travelCategories.map((category) => (
@@ -71,24 +98,27 @@ const TravelFilter = () => {
         </Select>
       </FormControl>
 
-      <Grid container spacing={2}>
+      <Stack spacing={2}        
+        direction="row"
+        flexWrap="wrap"
+        alignItems="center"
+        alignContent="center">
         {images
           .filter((image) => !selectedCategory || image.category === selectedCategory)
           .map((image) => (
-            <Grid item xs={12} sm={6} md={4} key={image.id}>
-          <img
-          src={image.url}
-          alt={image.title}
-          style={{
-            maxWidth: '24%', // Adjust the maximum width as needed
-
-
-          }}
-        />
+            <div key={image.id} style={{ flex: '0 0 5 30%', margin: '0 0 3 3%', flexWrap: 'wrap' }}>
+              <img
+                src={image.url}
+                alt={image.title}
+                style={{
+                  maxWidth: '100%', 
+                  maxHeight: '300px',                
+                }}
+              />
               <Typography variant="subtitle1">{image.title}</Typography>
-            </Grid>
+            </div>
           ))}
-      </Grid>
+      </Stack>
     </ThemeProvider>
   );
 };
