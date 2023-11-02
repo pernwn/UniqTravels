@@ -11,6 +11,7 @@ import {
 } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
 import { customTheme } from '../themes/themes';
+import { Image } from '@mui/icons-material';
 
 
 const travelCategories = [
@@ -24,6 +25,16 @@ const travelCategories = [
   'Pilgrimage Travel',
   'Honeymoon Travel',
 ];
+const images = [
+    // Your image data with category information
+    { id: 1, url: 'image1.jpg', title: 'Image 1', category: 'Luxury Travel' },
+    { id: 2, url: 'image1.jpg', title: 'Image 1', category:  'Educational Travel' },
+    { id: 3, url: 'image1.jpg', title: 'Image 1', category:   'Medical Tourism'},
+    { id: 4, url: 'image1.jpg', title: 'Image 1', category: 'Voluntqeer Travel', },
+    { id: 5, url: 'image1.jpg', title: 'Image 1', category:  'Honeymoon Travel' },
+    { id: 6, url: 'image1.jpg', title: 'Image 1', category:   'Pilgrimage Travel' },
+    // Add more images with categories
+  ];
 
 const TravelFilter = () => {
   const outerTheme = useTheme();
