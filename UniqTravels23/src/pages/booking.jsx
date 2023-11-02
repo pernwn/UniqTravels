@@ -196,7 +196,15 @@ export default function Booking() {
                         <ScrollCards name="Incredible" image={london} />
                         <ScrollCards name="coupon?" image={kyoto} />
                         </Stack>
+                        <Typography variant="h3" m="0 3%">
+                            Popular searches
+                        </Typography>
 
+
+                        <TravelFilter></TravelFilter>
+
+
+                
                         <Typography variant="h3" m="0 3%" color="text.secondary.accent" >
                Hot Deals!            
             </Typography>
@@ -217,11 +225,6 @@ export default function Booking() {
                         <ScrollCards name="coupon?" image={kyoto} />
                         </Stack>
 
-
-                        <TravelFilter></TravelFilter>
-
-
-                
 
 
 

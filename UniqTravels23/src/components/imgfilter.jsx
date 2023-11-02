@@ -77,7 +77,7 @@ const TravelFilter = () => {
   return (
     <ThemeProvider theme={customTheme(outerTheme)} >
       <CssBaseline enableColorScheme />
-      <FormControl sx={{ m: 3, width: 300}}>
+      <FormControl sx={{ m: 3, width: 300, marginLeft:10 }}>
         <InputLabel id="category-label">Select Travel Category</InputLabel>
         <Select
           labelId="category-label"
@@ -86,7 +86,7 @@ const TravelFilter = () => {
           label="Select Travel Category"
           onChange={handleCategoryChange}
           sx={{
-            maxWidth: '400px',
+            maxWidth: '600px',
           }}
         >
           <MenuItem value="">All Categories</MenuItem>
