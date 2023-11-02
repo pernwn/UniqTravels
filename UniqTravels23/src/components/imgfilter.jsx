@@ -125,10 +125,11 @@ const TravelFilter = () => {
               src={image.url}
               alt={image.title}
               style={{
-                maxWidth: '300px',
+                maxWidth: '250px',
                 maxHeight: '300px',
                 display: 'block',
-                borderRadius: '20px'
+                borderRadius: '20px',
+                margin: '5px'
               }}
             />
             <Typography
