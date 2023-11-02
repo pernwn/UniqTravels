@@ -37,13 +37,12 @@ const travelCategories = [
 ];
 const images = [
     // billeder med tilhørende kategorier til filter funktion
-    { id: 1, url: {hamburg}, title: 'Image 1', category: 'Luxury Travel' },
-    { id: 2, url: {iceland}, title: 'Image 1', category:  'Educational Travel' },
-    { id: 3, url: {bhutan}, title: 'Image 1', category:   'Medical Tourism'},
-    { id: 4, url: {azores}, title: 'Image 1', category: 'Voluntqeer Travel', },
-    { id: 5, url: {lapland}, title: 'Image 1', category:  'Honeymoon Travel' },
-    { id: 6, url: {salvador}, title: 'Image 1', category:   'Pilgrimage Travel' },
-
+    { id: 1, url: hamburg, title: 'Hamburg', category: 'Luxury Travel' },
+    { id: 2, url: iceland, title: 'Iceland', category: 'Educational Travel' },
+    { id: 3, url: bhutan, title: 'Bhutan', category: 'Medical Tourism' },
+    { id: 4, url: azores, title: 'Azores', category: 'Volunteer Travel' },
+    { id: 5, url: lapland, title: 'Lapland', category: 'Honeymoon Travel' },
+    { id: 6, url: salvador, title: 'Salvador', category: 'Pilgrimage Travel' },
   ];
 
 const TravelFilter = () => {
