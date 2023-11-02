@@ -128,16 +128,17 @@ const TravelFilter = () => {
                 maxWidth: '300px',
                 maxHeight: '300px',
                 display: 'block',
+                borderRadius: '20px'
               }}
             />
             <Typography
               variant="subtitle1"
               style={{
                 position: 'absolute',
-                top: '50%', // Center vertically
-                left: '50%', // Center horizontally
-                transform: 'translate(-50%, -50%)', // Center both vertically and horizontally
-                backgroundColor: 'rgba(255, 255, 255, 0.7)', // Add a semi-transparent background
+                top: '50%', // Center vertikalt på billedet
+                left: '50%', // Center horisontalt på billedet
+                transform: 'translate(-50%, -50%)', // Center både vertikalt og horisontalt
+                backgroundColor: 'rgba(255, 255, 255, 0.7)', // giver teksten en gennemsigtig baggrund så teksten står mere frem
                 padding: '5px',
                 borderRadius: '5px',
               }}

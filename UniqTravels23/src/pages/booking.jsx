@@ -149,7 +149,7 @@ export default function Booking() {
 
 
                 <ComplexCard 
-                image={"../src/assets/pictures/hamburg.jpg"}
+                image={hamburg}
                 title={ "Two day trip to Hamburg"}
                 subheader={"Special tickets to the Elbphilharmonie"}
                 label={"GER"}
@@ -157,7 +157,7 @@ export default function Booking() {
                 />
 
                 <ComplexCard 
-                image={"../src/assets/pictures/kyoto.jpg"}
+                image={kyoto}
                 title={"The Beauty of Kyoto"}
                 subheader={"Experience Japanese Culture"}
                 label={"JPN"}
@@ -166,7 +166,7 @@ export default function Booking() {
 
 
                 <ComplexCard 
-                image={"../src/assets/pictures/london.jpg"}
+                image={london}
                 title={"Discover the Magic of London"}
                 subheader={"Explore Iconic Landmarks"}
                 label={"UK"}
@@ -175,7 +175,7 @@ export default function Booking() {
                 // Her gentages lignende blokke for andre rejsemål (Kyoto og London) med forskellige oplysninger
                 // ComplexCard komponenten bruges til at vise oplysningerne om hvert rejsemål Offers  */}
             </Stack>
-            <Typography variant="h3" m="0 3%" color="text.secondary.accent" >
+            <Typography variant="h3" m="0 3% " color="text.secondary.accent" >
                Exclusive Offers!            
             </Typography>
 
