@@ -25,6 +25,7 @@ import "../styles/rin.css"
 
 import BackBtn from "../components/backbtn";
 import ImageGallery from "../components/imgfilter";
+import TravelFilter from "../components/imgfilter";
 
 export default function Booking() {
     // Hent det aktuelle tema ved hjælp af useTheme hook
@@ -218,7 +219,11 @@ export default function Booking() {
                         </Stack>
 
 
-                        <ImageGallery images={images} />
+                        <TravelFilter></TravelFilter>
+
+
+                
+
 
 
 
