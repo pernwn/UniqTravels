@@ -31,6 +31,19 @@ export default function Booking() {
     const outerTheme = useTheme();
      // Definér nogle variabler med data, der skal bruges senere
 
+     const images = [
+        {
+          src: 'image1.jpg',
+          title: 'Image 1',
+          subheader: 'Description 1',
+        },
+        {
+          src: 'image2.jpg',
+          title: 'Image 2',
+          subheader: 'Description 2',
+        },
+      ];//objekter som skal bruges til filter funktionen
+
     return (
         <ThemeProvider theme={customTheme(outerTheme)}>
             <CssBaseline enableColorScheme />
