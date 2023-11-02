@@ -18,6 +18,8 @@ import UserHead from "../components/userhead";
 import '../styles/vic.css'
 import BackBtn from "../components/backbtn";
 
+import SettingsOutlinedIcon from '@mui/icons-material/SettingsOutlined';
+
 export default function User() {
     const outerTheme = useTheme();
     return (
@@ -27,6 +29,19 @@ export default function User() {
             <div className="header">
                 <BackBtn/>
                 <Typography variant="subtitle1" className="h_txt">Traveler Profile</Typography>
+                <SettingsOutlinedIcon
+                            sx={{
+                                position:"fixed",
+                                top:20,
+                                right:20,
+
+                                color: customTheme => customTheme.palette.secondary.main,
+                                borderRadius:"10px",
+                                fontSize:"25pt",
+                                boxShadow: "0 0 5px 0 rgba(0, 0, 0, 0.5)"
+                                
+                            }}
+                />
             </div>
 
             <section className="body">

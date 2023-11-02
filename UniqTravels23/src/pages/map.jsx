@@ -1,4 +1,4 @@
-import { Typography } from "@mui/material";
+/*import { Typography } from "@mui/material";
 import { GoogleMap, Marker, useJsApiLoader } from "@react-google-maps/api";
 import { useMemo} from "react";
 
@@ -33,4 +33,4 @@ export default function Map(){
 
         </>
     )
-}
+}*/
