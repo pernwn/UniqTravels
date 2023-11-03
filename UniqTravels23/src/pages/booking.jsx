@@ -24,7 +24,11 @@ import MapsHomeWorkOutlinedIcon from '@mui/icons-material/MapsHomeWorkOutlined';
 import "../styles/rin.css"
 
 import BackBtn from "../components/backbtn";
+<<<<<<< Updated upstream
 import TravelFilter from "../components/imgfilter";
+=======
+//import ComplexCardRating from "../components/cardrating";
+>>>>>>> Stashed changes
 
 export default function Booking() {
     // Hent det aktuelle tema ved hjælp af useTheme hook
@@ -70,7 +74,7 @@ export default function Booking() {
 {/* sx tilpasser stil for stack så det er horisontalt og tilføjer en rullebjælke så man kan scrolle over komponenterne*/}
             <section className='quickTools'>
                         <BackBtn/>
-            <Stack spacing={4} m={"2em 0 8em"}>
+            <Stack spacing={4} m={"2em 0 4em"}>
                 <Box className='quickTools'
                     sx={{
                         display: "flex",
@@ -87,12 +91,12 @@ export default function Booking() {
             </section>
             <Typography variant="h2" m="0 3%">Flights</Typography>
 
-            <Stack direction="row" spacing={2} m="0 3%" className="horizontal-scroll"
+            <Stack direction="row" spacing={2} p="0 4% 16%"
+          
                     sx={{
                     overflow: "auto",
-                    display: "flex",
-                    justifyContent: "space-evenly",
-
+                
+        
                     }}
             >
                 {/* ComplexCard er importeret som en komponent og bliver indsat ved at kalde den her
@@ -175,7 +179,12 @@ export default function Booking() {
                 // Her gentages lignende blokke for andre rejsemål (Kyoto og London) med forskellige oplysninger
                 // ComplexCard komponenten bruges til at vise oplysningerne om hvert rejsemål Offers  */}
             </Stack>
+<<<<<<< Updated upstream
             <Typography variant="h3" m="0 3% " color="text.secondary.accent" >
+=======
+
+            <Typography variant="h3" m="0 3%" color="text.secondary.accent" >
+>>>>>>> Stashed changes
                Exclusive Offers!            
             </Typography>
 
