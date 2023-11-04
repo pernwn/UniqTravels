@@ -87,12 +87,12 @@ export default function Booking() {
             </section>
             <Typography variant="h2" m="0 3%">Flights</Typography>
 
-            <Stack direction="row" spacing={2} p="0 4% 16%"
+            <Stack direction="row" spacing={2} p="0 4% 20%"
           
                     sx={{
                     overflow: "auto",
+
                 
-        
                     }}
             >
                 {/* ComplexCard er importeret som en komponent og bliver indsat ved at kalde den her
@@ -181,12 +181,12 @@ export default function Booking() {
 
 
 
-            <Stack direction="row" spacing={1} m="0 0 3%" 
+            <Stack direction="row" spacing={1}  
                         sx={{
                             overflow: "auto",
                             display: "flex",
                             flexDirection: "row",
-                            justifyContent: "space-evenly"
+                            justifyContent: "space-evenly",
 
                         }}
                     >
@@ -196,6 +196,7 @@ export default function Booking() {
                         <ScrollCards name="Incredible" image={london} />
                         <ScrollCards name="Want a coupon?" image={kyoto} />
                         </Stack>
+
                         <Typography variant="h3" m="0 3%">
                             Popular searches
                         </Typography>

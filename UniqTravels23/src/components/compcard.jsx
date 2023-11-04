@@ -25,6 +25,7 @@ export default function ComplexCard(props) {
         
       };
 return(
+    
     <Card className="compcard"
     >
         <CardHeader
@@ -76,8 +77,6 @@ return(
                 <NavLink to="/destination" sx={{ fontSize: 35 }}>Read More</NavLink>
             </CardActions>
         </Card>
-
-
 
     )
 }
