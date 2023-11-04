@@ -175,10 +175,15 @@ export default function Booking() {
                 // Her gentages lignende blokke for andre rejsemål (Kyoto og London) med forskellige oplysninger
                 // ComplexCard komponenten bruges til at vise oplysningerne om hvert rejsemål Offers  */}
             </Stack>
-            <Typography variant="h3" m="0 3% " color="text.secondary.accent" >
-               Exclusive Offers!            
+            <Typography variant="h3" m="0 3% " >
+               Exclusive Offers!  &#10024;           
             </Typography>
 
+
+
+            <Box
+                    sx={{ color: customTheme => customTheme.palette.secondary.main }}
+                >
 
 
             <Stack direction="row" spacing={1}  
@@ -187,6 +192,7 @@ export default function Booking() {
                             display: "flex",
                             flexDirection: "row",
                             justifyContent: "space-evenly",
+                            p: "0 3% 3%",
 
                         }}
                     >
@@ -196,7 +202,7 @@ export default function Booking() {
                         <ScrollCards name="Incredible" image={london} />
                         <ScrollCards name="Want a coupon?" image={kyoto} />
                         </Stack>
-
+</Box>
                         <Typography variant="h3" m="0 3%">
                             Popular searches
                         </Typography>
