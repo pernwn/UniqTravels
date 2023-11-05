@@ -19,6 +19,7 @@ export default function ComplexCard(props) {
 
 
     const cardContentStyle = {
+<<<<<<< Updated upstream
         maxHeight: '200px', // Sætter en maks højde for vores kort
         overflow: 'hidden', // Gemmer overflow væk
         textOverflow: 'ellipsis', // Tilføjer en ellipse til overflow
@@ -58,6 +59,32 @@ return(
             > 
                {props.body}
             </Typography>
+=======
+        maxHeight: '200px', // Set the max height for the card content
+        overflow: 'hidden', // Hide the overflow
+        textOverflow: 'ellipsis', // Add ellipsis for the text overflow
+
+    };
+    return (
+        <Stack /* Card sat i stack for at kunne scroll  */>
+        <Card elevation={4} sx={{ width: 300, maxHeight:500 /* Denne ændres på bredde og højde af kort */ }}> 
+            <CardHeader
+                avatar={
+                    <Avatar sx={{ bgcolor: "info" }} aria-label="Destination">
+                        {props.label}
+                    </Avatar>
+                }
+                action={
+                    <IconButton aria-label="settings">
+                        <MoreVert />
+
+                    </IconButton>
+                }
+
+                title={props.title}
+                subheader={props.subheader}
+            />
+>>>>>>> Stashed changes
 
             <CardMedia
                 component="img"
