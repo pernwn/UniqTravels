@@ -12,13 +12,18 @@ import userp from '../assets/pictures/userp.png'
 import { customTheme } from '../themes/themes';
 import { useTheme } from '@mui/material/styles';
 
-import { CssBaseline, ThemeProvider, Typography } from '@mui/material';
+import { Box, CssBaseline, Stack, ThemeProvider, Typography } from '@mui/material';
 
 import UserHead from "../components/userhead";
 import '../styles/vic.css'
 import BackBtn from "../components/backbtn";
 
 import SettingsOutlinedIcon from '@mui/icons-material/SettingsOutlined';
+import ArticleOutlinedIcon from '@mui/icons-material/ArticleOutlined';
+import AirplaneTicketOutlinedIcon from '@mui/icons-material/AirplaneTicketOutlined';
+import PhotoCameraFrontOutlinedIcon from '@mui/icons-material/PhotoCameraFrontOutlined';
+
+import { QuickTools } from "../components/cards";
 
 export default function User() {
     const outerTheme = useTheme();
@@ -58,6 +63,29 @@ export default function User() {
                 </section>
 
             </section>
+
+            <Box
+                    sx={{ color: customTheme => customTheme.palette.secondary.main }}
+                >
+                    <Typography variant='h4' m="0 3%"> My Pages &#10024;</Typography>
+                    <Stack direction="row" spacing={2}  /*Stack komponenten fra MUI er brugt her for at sætte elementerne horisontalt – opdagede denne måde, efter jeg havde brugt flex og flexdirection andre steder */
+                        sx={{
+                            p: "0 3% 3%",
+                            overflow: "auto",
+                        }}
+                    >
+
+                        
+                    <QuickTools name="Documents" icon={<ArticleOutlinedIcon sx={{ fontSize: 40 }} />} />
+                    <QuickTools name="Tickets" icon={<AirplaneTicketOutlinedIcon sx={{ fontSize: 40 }} />} />
+                    <QuickTools name="Passport" icon={<PhotoCameraFrontOutlinedIcon sx={{ fontSize: 40 }} />} />
+
+
+
+
+                    </Stack>
+                </Box>
+
 
 
 
