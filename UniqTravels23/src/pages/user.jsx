@@ -1,4 +1,6 @@
 //{HEADER / USERHEAD er kodet af: Victoria}
+//{Kodet af: Rina}
+
 
 // Med NavLink gør vi, at produktet bliver en 1 pager
 import { NavLink } from "react-router-dom";
