@@ -78,7 +78,7 @@ export default function User() {
                         
                     <QuickTools name="Documents" icon={<ArticleOutlinedIcon sx={{ fontSize: 40 }} />} />
                     <QuickTools name="Tickets" icon={<AirplaneTicketOutlinedIcon sx={{ fontSize: 40 }} />} />
-                    <QuickTools name="Tickets" icon={<PhotoCameraFrontOutlinedIcon sx={{ fontSize: 40 }} />} />
+                    <QuickTools name="Passport" icon={<PhotoCameraFrontOutlinedIcon sx={{ fontSize: 40 }} />} />
 
 
 
