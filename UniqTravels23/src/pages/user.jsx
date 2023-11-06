@@ -1,5 +1,7 @@
-//HUSK AT SKRIVE KOMMENTARER TIL NÆRMEST ALT – forklaring samt hvad koden gør
-//lavet af Rina 
+//{HEADER / USERHEAD er kodet af: Victoria}
+//{Kodet af: Rina}
+
+
 // Med NavLink gør vi, at produktet bliver en 1 pager
 import { NavLink } from "react-router-dom";
 
