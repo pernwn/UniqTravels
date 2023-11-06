@@ -24,17 +24,24 @@ import { CssBaseline, ThemeProvider, Typography } from '@mui/material';
 
 
 export default function HomePage() {
+    //variabel til at anvende useTheme
     const outerTheme = useTheme();
     return (
+        //theme bliver kaldt ved brug af themeprovider – importeret funktion "customTheme" kaldes hvor i variabel outertheme kaldes
         <ThemeProvider theme={customTheme(outerTheme)}>
             <CssBaseline enableColorScheme />
             <div ><img src={logoplaceholder} alt="placeholder" style={{ width: "5em" }} /></div>
 
             <section>
                 <Box
-                    display={"flex"}
-                    flexDirection={"column"}
-                    textAlign={"center"}
+                    sx={{
+                        display: 'flex',
+                        flexDirection: 'column',
+                        justifyContent:'space-between',
+                        alignItems:'center'
+
+                    }}
+    
 
                 >
 

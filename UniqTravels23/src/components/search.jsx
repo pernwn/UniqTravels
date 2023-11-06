@@ -7,6 +7,7 @@ import TravelExploreOutlinedIcon from '@mui/icons-material/TravelExploreOutlined
 //import af separat theme fil
 import { customTheme } from '../themes/themes';
 import { ThemeProvider, useTheme } from '@mui/material/styles';
+import { InputAdornment } from '@mui/material';
 
 
 export default function SearchBar() {
@@ -14,25 +15,21 @@ export default function SearchBar() {
 
     return (
         <ThemeProvider theme={customTheme(outerTheme)}>
-            <Box
-                sx={{
-                    '& .MuiTextField-root': { m: 1, width: '30ch' },
+            <Box sx={{ display: 'flex', alignItems: 'flex-end', m:"2"}}>
 
-
-                }}
-                noValidate
-                autoComplete="off"
-            >
-               <TravelExploreOutlinedIcon />
                 <TextField
-
-                    id="filled-search"
-                    label="Search travel destinations..."
-                    type="search"
-                    variant="filled"
-
+                    id="input-with-icon-textfield"
+                    label="Search"
+                    placeholder='Your next adventure awaits!'
+                    InputProps={{
+                        startAdornment: (
+                            <InputAdornment position="start">
+                                <TravelExploreOutlinedIcon />
+                            </InputAdornment>
+                        ),
+                    }}
+                    variant="outlined"
                 />
-
             </Box>
 
 
