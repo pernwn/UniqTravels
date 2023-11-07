@@ -34,16 +34,12 @@ function App() {
 
         <Route path="/signup" element={<SignUp />} />
         <Route path="/login" element={<Login />} />
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 
     </Routes>
-    </main>
-)
-=======
-=======
-        <Route path="/destination" element={<Destination />} />
->>>>>>> c2bd46f6623a7cc0f511614f04287973b793a4c7
+  
+
+    <Routes>
         <Route element={
           <>
             <Nav />
@@ -56,6 +52,7 @@ function App() {
           <Route path="/planner" element={<Planner />} /> {/*TODO: evt kan vi kalde denne for inspiration eller community hvor der kun er reviews af steder, appen osv – evt kan man skrive kommentarer til andre brugere? */}
           <Route path="/map" element={<Error />} />
           <Route path="/user" element={<User />} />
+          <Route path="/destination" element={<Destination />} />
 
           <Route path="*" element={<Error />} />
 
@@ -66,7 +63,7 @@ function App() {
       </Routes>
     </ThemeProvider>
   )
->>>>>>> 38c93cf6db78fe7a20d0fbc41ff147dc20cf00da
+
 }
 
 export default App

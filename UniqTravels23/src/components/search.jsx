@@ -7,15 +7,11 @@
 //import af separat theme fil
 import { customTheme } from '../themes/themes';
 import { ThemeProvider, useTheme } from '@mui/material/styles';
-<<<<<<< HEAD
-import { InputAdornment } from '@mui/material';
-=======
 import SearchIcon from '@mui/icons-material/Search';
-import { /*Divider,*/ Divider, IconButton, InputBase, Paper } from '@mui/material';
+import { Divider, IconButton, InputBase, Paper } from '@mui/material';
 //import MenuIcon from '@mui/icons-material/Menu';
 //import DirectionsIcon from '@mui/icons-material/Directions';
 import TuneOutlinedIcon from '@mui/icons-material/TuneOutlined';
->>>>>>> 38c93cf6db78fe7a20d0fbc41ff147dc20cf00da
 
 
 export default function SearchBar() {
@@ -24,24 +20,6 @@ export default function SearchBar() {
     
     return (
         <ThemeProvider theme={customTheme(outerTheme)}>
-<<<<<<< HEAD
-            <Box sx={{ display: 'flex', alignItems: 'flex-end', m:"2"}}>
-
-                <TextField
-                    id="input-with-icon-textfield"
-                    label="Search"
-                    placeholder='Your next adventure awaits!'
-                    InputProps={{
-                        startAdornment: (
-                            <InputAdornment position="start">
-                                <TravelExploreOutlinedIcon />
-                            </InputAdornment>
-                        ),
-                    }}
-                    variant="outlined"
-                />
-            </Box>
-=======
 
             <Paper
                 component="form"
@@ -78,7 +56,6 @@ export default function SearchBar() {
                 Searchbar results
 
             </Paper>
->>>>>>> 38c93cf6db78fe7a20d0fbc41ff147dc20cf00da
 
 
         </ThemeProvider>

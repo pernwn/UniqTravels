@@ -45,7 +45,7 @@ import hike11 from "../assets/vacation_places_gallery/hike11.jpg"
 
 
 //import andre komponenter
-import { MainBtn, QuickTools, ScrollCards, AutoScroll, SecndBtn } from '../components/cards';
+import {QuickTools, ScrollCards, AutoScroll, SecndBtn } from '../components/cards';
 import SearchBar from '../components/search';
 import "../styles/vic.css"
 import { /*SplashAnimation, GuyAnimation,*/ TravelAnimation } from "../components/splash";
@@ -67,35 +67,14 @@ import Trustpilot from "../components/trustpilot";
 
 
 export default function HomePage() {
-<<<<<<< HEAD
-<<<<<<< HEAD
     //variabel til at anvende useTheme
-    const outerTheme = useTheme();
+
     return (
         //theme bliver kaldt ved brug af themeprovider – importeret funktion "customTheme" kaldes hvor i variabel outertheme kaldes
-        <ThemeProvider theme={customTheme(outerTheme)}>
-            <CssBaseline enableColorScheme />
-            <div ><img src={logoplaceholder} alt="placeholder" style={{ width: "5em" }} /></div>
-
-            <section>
-                <Box
-                    sx={{
-                        display: 'flex',
-                        flexDirection: 'column',
-                        justifyContent:'space-between',
-                        alignItems:'center'
-
-                    }}
-    
-=======
-   
-=======
-
->>>>>>> c2bd46f6623a7cc0f511614f04287973b793a4c7
-
-    // TODO: ???????????????????????? const greet = newUser ? "Welcome, new traveler!" : "Welcome back, traveler!"
-    return (
+                    // TODO: ???????????????????????? const greet = newUser ? "Welcome, new traveler!" : "Welcome back, traveler!" d
+        
         <>
+             
             <section className='hPic'>
                 <section className='search'>
                     <Box /* Bruger box komponenten fra MUI i stedet for div/section etc, for at være i stand til at style med CSS fra MUI systemet*/
@@ -111,13 +90,11 @@ export default function HomePage() {
                         <Typography variant="h2" sx={{ color: customTheme => customTheme.palette.background.default, lineHeight: .8, marginBottom: 4 }}>Welcome Traveler!</Typography>
                         <SearchBar />
                     </Box>
->>>>>>> 38c93cf6db78fe7a20d0fbc41ff147dc20cf00da
 
                 </section>
             </section>
 
             <Desti />
-
 
             <Stack spacing={8} m={"2em 0 12em"}>
                 <Box className='quickTools'
@@ -132,8 +109,6 @@ export default function HomePage() {
                     <QuickTools name="Housing options" icon={<MapsHomeWorkOutlinedIcon sx={{ fontSize: 40, marginBottom: "16%" }} />} />
                     <QuickTools name="Transport options" icon={<CarRentalIcon sx={{ fontSize: 40, marginBottom: "16%" }} />} />
                 </Box>
-
-
 
                 <Box
                     sx={{ color: customTheme => customTheme.palette.secondary.main }}
@@ -150,16 +125,12 @@ export default function HomePage() {
                         <ScrollCards name="Flights to Paris are especially cheap right now" image={beach} />
                         <ScrollCards name="Earn points in our loyalty programme just by traveling!" image={beach} />
                         <ScrollCards name="Hurry! Get this Golden Ticket before another traveler!!" image={beach} />
-
-
                     </Stack>
-
-
                 </Box>
 
 
                 <Stack direction="column" alignItems="center">
-                    <Typography variant="h4" lineHeight="1" textAlign="center" gutterBottom p="0 3% 3%" >We'll help plan your perfect dream adventure</Typography>
+                    <Typography variant="h4" lineHeight="1" textAlign="center" gutterBottom p="0 3% 3%" >We&apos;ll help plan your perfect dream adventure</Typography>
 
                     <TravelAnimation />
 
@@ -184,18 +155,13 @@ export default function HomePage() {
 
                     </Stack>
 
-
-
                     <SecndBtn name="Book now" page="/booking" />
-
-
 
                 </Stack>
 
                 <Stack
                     spacing={2}
                     sx={{ color: customTheme => customTheme.palette.text }}
-
                 >
 
                     <Typography variant="h5" lineHeight="1" textAlign="center">Get inspired</Typography>
@@ -299,7 +265,7 @@ export default function HomePage() {
                     </div>
 
                     <Trustpilot />
-                    {/*<ComReviews />*/}
+                   
                 </Box>
 
 

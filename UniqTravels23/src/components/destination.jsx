@@ -107,7 +107,7 @@ return(
 </CardActions>
 <Collapse in={expanded} timeout="auto" unmountOnExit>
 <CardContent>
-    <Typography paragraph> 1.1 Choosing the Right Time to Visit:</Typography>
+    <Typography paragraph> 1.1 Choosing the Right Time to Visit:</Typography> {/*evt lave numerede punkter som <li> i en <ul> */}
     <Typography paragraph>
 
     Iceland offers different experiences throughout the year. Summer, from June to August, is ideal for exploring the lush landscapes, hiking, and enjoying extended daylight hours. Winter, from November to March, is perfect for witnessing the Northern Lights, but be prepared for shorter days and colder temperatures. Spring and autumn offer a balance between these extremes.
@@ -116,14 +116,14 @@ return(
     Determine how long you plan to stay in Iceland. A typical trip can range from a long weekend to a couple of weeks. The duration of your stay will influence your itinerary and the number of places you can explore.
 
     1.3 Budget Considerations:
-    Iceland is known for its high cost of living, so it's essential to set a budget that aligns with your travel goals. Be prepared for higher prices on accommodations, dining, and activities.
+    Iceland is known for its high cost of living, so it&apos;s essential to set a budget that aligns with your travel goals. Be prepared for higher prices on accommodations, dining, and activities.
 
     </Typography>
     <Typography paragraph> Section 2: Must-See Destinations in Iceland</Typography>
     <Typography paragraph>
 
 
-    Iceland boasts a variety of stunning natural attractions that you shouldn't miss. Here are some of the must-see destinations:
+    Iceland boasts a variety of stunning natural attractions that you shouldn&apos;t miss. Here are some of the must-see destinations:
 
     2.1 Reykjavik:
     Start your journey in the capital city, Reykjavik. Explore its vibrant arts scene, unique architecture, and soak in the Blue Lagoon, a geothermal spa located nearby.
@@ -132,7 +132,7 @@ return(
     The Golden Circle is a popular tourist route that includes three primary stops: Thingvellir National Park, Geysir geothermal area, and Gullfoss waterfall. Each destination offers breathtaking natural wonders.
 
     2.3 The South Coast:
-    Travel along Iceland's south coast to witness spectacular waterfalls like Seljalandsfoss and Skogafoss, as well as the black sand beaches of Reynisfjara. Don't forget to visit Vatnajokull National Park, home to Europe's largest glacier.
+    Travel along Iceland&apos;s south coast to witness spectacular waterfalls like Seljalandsfoss and Skogafoss, as well as the black sand beaches of Reynisfjara. Don&apos;t forget to visit Vatnajokull National Park, home to Europe&apos;s largest glacier.
 
     2.4 The Ring Road (Route 1):
     For a comprehensive Icelandic experience, consider driving the Ring Road. This route encircles the entire island, allowing you to explore diverse landscapes, quaint villages, and more remote attractions.
@@ -142,16 +142,16 @@ return(
 
 
     3.1 Packing Essentials:
-    Pack clothing suitable for the season you're visiting, including waterproof and insulated gear. A good camera is a must for capturing the stunning landscapes.
+    Pack clothing suitable for the season you&apos;re visiting, including waterproof and insulated gear. A good camera is a must for capturing the stunning landscapes.
 
     3.2 Accommodations:
     Iceland offers a range of accommodations, from hostels and guesthouses to luxury hotels and unique stays like geodesic domes and ice hotels. Be sure to book in advance, especially during the peak tourist season.
 
     3.3 Safety and Respect:
-    Iceland's natural beauty is delicate, so always follow the Leave No Trace principles to protect the environment. Additionally, stay safe by checking the weather, road conditions, and respecting local regulations.
+    Iceland&apos;s natural beauty is delicate, so always follow the Leave No Trace principles to protect the environment. Additionally, stay safe by checking the weather, road conditions, and respecting local regulations.
 
     3.4 Currency and Payment:
-    Iceland uses the Icelandic Krona (ISK), and while credit cards are widely accepted, it's advisable to carry some cash for emergencies, especially in more remote areas.
+    Iceland uses the Icelandic Krona (ISK), and while credit cards are widely accepted, it&apos;s advisable to carry some cash for emergencies, especially in more remote areas.
     </Typography>
     <Typography>
     Now that you have a basic introduction to traveling to Iceland, you can start planning your adventure and exploring this remarkable country. Enjoy your journey in the land of glaciers, volcanoes, and endless natural beauty!
