@@ -29,17 +29,11 @@ function App() {
   return (
     <ThemeProvider theme={customTheme(outerTheme)}>
       <CssBaseline enableColorScheme />
-
       <Routes>
 
         <Route path="/signup" element={<SignUp />} />
         <Route path="/login" element={<Login />} />
 
-
-    </Routes>
-  
-
-    <Routes>
         <Route element={
           <>
             <Nav />

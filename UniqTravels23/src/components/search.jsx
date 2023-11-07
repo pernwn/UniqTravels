@@ -12,12 +12,39 @@ import { Divider, IconButton, InputBase, Paper } from '@mui/material';
 //import MenuIcon from '@mui/icons-material/Menu';
 //import DirectionsIcon from '@mui/icons-material/Directions';
 import TuneOutlinedIcon from '@mui/icons-material/TuneOutlined';
+import cName from "../json/cName.json"
 
-import Desti from './searchDesti';
+//import Desti from './searchDesti';
+import { useState } from 'react';
 
 
-export default function SearchBar() {
+
+
+export default function SearchBar({setResults}){
+    const json = cName;
+    const obj = JSON.parse(json)
+
+ // { country: 'Afghanistan', city: 'Kabul' }
     const outerTheme = useTheme();
+    const [input, setInput] = useState("");
+   
+
+    const fetchData = (value) => {
+        fetch(obj).then((response) => response.json()).then((json) => 
+        { 
+            const results = json.filter((obj) => {
+                return value && obj && obj.country && obj.country.toLowerCase().includes(value)
+            });
+
+            setResults(results);
+        });
+    }
+
+    const handleChange = (value) => {
+        setInput(value);
+        fetchData(value);
+
+    }
 
     return (
         <ThemeProvider theme={customTheme(outerTheme)}>
@@ -29,10 +56,13 @@ export default function SearchBar() {
             >
 
 
-                <InputBase //tekstfeltet
+                <InputBase //søgefeltet
                     sx={{ ml: 2, flex: 1 }}
+                    component="input"
                     placeholder="Search dream vacation"
-                    inputProps={{ 'label': 'search dream vacation' }}
+                    inputProps={{ 'aria-label': 'Your next dream vacation' }}
+                    onChange={(e) => handleChange(e.target.value)}
+                    value={input}
                 />
 
                 <IconButton type="button" sx={{ p: '10px' }} label="search">
@@ -52,6 +82,7 @@ export default function SearchBar() {
                     <DirectionsIcon />
                 </IconButton>*/}
             </Paper>
+
 
 
 

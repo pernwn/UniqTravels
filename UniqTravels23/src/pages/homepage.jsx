@@ -50,7 +50,8 @@ import SearchBar from '../components/search';
 import "../styles/vic.css"
 import { /*SplashAnimation, GuyAnimation,*/ TravelAnimation } from "../components/splash";
 
-import Desti from "../components/searchDesti";
+
+
 
 //import fra MUI
 import Box from '@mui/material/Box';
@@ -60,6 +61,8 @@ import FmdGoodOutlinedIcon from '@mui/icons-material/FmdGoodOutlined';
 import MapsHomeWorkOutlinedIcon from '@mui/icons-material/MapsHomeWorkOutlined';
 import CarRentalIcon from '@mui/icons-material/CarRental';
 import Trustpilot from "../components/trustpilot";
+import { useState } from "react"
+import SearchResultsList from "../components/searchResultList"
 
 
 
@@ -67,7 +70,7 @@ import Trustpilot from "../components/trustpilot";
 
 
 export default function HomePage() {
-    //variabel til at anvende useTheme
+   const [results, setResults] = useState([]);
 
     return (
         //theme bliver kaldt ved brug af themeprovider – importeret funktion "customTheme" kaldes hvor i variabel outertheme kaldes
@@ -88,13 +91,17 @@ export default function HomePage() {
                         }}
                     >
                         <Typography variant="h2" sx={{ color: customTheme => customTheme.palette.background.default, lineHeight: .8, marginBottom: 4 }}>Welcome Traveler!</Typography>
-                        <SearchBar />
+                        <div className="search-wrapper">
+                        <SearchBar setResults={setResults}/>
+                        <SearchResultsList results={results}/>
+                        </div>
+
                     </Box>
 
                 </section>
             </section>
 
-            <Desti />
+         
 
             <Stack spacing={8} m={"2em 0 12em"}>
                 <Box className='quickTools'
@@ -164,10 +171,10 @@ export default function HomePage() {
                     sx={{ color: customTheme => customTheme.palette.text }}
                 >
 
-                    <Typography variant="h5" lineHeight="1" textAlign="center">Get inspired</Typography>
+                    <Typography variant="h4" lineHeight="1" textAlign="center">Get inspired</Typography>
                     <Stack direction="row" spacing={2}
                         sx={{
-                            p: "4% 6% 16%",
+                            p: "2% 6% 16%",
                             overflow: "auto",
                             
                         }}
@@ -187,10 +194,10 @@ export default function HomePage() {
 
                     </Stack>
 
-                    <Typography variant="h5" lineHeight="1" textAlign="center">Explore unique cities</Typography>
+                    <Typography variant="h4" lineHeight="1" textAlign="center">Explore unique cities</Typography>
                     <Stack direction="row" spacing={2}
                         sx={{
-                            p: "4% 6% 16%",
+                            p: "2% 6% 16%",
                             overflow: "auto",
                             
                         }}
@@ -209,13 +216,13 @@ export default function HomePage() {
 
                     </Stack>
 
-                    <Typography variant="h5" lineHeight="1" textAlign="center" gutterBottom>Experience extraordinary cultures</Typography>
+                    <Typography variant="h4" lineHeight="1" textAlign="center" gutterBottom paddingX={2}>Experience extraordinary cultures</Typography>
                     <Stack direction="row" spacing={2}
-                        sx={{
-                            p: "4% 6% 16%",
-                            overflow: "auto",
-                            
-                        }}
+                              sx={{
+                                p: "2% 6% 16%",
+                                overflow: "auto",
+                                
+                            }}
                     > {/* TODO: BILLEDERNE SKAL ÆNDRES SÅ DET PASSER TIL TITLEN. TODO: TILFØJ FAV/SAVE FUNKTION. TODO: tilføj share, like, save, whatever ikoner*/}
                         <AutoScroll title="Nomadic Tapestry" description="In this culture, traditions are woven like threads into a nomadic tapestry. Each step is a stitch in this grand design, and even the yurts have tales to share." image={hike1} />
                         <AutoScroll title="City of contradictions" description="In this culture, cities are kaleidoscopes of contrast, where ancient temples stand next to futuristic skyscrapers, and street vendors sell both traditional delicacies and high-tech gadgets. It's a place where history and the future share a cup of tea." image={hike2} />
@@ -230,10 +237,10 @@ export default function HomePage() {
 
                     </Stack>
 
-                    <Typography variant="h5" lineHeight="1" textAlign="center" gutterBottom>Travel more for less</Typography>
+                    <Typography variant="h4" lineHeight="1" textAlign="center" gutterBottom>Travel more for less</Typography>
                     <Stack direction="row" spacing={2}
                         sx={{
-                            p: "4% 6% 16%",
+                            p: "2% 6% 8%",
                             overflow: "auto",
                             
                         }}

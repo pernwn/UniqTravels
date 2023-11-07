@@ -40,7 +40,7 @@ export default function Nav() {
     return (
         <>
             <BottomNavigation
-                sx={{ width: "100%", p: "2.5em 0 4em 0", position: 'fixed', bottom: 0, left: 0, right: 0, boxShadow: 3, zIndex: 2 }}
+                sx={{ width: "100%", p: "2em 0 2.5em 0", position: 'fixed', bottom: 0, left: 0, right: 0, boxShadow: 10, zIndex: 2 }}
                 value={location.pathname} //denne value gør at knappen er aktiv på den side man er på uanset om man har trykket på nav eller tilgår siden på anden måde
                 onChange={handleChange}
 

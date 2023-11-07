@@ -137,3 +137,25 @@ html {
   align-items: center;
   justify-content: space-between;
 }
+
+.searchResults{
+  width:100%;
+  display:flex;
+  flex-direction: column;
+  max-height:300px;
+  overflow-y: scroll;
+  border-radius: 1em;
+  z-index: 3;
+  box-shadow: 0 0 15px #1c465c61;
+}
+
+.search-wrapper{
+  margin:auto;
+  display:flex;
+  flex-direction: column;
+}
+
+.search-result {
+  padding: 10px 20px;
+  text-align: left;
+}

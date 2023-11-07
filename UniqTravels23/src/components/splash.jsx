@@ -1,8 +1,8 @@
 //{Kodet af: Victoria}
 
-import splash from "../uniq.json"
-import guy from "../guy2.json"
-import travel from "../travel.json"
+import splash from "../json/uniq.json"
+import guy from "../json/guy2.json"
+import travel from "../json/travel.json"
 import Lottie from "lottie-react"
 import "../styles/vic.css"
 
