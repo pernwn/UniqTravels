@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { db } from "../firebase-config";
 
 import { /*Avatar, Button, Divider, FormGroup,*/ ListItem, /*Rating,*/ Stack, /*TextField,*/ Typography } from "@mui/material";
+import Paper from '@mui/material/Paper';
 
 
 
@@ -36,24 +37,17 @@ export default function Desti() {
 
 
 
-
-
     return (
-        <>
+        <Paper elevation={3}  square={false}>
 
             <Stack direction="column" textAlign="center" spacing={4}>
-                <Typography variant="h4">Destinations</Typography>
-
+                
                 <Stack spacing={4}>
                     {data.map((item) => (
                         <ListItem key={item.id}>
                             <div className="rev">
                                 <Typography variant="h5">{item.country}</Typography>
-
-                                <Typography variant="h6">{item.city}</Typography>
-
-
-
+                                <Typography variant="body1">{item.city}</Typography>
                             </div>
 
 
@@ -66,7 +60,7 @@ export default function Desti() {
             </Stack>
 
 
-        </>
+        </Paper>
     );
 }
 
@@ -85,7 +79,8 @@ console.error("ERROR – the review could not be deleted: ", e);
 }
 }
  
- 
+ <Typography variant="h4">Destinations</Typography>
+
  
 <Button>
                     <Tooltip City="Delete" data-id={item.id} onClick={deleteReview}>

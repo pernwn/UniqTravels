@@ -83,7 +83,7 @@ return(
             <IconButton aria-label="share">
                 <ShareIcon />
             </IconButton>
-            <div sx={{ fontSize: 35 }}>Read More</div>
+            <div sx={{ fontSize: 35 }}>Read More </div> {/* sx kan ikke bruges i alm html elementer som div, section etc */}
         </CardActions>
     </Link>
         </Card>

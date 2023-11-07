@@ -1,11 +1,12 @@
 //{Kodet af: Victoria}
 
 
-import { Button, Card, CardActionArea, CardContent, CardMedia, Stack, Typography } from "@mui/material";
+import { Button, Card, CardActionArea, CardActions, CardContent, CardMedia, IconButton, Stack, Typography } from "@mui/material";
 import { NavLink } from "react-router-dom";
+import FavoriteIcon from '@mui/icons-material/Favorite';
+import ShareIcon from '@mui/icons-material/Share';
 
-
-
+import "../styles/vic.css"
 
 
 //Kort komponent som genbruges på flere sider vha props
@@ -87,16 +88,19 @@ export function ScrollCards(props) {
 
 export function AutoScroll(props) {
     return (
-//for-loop ?
-   
-            <CardActionArea>
+        //for-loop ?
+
+        <CardActionArea>
 
             <Card elevation={4}
                 sx={{
                     height: "100%",
+
                 }}
             >
                 <CardContent>
+
+                    
                     <CardMedia
                         component="img"
                         image={props.image}
@@ -108,12 +112,29 @@ export function AutoScroll(props) {
 
                         }}
                     ></CardMedia>
-                    <Typography variant="body1">{props.title}</Typography>
-                    <Typography variant="body2">{props.description}</Typography>
-                </CardContent>
-            </Card>
-            </CardActionArea>
 
+                    <div className="container">
+                        <Typography variant="body1">{props.title}</Typography>
+
+                        <CardActions disableSpacing>
+                            <IconButton aria-label="add to favorites">
+                                <FavoriteIcon />
+                            </IconButton>
+                            <IconButton aria-label="share">
+                                <ShareIcon />
+                            </IconButton>
+                        </CardActions>
+                    </div>
+
+
+                    <Typography variant="body2">{props.description}</Typography>
+   
+                </CardContent>
+
+
+            </Card>
+  
+            </CardActionArea>
     )
 }
 
@@ -139,7 +160,7 @@ export function MainBtn(props) {
     )
 }
 
-export function SecndBtn(props){
+export function SecndBtn(props) {
     return (
         <Button variant="filled"
             component={NavLink}
@@ -148,12 +169,12 @@ export function SecndBtn(props){
             sx={{
                 color: customTheme => customTheme.palette.secondary.main,
                 backgroundColor: "transparent",
-                border:"2px solid",
-                width: "80%",
+                border: "2px solid",
+                width: "15em",
 
             }}
         >
-            <Typography variant="button">{props.name}</Typography>
+            <Typography variant="buttonc">{props.name}</Typography>
         </Button>
 
 

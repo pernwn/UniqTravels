@@ -13,11 +13,12 @@ import { Divider, IconButton, InputBase, Paper } from '@mui/material';
 //import DirectionsIcon from '@mui/icons-material/Directions';
 import TuneOutlinedIcon from '@mui/icons-material/TuneOutlined';
 
+import Desti from './searchDesti';
+
 
 export default function SearchBar() {
     const outerTheme = useTheme();
 
-    
     return (
         <ThemeProvider theme={customTheme(outerTheme)}>
 
@@ -52,10 +53,6 @@ export default function SearchBar() {
                 </IconButton>*/}
             </Paper>
 
-            <Paper className='search-results'>
-                Searchbar results
-
-            </Paper>
 
 
         </ThemeProvider>
@@ -64,6 +61,13 @@ export default function SearchBar() {
 }
 
 /*
+
+
+            <Paper className='search-results'>
+                Searchbar results
+
+            </Paper>
+
 <Box sx={{
     display: 'flex',
     alignItems: 'flex-start',
