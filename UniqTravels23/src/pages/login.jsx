@@ -2,12 +2,11 @@
 //kodet af Rina
 
 //import af separat theme file
+// Importér nødvendige moduler og komponenter
 import { customTheme } from '../themes/themes';
 import { useTheme } from '@mui/material/styles';
-
 import { Button, ThemeProvider, Typography, TextField, Box, /*Grid*/ } from "@mui/material";
 import { useState } from "react";
-//import { Link } from 'react-router-dom';
 
 import '../styles/vic.css'
 
