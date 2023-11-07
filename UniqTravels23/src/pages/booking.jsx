@@ -91,7 +91,7 @@ export default function Booking() {
                 */ }
               <ComplexCard
                 image={santorini}
-                title={"Escape to Santorini's Paradise"}
+                title={"Explore Santorini's Paradise"}
                 subheader={"Relax on Aegean Islands"}
                 label={"GRC"}
                 body={"Indulge in a dreamy retreat to Santorini, Greece's island gem. Enjoy breathtaking sunsets in Oia, explore ancient ruins in Akrotiri, and unwind on the unique black sand beaches of Kamari. Savor traditional Greek cuisine and immerse yourself in the local culture. With its stunning landscapes and charming villages, Santorini is a true paradise waiting to be discovered. Book your getaway now and experience the magic of the Aegean Islands!"}
@@ -100,7 +100,7 @@ export default function Booking() {
                 <ComplexCard
                 image={iceland}
                 title={"Iceland's Natural Wonders"}
-                subheader={"Chase Northern Lights & Geysers"}
+                subheader={"Northern Lights"}
                 label={"ISL"}
                 body={"Embark on an adventure to Iceland, a land of unparalleled natural beauty. Witness the mesmerizing Northern Lights dance across the Arctic sky, bathe in the Blue Lagoon's geothermal waters, and hike to see geysers erupt in the Golden Circle. Discover the unique Icelandic culture, try the famous hot dogs, and explore the vibrant Reykjavik. Iceland's diverse landscapes will leave you in awe. Book your journey now and experience the wonders of the North!"}
                 />
@@ -108,14 +108,14 @@ export default function Booking() {
                 <ComplexCard
                 image={bhutan}
                 title={"Bhutan's Hidden Beauty"}
-                subheader={"Explore the Land of the Thunder Dragon"}
+                subheader={"Land of the Thunder Dragon"}
                 label={"BTN"}
                 body={"Venture to Bhutan, the hidden gem of the Himalayas. Visit ancient monasteries like Paro Taktsang (Tiger's Nest), hike through lush valleys, and immerse yourself in the peaceful Buddhist culture. Discover the beauty of Bhutan's unique architecture and try delicious dishes like Ema Datshi. With its untouched natural beauty, Bhutan offers a serene escape from the ordinary. Book your journey now and explore the Land of the Thunder Dragon!"}
                 />
 
                 <ComplexCard
                 image={salvador}
-                title={"Salvador's Vibrant Culture"}
+                title={"Salvador's Culture"}
                 subheader={"Experience Bahian Traditions"}
                 label={"BRA"}
                 body={"Immerse yourself in the vibrant culture of Salvador, Brazil. Explore the historic Pelourinho district, witness colorful Carnaval celebrations, and savor delicious Bahian cuisine. Dance to the rhythms of Samba and Capoeira, and relax on the beautiful beaches of Itapuã. Salvador's rich history and lively atmosphere promise an unforgettable cultural journey. Book your trip now and experience the rhythms of Bahia!"}
@@ -124,7 +124,7 @@ export default function Booking() {
                 <ComplexCard
                 image={lapland}
                 title={"Lapland's Winter"}
-                subheader={"Meet Santa & Northern Lights"}
+                subheader={"Meet Santa & Northern lights"}
                 label={"FIN"}
                 body={"Embark on a magical winter adventure to Lapland, Finland. Meet Santa Claus in his hometown of Rovaniemi, go husky sledding through snowy forests, and witness the enchanting Northern Lights. Stay in cozy glass igloos and experience the thrill of ice fishing. Lapland's snowy landscapes and unique experiences make it a perfect winter getaway. Book your journey now and embrace the winter wonderland of Lapland!"}
                 />
@@ -132,7 +132,7 @@ export default function Booking() {
                 <ComplexCard
                 image={azores}
                 title={"Azores: Nature's Paradise"}
-                subheader={"Explore the Volcanic Islands"}
+                subheader={"Volcanic Islands & thermal pools"}
                 label={"PRT"}
                 body={"Discover the natural beauty of the Azores, Portugal's hidden gem in the Atlantic Ocean. Hike to volcanic craters, relax in thermal pools, and whale watch in the crystal-clear waters. Enjoy the local cuisine with fresh seafood and cheeses, and explore the charming towns of São Miguel and Terceira. The Azores offer a unique blend of adventure and tranquility. Book your trip now and experience nature's paradise!"}
                 />
@@ -157,7 +157,7 @@ export default function Booking() {
 
                 <ComplexCard 
                 image={london}
-                title={"Discover the Magic of London"}
+                title={"The Magic of London"}
                 subheader={"Explore Iconic Landmarks"}
                 label={"UK"}
                 body={"Escape to the enchanting city of London and uncover its rich history and vibrant culture. Visit world-famous landmarks like the Tower of London, Buckingham Palace, and the British Museum. Take a leisurely stroll along the River Thames, enjoy a traditional afternoon tea, and explore the trendy neighborhoods of Shoreditch and Notting Hill. London's diverse attractions and culinary scene promise an unforgettable journey. Book your trip now and experience the magic of this iconic city!"}

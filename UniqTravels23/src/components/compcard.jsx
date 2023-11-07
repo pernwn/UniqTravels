@@ -47,8 +47,14 @@ return(
         />
         <CardMedia
           component="img"
-          height="200"
           image={props.image} 
+          sx={{
+            height: 200,
+            minWidth: 290,
+            borderRadius: "4%",
+            marginBottom: 1.5
+
+        }}
         >
              
         </CardMedia>
