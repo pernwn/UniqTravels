@@ -11,7 +11,7 @@ import Typography from '@mui/material/Typography';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import ShareIcon from '@mui/icons-material/Share';
 import MoreVert from '@mui/icons-material/MoreVert';
-import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { Stack } from '@mui/material';
 
 export default function ComplexCard(props) {
@@ -75,15 +75,17 @@ return(
 
             </CardMedia>
             </CardContent>
-            <CardActions disableSpacing>
-                <IconButton aria-label="add to favorites">
-                    <FavoriteIcon />
-                </IconButton>
-                <IconButton aria-label="share">
-                    <ShareIcon />
-                </IconButton>
-                <NavLink to="/destination" sx={{ fontSize: 35 }}>Read More</NavLink>
-            </CardActions>
+            <Link to="/destination">
+        <CardActions disableSpacing>
+            <IconButton aria-label="add to favorites">
+                <FavoriteIcon />
+            </IconButton>
+            <IconButton aria-label="share">
+                <ShareIcon />
+            </IconButton>
+            <div sx={{ fontSize: 35 }}>Read More</div>
+        </CardActions>
+    </Link>
         </Card>
 </Stack>
     )

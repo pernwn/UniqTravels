@@ -10,6 +10,7 @@ import bhutan from "../assets/pictures/bhutan.jpg";
 import salvador from "../assets/pictures/salvador.jpg";
 import lapland from "../assets/pictures/lapland.jpg";
 import azores from "../assets/pictures/azores.jpg";
+import beach from "../assets/pictures/beachy.jpeg";
 
 import { customTheme } from '../themes/themes';
 import { useTheme } from '@mui/material/styles';
@@ -180,11 +181,15 @@ export default function Booking() {
 
                         }}
                     >
-                        <ScrollCards name="New adventure " image={azores} /> 
+                        <ScrollCards name="Claim your golden ticket and embark on the adventure of a lifetime. Don't wait, secure your spot before it's gone! " image={azores} /> 
                         <ScrollCards name="vacation for you?" image={bhutan} />
-                        <ScrollCards name="booking!" image={hamburg} />
-                        <ScrollCards name="Incredible" image={london} />
+                        <ScrollCards name="It's time to treat yourself!" image={hamburg} />
+                        <ScrollCards name="Unlock paradise at an incredible 15% off! Your next adventure awaits." image={london} />
                         <ScrollCards name="Want a coupon?" image={kyoto} />
+                        <ScrollCards name="Hurry! Get this Golden Ticket before another traveler!" image={beach} />
+                        <ScrollCards name="Earn points in our loyalty program just by traveling!" image={beach} />
+                        <ScrollCards name="Flights to Paris are especially cheap right now" image={beach} />
+                        <ScrollCards name="15% discount on your next booking!" image={beach} />
                         </Stack>
   
                         <Typography variant="h3" m="0 3%">

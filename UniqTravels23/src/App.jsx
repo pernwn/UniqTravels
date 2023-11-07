@@ -19,6 +19,7 @@ import { customTheme } from './themes/themes'
 import { useTheme } from '@mui/material/styles';
 import { ThemeProvider } from '@emotion/react'
 import { CssBaseline } from '@mui/material'
+import Destination from './components/destination'
 
 
 function App() {
@@ -33,6 +34,7 @@ function App() {
 
         <Route path="/signup" element={<SignUp />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/destination" element={<Destination />} />
         <Route element={
           <>
             <Nav />
