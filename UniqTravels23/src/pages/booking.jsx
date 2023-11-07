@@ -28,12 +28,13 @@ import BackBtn from "../components/backbtn";
 import TravelFilter from "../components/imgfilter";
 
 export default function Booking() {
-    // Hent det aktuelle tema ved hjælp af useTheme hook
+  
     const outerTheme = useTheme();
     // Definér nogle variabler med data, der skal bruges senere
 
 
-
+// Vi har defineret et theme og cssbaseline vha MUI materials og kalder på det på alle vores sider så styling er sammenhængende  
+// Hent det aktuelle tema ved hjælp af useTheme hook
     return (
         <>
         <ThemeProvider theme={customTheme(outerTheme)}>
@@ -70,6 +71,7 @@ export default function Booking() {
 
                     }}
                 >
+                     {/* Komponent quicktools bruges her */}
                     <QuickTools name="Travel options" icon={<FmdGoodOutlinedIcon sx={{ fontSize: 40, marginBottom: "16%" }} />} />
                     <QuickTools name="Housing options" icon={<MapsHomeWorkOutlinedIcon sx={{ fontSize: 40, marginBottom: "16%" }} />} />
                     <QuickTools name="Explore options" icon={<TravelExploreOutlinedIcon sx={{ fontSize: 40, marginBottom: "16%" }} />} />
@@ -171,16 +173,16 @@ export default function Booking() {
             </Typography>
 
 
-
+                               
             <Stack direction="row" spacing={1} p="0 4% 16%" 
                         sx={{
-                            overflow: "auto",
+                            overflow: "auto", 
                             display: "flex",
                             flexDirection: "row",
                             p: "0 3% 3%",
 
                         }}
-                    >
+                    >{/* I styling vælger vi at bruge overflow:auto i kombi med flowdirection:row mange steder for at  vores card komponenter kan scrolles horisontalt*/}
                         <ScrollCards name="Claim your golden ticket and embark on the adventure of a lifetime. Don't wait, secure your spot before it's gone! " image={azores} /> 
                         <ScrollCards name="vacation for you?" image={bhutan} />
                         <ScrollCards name="It's time to treat yourself!" image={hamburg} />

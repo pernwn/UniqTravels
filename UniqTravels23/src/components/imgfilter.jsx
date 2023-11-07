@@ -1,5 +1,5 @@
 //lavet af Rina
-
+// Importér nødvendige moduler og komponenter
 import { useState } from 'react';
 import {
   ThemeProvider,
@@ -67,6 +67,7 @@ const images = [
   { id: 17, url: venice, title: 'Venice', category:  'Pilgrimage Travel' },
 ];
 
+// Funktion til håndtering af ændringer i valgt rejsesøgningskategori
 const TravelFilter = () => {
   const outerTheme = useTheme();
   const [selectedCategory, setSelectedCategory] = useState('');
@@ -79,18 +80,22 @@ const TravelFilter = () => {
     <ThemeProvider theme={customTheme(outerTheme)} >
       <CssBaseline enableColorScheme />
       <FormControl sx={{ m: 3, width: 300 }}>
+          {/* Label for rejsesøgningskategori */}
         <InputLabel id="category-label">Select Travel Category</InputLabel>
+          {/* Dropdown-menu for valg af rejsesøgningskategori */}
         <Select
           labelId="category-label"
           id="category-select"
           value={selectedCategory}
           label="Select Travel Category"
-          onChange={handleCategoryChange}
+          onChange={handleCategoryChange} // Funktion, der kaldes ved ændring af valgt kategori
           sx={{
             maxWidth: '600px',
           }}
         >
+            {/* Standardværdi, der repræsenterer "Alle kategorier" */}
           <MenuItem value="">All Categories</MenuItem>
+           {/* Map gennem rejsesøgningskategorier og opret en MenuItem for hver kategori */}
           {travelCategories.map((category) => (
             <MenuItem key={category} value={category}>
               {category}
@@ -110,11 +115,12 @@ const TravelFilter = () => {
         justifyContent: 'center',
       }}
     >
+       {/* Filtrer og map gennem billederne baseret på den valgte kategori */}
       {images
         .filter((image) => !selectedCategory || image.category === selectedCategory)
         .map((image) => (
           <div
-            key={image.id}
+            key={image.id} // Unik nøgle til at identificere hvert element i mappet liste
             style={{
               flex: '0 0 15%',
               margin: '0 0 3%',
@@ -136,7 +142,7 @@ const TravelFilter = () => {
             <Typography
               variant="subtitle1"
               style={{
-                position: 'absolute',
+                position: 'absolute', // Positionen er absolut i forhold til forældreelementet
                 top: '50%', // Center vertikalt på billedet
                 left: '50%', // Center horisontalt på billedet
                 transform: 'translate(-50%, -50%)', // Center både vertikalt og horisontalt
