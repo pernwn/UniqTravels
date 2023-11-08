@@ -12,34 +12,31 @@ import { Divider, IconButton, InputBase, Paper } from '@mui/material';
 //import MenuIcon from '@mui/icons-material/Menu';
 //import DirectionsIcon from '@mui/icons-material/Directions';
 import TuneOutlinedIcon from '@mui/icons-material/TuneOutlined';
-import cName from "../json/cName.json"
+
 
 //import Desti from './searchDesti';
 import { useState } from 'react';
 
-
+import countriesData from "../json/cName.json"
 
 
 export default function SearchBar({setResults}){
-    const json = cName;
-    const obj = JSON.parse(json)
-
- // { country: 'Afghanistan', city: 'Kabul' }
     const outerTheme = useTheme();
-    const [input, setInput] = useState("");
+    const [input, setInput] = useState('');
+
    
 
     const fetchData = (value) => {
-        fetch(obj).then((response) => response.json()).then((json) => 
-        { 
-            const results = json.filter((obj) => {
-                return value && obj && obj.country && obj.country.toLowerCase().includes(value)
+      
+            const results = countriesData.filter((obj) => {
+                return value && obj && obj.country && obj.country.toLowerCase().includes(value.toLowerCase())
             });
 
             setResults(results);
-        });
-    }
+        }
+    
 
+    
     const handleChange = (value) => {
         setInput(value);
         fetchData(value);
@@ -71,7 +68,7 @@ export default function SearchBar({setResults}){
 
                 <Divider sx={{ height: 28, m: 0.2 }} orientation="vertical" />
 
-                <IconButton sx={{ p: '10px' }} label="search filter" /*Denne menu skal laves til filtrerin */>
+                <IconButton sx={{ p: '10px' }} label="search filter">
                     <TuneOutlinedIcon />
                 </IconButton>
 
@@ -87,38 +84,6 @@ export default function SearchBar({setResults}){
 
 
         </ThemeProvider>
-    )
+    );
 
 }
-
-/*
-
-
-            <Paper className='search-results'>
-                Searchbar results
-
-            </Paper>
-
-<Box sx={{
-    display: 'flex',
-    alignItems: 'flex-start',
-}}>
-    <TextField //DENNE SKAL HAVE INPUT ?? man skal kunne søge ting, evt tag fra firebase
-
-        fullWidth
-        id="input-with-icon-textfield"
-        label="Your next adventure awaits!"
-        placeholder='E.g. "Amazing beaches"'
-
-        InputProps={{
-            startAdornment: (
-                <InputAdornment position="start">
-                    <SearchIcon
-                        sx={{ color: customTheme => customTheme.palette.secondary.main }}
-                    />
-                </InputAdornment>
-            ),
-        }}
-        variant="outlined"
-    />
-</Box>*/

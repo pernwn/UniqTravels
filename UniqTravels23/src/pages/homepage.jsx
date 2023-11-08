@@ -1,7 +1,6 @@
 //{Kodet af: Victoria}
 
 
-
 //import billeder
 import beach from "../assets/pictures/beachy.jpeg"
 import trust from "../assets/trustpilot.png"
@@ -101,7 +100,6 @@ export default function HomePage() {
                 </section>
             </section>
 
-         
 
             <Stack spacing={8} m={"2em 0 12em"}>
                 <Box className='quickTools'

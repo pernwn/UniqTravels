@@ -144,8 +144,7 @@ html {
   flex-direction: column;
   max-height:300px;
   overflow-y: scroll;
-  border-radius: 1em;
-  z-index: 3;
+  z-index: 1;
   box-shadow: 0 0 15px #1c465c61;
 }
 
