@@ -32,8 +32,6 @@ import switzerland from "../assets/pictures/switzerland.webp";
 import venice from "../assets/pictures/venice.webp";
 
 
-
-
 const travelCategories = [
   'Luxury Travel',
   'Backpacking',
@@ -45,7 +43,6 @@ const travelCategories = [
   'Pilgrimage Travel',
   'Honeymoon Travel',
 ];
-
 
 
 const images = [
