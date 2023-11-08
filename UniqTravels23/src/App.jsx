@@ -31,7 +31,7 @@ function App() {
       <CssBaseline enableColorScheme />
       <Routes>
 
-        <Route path="/signup" element={<SignUp />} index /> {/* Tilføjer index her så det er landing page */}
+        <Route path="/signup" element={<SignUp />} index/> {/* Tilføjer index her så det er landing page –virker ikke */}
         <Route path="/login" element={<Login />} />
 
 

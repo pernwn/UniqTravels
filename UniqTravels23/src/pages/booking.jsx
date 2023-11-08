@@ -13,7 +13,7 @@ import london from "../assets/pictures/london.webp";
 import manarola from "../assets/pictures/manarola.webp";
 import salvador from "../assets/pictures/salvador.webp";
 import santorini from "../assets/pictures/santorini.webp";
-import beach from "../assets/pictures/beachy.jpeg";
+
 
 import { customTheme } from '../themes/themes';
 import { useTheme } from '@mui/material/styles';
