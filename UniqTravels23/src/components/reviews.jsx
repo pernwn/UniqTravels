@@ -4,10 +4,9 @@ import { addDoc, collection, onSnapshot } from "@firebase/firestore";
 import { useEffect, useState } from "react";
 import { db } from "../firebase-config";
 
-import { Avatar, Button, Divider, FormGroup, ListItem, Rating, Stack, TextField, Typography } from "@mui/material";
+import { Avatar, Box, Button, Divider, FormGroup, ListItem, Rating, Stack, TextField, Typography } from "@mui/material";
 
-
-
+import { Copyright } from "../pages/signup";
 
 export default function ComReviews() {
     const [data, setData] = useState([]);
@@ -16,11 +15,9 @@ export default function ComReviews() {
     const [description, setDescription] = useState("");
     const [location, setLocation] = useState("");
     const [rating, setRating] = useState(0);
-    const [date] = useState(0);
+
 
     const [sorting, setSorting] = useState("location")
-
-
 
 
 
@@ -61,12 +58,12 @@ export default function ComReviews() {
             description: description,
             location: location,
             rating: rating,
-            date: date, //TODO: tilføje noget dato et eller andet sted?????
+
         }
 
         try { //laver opdatering TODO: pop up beskeder i stedet for console log
-            
-            
+
+
             const ratingRef = await addDoc(collection(db, "community-reviews"), newReview);//når bruger opretter ny vare, oprettes nyt dokument i firebase shoppingliste collection
 
 
@@ -88,10 +85,14 @@ export default function ComReviews() {
     }
 
     return (
-        <>
+        <Box>
 
-            <Stack direction="column" textAlign="center" spacing={4}>
-                <Typography variant="h4">Reviews –– TODO SO I DONT FORGET, omrokering på reviews efter feedback</Typography>
+            <Stack direction="column" textAlign="center" spacing={2} 
+            sx={{
+                position: 'relative',
+                top: 30,
+            }}>
+                <Typography variant="h2">Reviews</Typography>
 
                 <div className="sorting">
                     <Button onClick={sortByRating}>Sort by rating</Button>
@@ -99,12 +100,12 @@ export default function ComReviews() {
                 </div>
 
 
-                <Stack spacing={4}>
+                <Stack spacing={2}>
                     {data.map((item) => (
                         <ListItem key={item.id}>
                             <div className="rev">
                                 <Typography variant="h5">{item.title}</Typography>
-                                
+
                                 <Typography variant="h6"
                                     sx={{
                                         display: "flex",
@@ -142,12 +143,13 @@ export default function ComReviews() {
                 sx={{
                     '& .MuiTextField-root': { m: 1, width: "35ch" },
                     display: "flex",
-                    textAlign: "center"
+                    textAlign: "center",
+                    marginBottom:"20vh"
                 }}
                 autoComplete="off"
 
             >
-                <Typography variant="h4">Review a city, place or any location!</Typography>
+                <Typography variant="h4" paddingInline={6}>Review a city, place or any location!</Typography>
                 <div>
                     <TextField
                         required
@@ -156,7 +158,7 @@ export default function ComReviews() {
                         placeholder="How others see you."
 
                         value={user}
-                        onChange={e => setUser(e.target.value)} 
+                        onChange={e => setUser(e.target.value)}
                     />
 
                     <TextField
@@ -200,8 +202,8 @@ export default function ComReviews() {
                             defaultValue={0}
                             precision={0.5}
                             size="large"
-                            
-                            sx={{color: customTheme => customTheme.palette.secondary.accent}}
+
+                            sx={{ color: customTheme => customTheme.palette.secondary.accent }}
                         />
                     </div>
 
@@ -212,10 +214,13 @@ export default function ComReviews() {
                     >Submit</Button>
 
                 </div>
+
+                <Copyright />
             </FormGroup>
 
+            
 
-        </>
+        </Box>
     );
 }
 

@@ -1,5 +1,3 @@
-//{Kodet af: Victoria}
-
 
 import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
@@ -15,7 +13,9 @@ import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { ThemeProvider } from '@mui/material/styles';
 
-function Copyright(props) {
+
+
+export function Copyright(props) {
   return (
     <Typography variant="body2" align="center" {...props}>
       {'Copyright © '}
@@ -54,7 +54,7 @@ export default function SignUp() {
         <CssBaseline />
         <Box
           sx={{
-            marginTop: 20,
+            marginTop: 8,
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'center',
@@ -75,7 +75,7 @@ export default function SignUp() {
                   required
                   fullWidth
                   id="firstName"
-                  label="First Name"
+                  label="Name"
                   autoFocus
                 />
               </Grid>
@@ -83,9 +83,9 @@ export default function SignUp() {
                 <TextField
                   required
                   fullWidth
-                  id="lastName"
-                  label="Last Name"
-                  name="lastName"
+                  id="userName"
+                  label="Username"
+                  name="userName"
                   autoComplete="family-name"
                 />
               </Grid>
@@ -125,11 +125,29 @@ export default function SignUp() {
             >
               Sign Up
             </Button>
+              
+            <Button
+              type="submit"
+              fullWidth
+              variant="outlined"
+              sx={{ mt: 3, mb: 2, color: "#1877F2", border:"1px solid" }}
+            >
+              Login with Facebook
+            </Button>
+
+            <Button
+              type="submit"
+              fullWidth
+              variant="outlined"
+              sx={{ mb: 2, color: "#DB4437", border:"1px solid"}}
+            >
+              Login with Google
+            </Button>
             <Grid container justifyContent="flex-end">
               <Grid item>
                 
                 <Link href="/login" variant="body2">
-                  Already have an account? Sign in
+                  Already have an account? Login here
                 </Link>
               </Grid>
             </Grid>

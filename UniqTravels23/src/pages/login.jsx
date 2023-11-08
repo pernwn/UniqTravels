@@ -5,7 +5,7 @@
 // Importér nødvendige moduler og komponenter
 import { customTheme } from '../themes/themes';
 import { useTheme } from '@mui/material/styles';
-import { Button, ThemeProvider, Typography, TextField, Box, /*Grid*/ } from "@mui/material";
+import { Button, ThemeProvider, Typography, TextField, Box, Grid, Link, /*Grid*/ } from "@mui/material";
 import { useState } from "react";
 
 import '../styles/vic.css'
@@ -23,18 +23,13 @@ export default function Login() {
 
   // Opretter en funktion kaldet 'handleLogin', der udføres, når 'Login' knappen klikkes
   const handleLogin = () => {
-    if (email === "user@example.com" && password === "password") {
-      // Hvis email og password matcher, vises en velkomstbesked
-      //alert("welcome!");
-
-      //fører til homepage
+    if (email === "user" && password === "password") {
+      // Hvis email og password matcher fører den til homepage
       window.location.href = '/'
 
     } else {
       // Hvis email og password ikke matcher, vises en fejlbesked
-      alert("lol noob");
-
-      //TODO: måske felterne kan skifte farve til rød og en 'tooltip' (fra MUI) kan vises og sige at password wrong
+      alert("Wrong password or e-mail, try again!");
     }
   };
   // i denne sætning if (email === 'user@example.com' && password === 'password') starter vi en 'if' sætning for at undersøge om email og password matcher
@@ -53,7 +48,7 @@ export default function Login() {
           {/* Inputfelt for email med en onChange-handler, der opdaterer email-tilstanden */}
           <TextField
             type="email"
-            placeholder="Type here..."
+            placeholder="Type here... (user)"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             id="outlined-email"
@@ -63,7 +58,7 @@ export default function Login() {
           {/* Inputfelt for password med en onChange-handler, der opdaterer password-tilstanden */}
           <TextField
             type="password"
-            placeholder="Type here..."
+            placeholder="Type here... (password)"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             id="outlined-password"
@@ -73,16 +68,16 @@ export default function Login() {
           {/* Knappen, der udløser 'handleLogin' funktionen ved klik */}
           <Button variant="contained" type="button" onClick={handleLogin}>Login</Button>
 
-          {/* 
+          
           <Grid container justifyContent="flex-end">
               <Grid item>
                 
-                <Link href="../pages/signup.jsx" variant="body2">
-                  Don&rsquo;t have an account? Sign up
+                <Link href="/signup" variant="body2">
+                  Don&apos;t have an account? Sign up here
                 </Link>
               </Grid>
             </Grid>
-*/}
+
         </div>
 
       </Box>

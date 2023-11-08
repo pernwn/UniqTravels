@@ -30,10 +30,10 @@ function App() {
     <ThemeProvider theme={customTheme(outerTheme)}>
       <CssBaseline enableColorScheme />
       <Routes>
-
-        <Route path="/signup" element={<SignUp />} />
+        
         <Route path="/login" element={<Login />} />
-
+        <Route path="/signup" element={<SignUp />} />
+        
         <Route element={
           <>
             <Nav />
@@ -47,14 +47,13 @@ function App() {
           <Route path="/map" element={<Error />} />
           <Route path="/user" element={<User />} />
           <Route path="/destination" element={<Destination />} />
+          
 
           <Route path="*" element={<Error />} />
 
         </Route>
-
-
-
       </Routes>
+
     </ThemeProvider>
   )
 

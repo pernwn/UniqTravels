@@ -1,5 +1,5 @@
-.hPic {
-  background-image: url("../assets/pictures/beachy.jpeg");
+.fPic {
+  background-image: url("../assets/vacation_places_gallery/building12.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
@@ -9,8 +9,25 @@
 
 }
 
-.mBtn {
-  background-color: red;
+.cPic {
+  background-image: url("../assets/vacation_places_gallery/hike4.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+
+  height: 250px;
+  box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.5);
+
+}
+
+.logo img{
+  width:50%;
+
+}
+
+.logo{
+  display: flex;
+  align-items: center;
 }
 
 
