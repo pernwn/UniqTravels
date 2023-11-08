@@ -18,9 +18,9 @@ export function Copyright(props) {
   return (
     <Typography variant="body2" align="center" {...props}>
       {'Copyright © '}
-      <Link color="inherit" href="">
+      <Link color="inherit" href="https://uniq.rinamunk.dk/">
         UniqTravels
-      </Link>{'https://uniq.rinamunk.dk/'}
+      </Link>{''}
       {new Date().getFullYear()}
       {'.'}
     </Typography>
