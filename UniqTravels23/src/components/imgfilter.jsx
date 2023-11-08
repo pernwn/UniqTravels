@@ -14,22 +14,22 @@ import {
 import { useTheme } from '@mui/material/styles';
 import { customTheme } from '../themes/themes';
 
-import alabamahills from "../assets/pictures/alabamahills.jpg";
-import azores from "../assets/pictures/azores.jpg";
-import bali from "../assets/pictures/bali.jpg";
-import bellagio from "../assets/pictures/bellagio.jpg";
-import bhutan from "../assets/pictures/bhutan.jpg";
-import dubai from "../assets/pictures/dubai.jpg";
-import firestatepark from "../assets/pictures/firestatepark.jpg";
-import hamburg from "../assets/pictures/hamburg.jpg";
-import iceland from "../assets/pictures/iceland.jpg";
-import lapland from "../assets/pictures/lapland.jpg";
-import manarola from "../assets/pictures/manarola.jpg";
-import oia from "../assets/pictures/oia.jpg";
-import salvador from "../assets/pictures/salvador.jpg";
-import santorini from "../assets/pictures/santorini.jpg";
-import switzerland from "../assets/pictures/switzerland.jpg";
-import venice from "../assets/pictures/venice.jpg";
+import alabamahills from "../assets/pictures/alabamahills.webp";
+import azores from "../assets/pictures/azores.webp";
+import bali from "../assets/pictures/bali.webp";
+import bellagio from "../assets/pictures/bellagio.webp";
+import bhutan from "../assets/pictures/bhutan.webp";
+import dubai from "../assets/pictures/dubai.webp";
+import firestatepark from "../assets/pictures/firestatepark.webp";
+import hamburg from "../assets/pictures/hamburg.webp";
+import iceland from "../assets/pictures/iceland.webp";
+import lapland from "../assets/pictures/lapland.webp";
+import manarola from "../assets/pictures/manarola.webp";
+import oia from "../assets/pictures/oia.webp";
+import salvador from "../assets/pictures/salvador.webp";
+import santorini from "../assets/pictures/santorini.webp";
+import switzerland from "../assets/pictures/switzerland.webp";
+import venice from "../assets/pictures/venice.webp";
 
 
 

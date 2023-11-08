@@ -1,15 +1,18 @@
 
 //lavet af Rina
 // Importér nødvendige moduler og komponenter
-import hamburg from "../assets/pictures/hamburg.jpg"
-import kyoto from "../assets/pictures/kyoto.jpg"
-import london from "../assets/pictures/london.jpg"
-import santorini from "../assets/pictures/santorini.jpg";
-import iceland from "../assets/pictures/iceland.jpg";
-import bhutan from "../assets/pictures/bhutan.jpg";
-import salvador from "../assets/pictures/salvador.jpg";
-import lapland from "../assets/pictures/lapland.jpg";
-import azores from "../assets/pictures/azores.jpg";
+import azores from "../assets/pictures/azores.webp";
+import bhutan from "../assets/pictures/bhutan.webp";
+import hamburg from "../assets/pictures/hamburg.webp";
+import iceland from "../assets/pictures/iceland.webp";
+import kyoto from "../assets/pictures/kyoto.webp";
+import lapland from "../assets/pictures/lapland.webp";
+import bali from "../assets/pictures/bali.webp";
+import bellagio from "../assets/pictures/bellagio.webp";
+import london from "../assets/pictures/london.webp";
+import manarola from "../assets/pictures/manarola.webp";
+import salvador from "../assets/pictures/salvador.webp";
+import santorini from "../assets/pictures/santorini.webp";
 import beach from "../assets/pictures/beachy.jpeg";
 
 import { customTheme } from '../themes/themes';
@@ -194,10 +197,10 @@ export default function Booking() {
                     <ScrollCards name="It's time to treat yourself!" image={hamburg} />
                     <ScrollCards name="Unlock paradise at an incredible 15% off! Your next adventure awaits." image={london} />
                     <ScrollCards name="Want a coupon?" image={kyoto} />
-                    <ScrollCards name="Hurry! Get this Golden Ticket before another traveler!" image={beach} />
-                    <ScrollCards name="Earn points in our loyalty program just by traveling!" image={beach} />
-                    <ScrollCards name="Flights to Paris are especially cheap right now" image={beach} />
-                    <ScrollCards name="15% discount on your next booking!" image={beach} />
+                    <ScrollCards name="Hurry! Get this Golden Ticket before another traveler!" image={azores} />
+                    <ScrollCards name="Earn points in our loyalty program just by traveling!" image={bali} />
+                    <ScrollCards name="Flights to Paris are especially cheap right now" image={bellagio} />
+                    <ScrollCards name="15% discount on your next booking!" image={manarola} />
                 </Stack>
 
                 <Typography variant="h3" m="0 3%">
