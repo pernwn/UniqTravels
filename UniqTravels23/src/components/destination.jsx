@@ -20,7 +20,7 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 import "../styles/rin.css"
 
-import iceland from "../assets/pictures/iceland.jpg";
+import iceland from "../assets/pictures/iceland.webp";
 import BackBtn from "./backbtn";
 import { useState } from "react";
 
