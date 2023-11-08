@@ -18,7 +18,6 @@ import santorini from "../assets/pictures/santorini.webp";
 
 import { customTheme } from '../themes/themes';
 import { useTheme } from '@mui/material/styles';
-
 import { Box, CssBaseline, Stack, ThemeProvider, Typography } from '@mui/material';
 import SearchBar from '../components/search';
 import { QuickTools, ScrollCards } from '../components/cards';
@@ -110,7 +109,6 @@ export default function Booking() {
                         label={"GRC"}
                         body={"Indulge in a dreamy retreat to Santorini, Greece's island gem. Enjoy breathtaking sunsets in Oia, explore ancient ruins in Akrotiri, and unwind on the unique black sand beaches of Kamari. Savor traditional Greek cuisine and immerse yourself in the local culture. With its stunning landscapes and charming villages, Santorini is a true paradise waiting to be discovered. Book your getaway now and experience the magic of the Aegean Islands!"}
                     />
-
                     <ComplexCard
                         image={iceland}
                         title={"Iceland's Natural Wonders"}
@@ -118,7 +116,6 @@ export default function Booking() {
                         label={"ISL"}
                         body={"Embark on an adventure to Iceland, a land of unparalleled natural beauty. Witness the mesmerizing Northern Lights dance across the Arctic sky, bathe in the Blue Lagoon's geothermal waters, and hike to see geysers erupt in the Golden Circle. Discover the unique Icelandic culture, try the famous hot dogs, and explore the vibrant Reykjavik. Iceland's diverse landscapes will leave you in awe. Book your journey now and experience the wonders of the North!"}
                     />
-
                     <ComplexCard
                         image={bhutan}
                         title={"Bhutan's Hidden Beauty"}
@@ -126,7 +123,6 @@ export default function Booking() {
                         label={"BTN"}
                         body={"Venture to Bhutan, the hidden gem of the Himalayas. Visit ancient monasteries like Paro Taktsang (Tiger's Nest), hike through lush valleys, and immerse yourself in the peaceful Buddhist culture. Discover the beauty of Bhutan's unique architecture and try delicious dishes like Ema Datshi. With its untouched natural beauty, Bhutan offers a serene escape from the ordinary. Book your journey now and explore the Land of the Thunder Dragon!"}
                     />
-
                     <ComplexCard
                         image={salvador}
                         title={"Salvador's Culture"}
@@ -142,7 +138,6 @@ export default function Booking() {
                         label={"FIN"}
                         body={"Embark on a magical winter adventure to Lapland, Finland. Meet Santa Claus in his hometown of Rovaniemi, go husky sledding through snowy forests, and witness the enchanting Northern Lights. Stay in cozy glass igloos and experience the thrill of ice fishing. Lapland's snowy landscapes and unique experiences make it a perfect winter getaway. Book your journey now and embrace the winter wonderland of Lapland!"}
                     />
-
                     <ComplexCard
                         image={azores}
                         title={"Azores: Nature's Paradise"}
@@ -150,8 +145,6 @@ export default function Booking() {
                         label={"PRT"}
                         body={"Discover the natural beauty of the Azores, Portugal's hidden gem in the Atlantic Ocean. Hike to volcanic craters, relax in thermal pools, and whale watch in the crystal-clear waters. Enjoy the local cuisine with fresh seafood and cheeses, and explore the charming towns of São Miguel and Terceira. The Azores offer a unique blend of adventure and tranquility. Book your trip now and experience nature's paradise!"}
                     />
-
-
                     <ComplexCard
                         image={hamburg}
                         title={"Two day trip to Hamburg"}
@@ -159,7 +152,6 @@ export default function Booking() {
                         label={"GER"}
                         body={"Go to to Hamburg for a quick getaway! Explore historic landmarks like the stunning Elbphilharmonie, stroll along the scenic Alster Lake, and savor mouthwatering local cuisine at the famous Fischmarkt. With its vibrant arts scene and rich maritime history, Hamburg promises a memorable adventure in just a few days. Book your short trip now and immerse yourself in the charm of this captivating German city!"}
                     />
-
                     <ComplexCard
                         image={kyoto}
                         title={"The Beauty of Kyoto"}
@@ -167,8 +159,6 @@ export default function Booking() {
                         label={"JPN"}
                         body={"Embark on a journey to Kyoto and immerse yourself in the rich traditions of Japan. Visit historic temples and shrines, such as Kinkaku-ji (the Golden Pavilion) and Fushimi Inari Taisha, known for its thousands of vibrant red torii gates. Explore the enchanting Arashiyama Bamboo Grove and savor delicious Japanese cuisine, from sushi to ramen. Kyoto offers a unique blend of ancient and modern, making it a captivating travel destination. Book your adventure now and create lasting memories in the heart of Japan!"}
                     />
-
-
                     <ComplexCard
                         image={london}
                         title={"The Magic of London"}
@@ -183,14 +173,11 @@ export default function Booking() {
                     Exclusive Offers!
                 </Typography>
 
-
-
                 <Stack direction="row" spacing={2}
                     sx={{
                         overflow: "auto",
                         display: "flex",
                         flexDirection: "row",
-                
                         p: "4% 4% 8%",
 
                     }}
@@ -210,10 +197,7 @@ export default function Booking() {
                     Popular searches
                 </Typography>
 
-
                 <TravelFilter></TravelFilter>
-
-
 
                 <Typography variant="h3" m="0 3%" color="text.secondary.accent" >
                     Hot Deals!
@@ -227,21 +211,17 @@ export default function Booking() {
                         flexDirection: "row",
                         textAlign: "center",
                         marginBottom:"20vh"
-
                     }}
                 >
-                    <ScrollCards name="New " image={london} />
-                    <ScrollCards name="vacation?" image={kyoto} />
-                    <ScrollCards name="booking!" image={hamburg} />
-                    <ScrollCards name="Incredible" image={london} />
-                    <ScrollCards name="coupon?" image={kyoto} />
+                    <ScrollCards name="New coupons available for London trip" image={london} />
+                    <ScrollCards name="Japan flights much cheaper right now" image={kyoto} />
+                    <ScrollCards name="Remember to check your booking!" image={hamburg} />
+                    <ScrollCards name="Incredible sights waiting for you" image={london} />
+                    <ScrollCards name="We have a special coupon for you" image={kyoto} />
                     
                 </Stack>
-                
 
             </ThemeProvider>
-
-
 
             <Copyright />
 
