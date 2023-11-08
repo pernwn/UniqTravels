@@ -86,6 +86,7 @@ export default function User() {
 
                     </Stack>
                 </Box>
+                <Typography variant="body"> Denne side er ufærdig, i fremtiden vil man kunne se flagene være interaktive, et leaderboard, ens egne grupper, man vil kunne oprette sine gruppe og meget mere!</Typography>
                 <Box
                     sx={{ color: customTheme => customTheme.palette.secondary.main }}
                 >
