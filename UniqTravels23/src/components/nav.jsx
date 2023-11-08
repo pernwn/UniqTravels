@@ -24,7 +24,7 @@ import { useState } from 'react';
 
 
 
-//TODO: skal lige have skrevet kommentarer til ddet her
+
 export default function Nav() {
     const location = useLocation();
     const [value, setValue] = useState(location.pathname);
@@ -34,7 +34,6 @@ export default function Nav() {
         setValue(newValue, value);
 
     };
-
 
 
     return (

@@ -14,6 +14,7 @@ import manarola from "../assets/pictures/manarola.webp";
 import salvador from "../assets/pictures/salvador.webp";
 import santorini from "../assets/pictures/santorini.webp";
 
+
 import { customTheme } from '../themes/themes';
 import { useTheme } from '@mui/material/styles';
 import { Box, CssBaseline, Stack, ThemeProvider, Typography } from '@mui/material';
