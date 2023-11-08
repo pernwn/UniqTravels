@@ -50,7 +50,7 @@ import paris from "../assets/deals/paris.jpg"
 //import andre komponenter
 import { QuickTools, ScrollCards, AutoScroll, SecndBtn } from '../components/cards';
 import SearchBar from '../components/search';
-import "../styles/vic.css"
+
 import { /*SplashAnimation, GuyAnimation,*/ TravelAnimation } from "../components/splash";
 
 
@@ -143,7 +143,7 @@ export default function HomePage() {
                     <Typography variant="h4" lineHeight="1" textAlign="center">Get inspired</Typography>
                     <Stack direction="row" spacing={2}
                         sx={{
-                            p: "2% 6% 12%",
+                            p: "2% 6% 10%",
                             overflow: "auto",
 
                         }}

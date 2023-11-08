@@ -6,7 +6,7 @@ import { NavLink } from "react-router-dom";
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import ShareIcon from '@mui/icons-material/Share';
 
-import "../styles/vic.css"
+
 
 
 //Kort komponent som genbruges på flere sider vha props
@@ -88,7 +88,7 @@ export function ScrollCards(props) {
 
 export function AutoScroll(props) {
     return (
-        //for-loop ?
+        //for-loop ? Denne var tiltænkt at skulle scrolle langsomt i loop
 
         <CardActionArea>
 

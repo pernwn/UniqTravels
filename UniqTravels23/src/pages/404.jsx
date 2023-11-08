@@ -1,13 +1,12 @@
-//HUSK AT SKRIVE KOMMENTARER TIL NÆRMEST ALT – forklaring samt hvad koden gør
+//{Kodet af Victoria}
 
-// Her er der linket til CSS filen
-import '../styles/vic.css'
+
 
 //import af custom theme
 import { customTheme } from '../themes/themes';
 import { ThemeProvider, useTheme } from '@mui/material/styles';
 import { Box, CssBaseline, Stack, Typography } from "@mui/material";
-
+import logo from '../assets/logo.png'
 
 import { MainBtn } from '../components/cards';
 
@@ -27,8 +26,8 @@ export default function Error() {
             <Stack direction="column" spacing={8}>
                 <img src={placeholder} alt="" />
 
-                <Box textAlign="center">
-                    <Typography variant='h1'>404</Typography>
+                <Box textAlign="center" className="error">
+                    <img src={logo} alt="LOGO" />
                     <Typography variant="h4" lineHeight="1">Unfortunately this page doesn&apos;t exist yet <p>&#128546;</p></Typography>
                     <MainBtn name="Return to homepage" page="/"/>
                     

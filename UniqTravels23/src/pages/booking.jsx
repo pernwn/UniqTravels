@@ -1,5 +1,6 @@
 
 //lavet af Rina
+
 // Importér nødvendige moduler og komponenter
 import azores from "../assets/pictures/azores.webp";
 import bhutan from "../assets/pictures/bhutan.webp";
@@ -25,13 +26,15 @@ import ComplexCard from '../components/compcard';
 import TravelExploreOutlinedIcon from '@mui/icons-material/TravelExploreOutlined';
 import FmdGoodOutlinedIcon from '@mui/icons-material/FmdGoodOutlined';
 import MapsHomeWorkOutlinedIcon from '@mui/icons-material/MapsHomeWorkOutlined';
-import "../styles/rin.css"
+
 
 import BackBtn from "../components/backbtn";
 import TravelFilter from "../components/imgfilter";
 import SearchResultsList from "../components/searchResultList";
 import { useState } from "react";
 import { Copyright } from "../pages/signup";
+
+
 export default function Booking() {
     const [results, setResults] = useState([]);
     const outerTheme = useTheme();
@@ -44,7 +47,7 @@ export default function Booking() {
         <>
             <ThemeProvider theme={customTheme(outerTheme)}>
                 <CssBaseline enableColorScheme />
-                <section className='hPic'>{/* Denne section er stylet magen til den på Homepage for at der er sammenhæng i siden*/}
+                <section className='bPic'>{/* Denne section er stylet magen til den på Homepage for at der er sammenhæng i siden*/}
                     <section className='search'>
                         <Box
                             sx={{

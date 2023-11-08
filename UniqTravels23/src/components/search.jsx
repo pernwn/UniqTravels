@@ -1,16 +1,13 @@
 //{Kodet af: Victoria}
 
 
-//import Box from '@mui/material/Box';
-//import TextField from '@mui/material/TextField';
+
 
 //import af separat theme fil
 import { customTheme } from '../themes/themes';
 import { ThemeProvider, useTheme } from '@mui/material/styles';
 import SearchIcon from '@mui/icons-material/Search';
 import { Divider, IconButton, InputBase, Paper } from '@mui/material';
-//import MenuIcon from '@mui/icons-material/Menu';
-//import DirectionsIcon from '@mui/icons-material/Directions';
 import TuneOutlinedIcon from '@mui/icons-material/TuneOutlined';
 
 

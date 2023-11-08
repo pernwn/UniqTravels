@@ -1,11 +1,5 @@
-//import { /*addDoc,*/ collection, onSnapshot } from "@firebase/firestore";
-//import { useEffect, useState } from "react";
-//import { db } from "../firebase-config";
+//{Kodet af: Victoria}
 
-//import { Avatar, Button, Divider, FormGroup, Rating, Stack, TextField, Typography
-//Paper} from "@mui/material";
-//import Paper from '@mui/material/Paper';
-import "../styles/vic.css"
 import SearchResult from "./searchResults";
 
 import Paper from "@mui/material/Paper";

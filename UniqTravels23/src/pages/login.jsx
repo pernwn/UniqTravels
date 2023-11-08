@@ -1,5 +1,6 @@
-//HUSK AT SKRIVE KOMMENTARER TIL NÆRMEST ALT – forklaring samt hvad koden gør
+
 //kodet af Rina
+
 
 //import af separat theme file
 // Importér nødvendige moduler og komponenter
@@ -8,7 +9,7 @@ import { useTheme } from '@mui/material/styles';
 import { Button, ThemeProvider, Typography, TextField, Box, Grid, Link, /*Grid*/ } from "@mui/material";
 import { useState } from "react";
 
-import '../styles/vic.css'
+
 
 export default function Login() {
   // Bruger React's 'useTheme' hook til at hente det aktuelle tema

@@ -1,5 +1,7 @@
+//{Kodet af: Victoria}
+
 import { Typography } from "@mui/material";
-import "../styles/vic.css"
+
 export default function SearchResult ({ result }){
   return (
     <Typography

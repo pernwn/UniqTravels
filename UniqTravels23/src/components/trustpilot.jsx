@@ -6,7 +6,7 @@ import { db } from "../firebase-config";
 
 import { Avatar, ListItem, Rating, Stack, Typography } from "@mui/material";
 
-import '../styles/vic.css'
+
 
 
 export default function Trustpilot() {

@@ -14,14 +14,13 @@ import Container from '@mui/material/Container';
 import { ThemeProvider } from '@mui/material/styles';
 
 
-
 export function Copyright(props) {
   return (
     <Typography variant="body2" align="center" {...props}>
       {'Copyright © '}
       <Link color="inherit" href="">
         UniqTravels
-      </Link>{' '}
+      </Link>{'https://uniq.rinamunk.dk/'}
       {new Date().getFullYear()}
       {'.'}
     </Typography>
@@ -60,7 +59,7 @@ export default function SignUp() {
             alignItems: 'center',
           }}
         >
-          <Avatar sx={{ m: 1, bgcolor: 'secondary.main' }}/*TODO: logo her i stedet? */>
+          <Avatar sx={{ m: 1, bgcolor: 'secondary.main' }}  >
             <LockOutlinedIcon />
           </Avatar>
           <Typography component="h1" variant="h2">

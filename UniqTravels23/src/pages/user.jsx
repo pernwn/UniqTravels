@@ -3,6 +3,7 @@
 //{Kodet af: Rina}
 
 
+
 // Med NavLink gør vi, at produktet bliver en 1 pager
 import { NavLink } from "react-router-dom";
 
@@ -18,7 +19,7 @@ import { useTheme } from '@mui/material/styles';
 import { Box, CssBaseline, Stack, ThemeProvider, Typography } from '@mui/material';
 
 import UserHead from "../components/userhead";
-import '../styles/vic.css'
+
 import BackBtn from "../components/backbtn";
 
 import SettingsOutlinedIcon from '@mui/icons-material/SettingsOutlined';
@@ -31,7 +32,7 @@ import MilitaryTechOutlinedIcon from '@mui/icons-material/MilitaryTechOutlined';
 import ExtensionOutlinedIcon from '@mui/icons-material/ExtensionOutlined';
 
 import { QuickTools } from "../components/cards";
-
+import logo from '../assets/logo.png'
 export default function User() {
     const outerTheme = useTheme();
     return (
@@ -40,7 +41,9 @@ export default function User() {
 
             <div className="header">
                 <BackBtn/>
+                <img src={logo} alt="LOGO" />
                 <Typography variant="h5" className="h_txt">Traveler Profile</Typography>
+                
                 <SettingsOutlinedIcon
                             sx={{
                                 position:"fixed",
